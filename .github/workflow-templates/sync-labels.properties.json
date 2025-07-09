@@ -1,0 +1,9 @@
+{
+    "name": "Sync Labels from Central Definition",
+    "description": "Syncs labels from the central docs repo using label-syncer and yq.",
+    "iconName": "tag",
+    "categories": [
+        "automation",
+        "labels"
+    ]
+}
