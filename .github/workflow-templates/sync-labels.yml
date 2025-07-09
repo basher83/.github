@@ -1,0 +1,52 @@
+name: Sync Labels from Central Definition
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sync-labels:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+
+    steps:
+      - name: Checkout this repository
+        uses: actions/checkout@v4
+
+      - name: Download central label definitions
+        run: |
+          curl -sSL \
+            -o label-definitions.yml \
+            https://raw.githubusercontent.com/basher83/docs/main/mission-control/github-configs/label-definitions.yml
+
+      - name: Install yq v4
+        run: |
+          wget https://github.com/mikefarah/yq/releases/download/v4.44.1/yq_linux_amd64 -O /usr/local/bin/yq
+          chmod +x /usr/local/bin/yq
+
+      - name: Show yq version
+        run: yq --version
+
+      - name: Transform labels
+        run: |
+          echo "Working directory:"
+          pwd
+          echo "Checking if source file exists:"
+          ls -la label-definitions.yml
+          echo "First few lines of source file:"
+          head -20 label-definitions.yml
+          echo "Transforming labels..."
+          yq eval '[.[] | .[]]' label-definitions.yml > transformed-labels.yml
+          echo "Checking if transformed file was created:"
+          ls -la transformed-labels.yml
+          echo "First few lines of transformed file:"
+          head -20 transformed-labels.yml
+
+      - name: Sync labels to this repository
+        uses: micnncim/action-label-syncer@v1.3.0
+        with:
+          manifest: transformed-labels.yml
+          prune: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
