@@ -1,0 +1,110 @@
+name: Sync Labels from Central Definition
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Run weekly on Sundays at 2 AM UTC
+    - cron: '0 2 * * 0'
+
+jobs:
+  sync-labels:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+
+    steps:
+      - name: Checkout this repository
+        uses: actions/checkout@v4
+
+      - name: Install yq
+        uses: mikefarah/yq@v4.45.4
+
+      - name: Download central label definitions
+        run: |
+          echo "Downloading label definitions..."
+          if ! curl -sSL -f -o label-definitions.yml \
+            https://raw.githubusercontent.com/basher83/docs/main/mission-control/github-configs/label-definitions.yml; then
+            echo "❌ Failed to download label definitions from central repository"
+            exit 1
+          fi
+          echo "✅ Successfully downloaded label definitions"
+
+      - name: Validate source file
+        run: |
+          echo "Validating source file structure..."
+          if [[ ! -f label-definitions.yml ]]; then
+            echo "❌ Source file not found"
+            exit 1
+          fi
+          
+          # Check if file is valid YAML
+          if ! yq eval '.' label-definitions.yml > /dev/null 2>&1; then
+            echo "❌ Invalid YAML format in source file"
+            exit 1
+          fi
+          
+          # Check if file has expected structure
+          if ! yq eval 'keys | length > 0' label-definitions.yml > /dev/null 2>&1; then
+            echo "❌ No label categories found in source file"
+            exit 1
+          fi
+          
+          echo "✅ Source file validation passed"
+          echo "📊 Label categories found:"
+          yq eval 'keys | .[]' label-definitions.yml | sed 's/^/  - /'
+
+      - name: Transform labels
+        run: |
+          echo "Transforming labels for label-syncer..."
+          
+          # Transform the nested structure to flat array
+          yq eval '[.[] | .[]]' label-definitions.yml > transformed-labels.yml
+          
+          # Validate transformed file
+          if [[ ! -f transformed-labels.yml ]]; then
+            echo "❌ Failed to create transformed labels file"
+            exit 1
+          fi
+          
+          # Check if transformation produced valid results
+          label_count=$(yq eval 'length' transformed-labels.yml)
+          if [[ $label_count -eq 0 ]]; then
+            echo "❌ No labels found after transformation"
+            exit 1
+          fi
+          
+          echo "✅ Successfully transformed labels"
+          echo "📈 Total labels to sync: $label_count"
+          
+          # Show sample of transformed labels (first 5)
+          echo "📋 Sample of labels to be synced:"
+          yq eval '.[0:5] | .[] | "  - " + .name + " (" + .color + ")"' transformed-labels.yml
+
+      - name: Dry run - Show what will be synced
+        run: |
+          echo "🔍 Dry run summary:"
+          echo "Repository: ${{ github.repository }}"
+          echo "Labels will be synced with prune=true (unused labels will be removed)"
+          echo ""
+          echo "Label categories breakdown:"
+          yq eval 'group_by(.description | split(" ") | .[0]) | .[] | "  " + (.[0].description | split(" ") | .[0]) + ": " + (length | tostring) + " labels"' transformed-labels.yml | sort | uniq -c | sort -nr
+
+      - name: Sync labels to this repository
+        uses: micnncim/action-label-syncer@v1.3.0
+        with:
+          manifest: transformed-labels.yml
+          prune: true
+          dry_run: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Post-sync summary
+        if: always()
+        run: |
+          echo "🎉 Label sync completed!"
+          echo "Repository: ${{ github.repository }}"
+          echo "Timestamp: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          echo "Triggered by: ${{ github.actor }}"
+          echo ""
+          echo "ℹ️ Note: Labels not defined in the central configuration have been removed due to prune=true"
