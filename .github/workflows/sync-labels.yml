@@ -7,6 +7,9 @@ on:
         required: false
         type: string
         default: "https://raw.githubusercontent.com/basher83/docs/main/mission-control/github-configs/label-definitions.yml"
+    secrets:
+      GITHUB_TOKEN:
+        required: true
 
 jobs:
   sync-labels:
