@@ -1,0 +1,40 @@
+name: Sync Tailscale Policy
+
+on:
+  workflow_call:
+
+jobs:
+  acls:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch version-cache.json
+        id: fetch-old-version
+        uses: actions/cache@v4
+        with:
+          path: ./version-cache.json
+          key: version-cache.json-${{ github.run_id }}
+          restore-keys: |
+            version-cache.json-
+            
+      - name: Test ACL
+        id: test-acl
+        uses: tailscale/gitops-acl-action@v1
+        with:
+          oauth-client-id: ${{ secrets.TS_OAUTH_ID }}
+          oauth-secret: ${{ secrets.TS_OAUTH_SECRET}}
+          tailnet: ${{ secrets.TS_TAILNET }}
+          action: test
+          
+      - name: Deploy ACL
+        if: github.event_name == 'push' && github.ref_name == 'main'
+        id: deploy-acl
+        uses: tailscale/gitops-acl-action@v1
+        with:
+          oauth-client-id: ${{ secrets.TS_OAUTH_ID }}
+          oauth-secret: ${{ secrets.TS_OAUTH_SECRET}}
+          tailnet: ${{ secrets.TS_TAILNET }}
+          action: apply
+
