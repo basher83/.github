@@ -1,0 +1,28 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Docker/container preset - pins digests, enables GitHub Actions security, and detects abandoned packages",
+  "extends": [
+    "docker:pinDigests",
+    "helpers:pinGitHubActionDigests",
+    ":configMigration",
+    ":pinDevDependencies",
+    "abandonments:recommended"
+  ],
+  "packageRules": [
+    {
+      "description": "Auto-merge Docker patch updates",
+      "matchDatasources": ["docker"],
+      "matchUpdateTypes": ["patch"],
+      "automerge": true,
+      "automergeType": "pr"
+    },
+    {
+      "description": "Group Docker digest updates",
+      "matchDatasources": ["docker"],
+      "matchUpdateTypes": ["digest"],
+      "groupName": "docker-digests",
+      "automerge": true,
+      "automergeType": "pr"
+    }
+  ]
+}

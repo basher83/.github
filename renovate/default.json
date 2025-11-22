@@ -1,0 +1,42 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Base Renovate preset for basher83 repositories - provides common settings for PR management, security alerts, and semantic commits",
+  "extends": [
+    "config:recommended",
+    "workarounds:all"
+  ],
+  "timezone": "America/New_York",
+  "prConcurrentLimit": 3,
+  "prHourlyLimit": 2,
+  "prCreation": "not-pending",
+  "rebaseWhen": "behind-base-branch",
+  "semanticCommits": "enabled",
+  "commitMessagePrefix": "chore(deps):",
+  "commitMessageAction": "update",
+  "commitMessageTopic": "{{depName}}",
+  "commitMessageExtra": "to {{newVersion}}",
+  "labels": [
+    "dependencies",
+    "renovate"
+  ],
+  "assignees": [
+    "basher83"
+  ],
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "labels": [
+      "security"
+    ]
+  },
+  "packageRules": [
+    {
+      "description": "Auto-merge security patches",
+      "matchUpdateTypes": ["patch"],
+      "automerge": true,
+      "automergeType": "pr",
+      "vulnerabilityAlerts": {
+        "enabled": true
+      }
+    }
+  ]
+}

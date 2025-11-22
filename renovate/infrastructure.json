@@ -1,0 +1,57 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Infrastructure-as-Code preset - Terraform, Ansible, Packer with custom managers and auto-merge policies",
+  "extends": [
+    ":semanticCommits",
+    ":dependencyDashboard",
+    "schedule:earlyMondays"
+  ],
+  "packageRules": [
+    {
+      "description": "Auto-merge Terraform provider patches",
+      "matchManagers": ["terraform"],
+      "matchUpdateTypes": ["patch"],
+      "automerge": true,
+      "automergeType": "pr"
+    },
+    {
+      "description": "Group Ansible collection updates",
+      "matchManagers": ["ansible", "ansible-galaxy"],
+      "groupName": "ansible-collections",
+      "groupSlug": "ansible",
+      "matchUpdateTypes": ["patch", "minor"],
+      "automerge": true,
+      "automergeType": "pr"
+    },
+    {
+      "description": "Pin infrastructure tools for stability",
+      "matchManagers": ["mise"],
+      "matchPackageNames": ["terraform", "packer", "ansible-core"],
+      "rangeStrategy": "pin"
+    },
+    {
+      "description": "Auto-merge GitHub Actions patches and minor updates",
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["patch", "minor"],
+      "automerge": true,
+      "automergeType": "pr"
+    },
+    {
+      "description": "Require approval for major Terraform updates",
+      "matchPackagePatterns": ["terraform"],
+      "matchUpdateTypes": ["major"],
+      "dependencyDashboardApproval": true
+    },
+    {
+      "description": "Group all GitHub Actions updates",
+      "matchManagers": ["github-actions"],
+      "groupName": "github-actions",
+      "groupSlug": "actions"
+    },
+    {
+      "description": "Group Python dependencies",
+      "matchManagers": ["pip_requirements"],
+      "groupName": "python-dependencies"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Python project preset - groups linters and test tools, auto-merges patches and dev dependencies",
+  "extends": [
+    ":semanticCommits",
+    ":preserveSemverRanges"
+  ],
+  "pip_requirements": {
+    "fileMatch": [
+      "(^|/)requirements(-.*)?\\.(txt|in)$"
+    ]
+  },
+  "packageRules": [
+    {
+      "description": "Auto-merge production dependency patches",
+      "matchManagers": ["pip_requirements", "poetry", "pipenv"],
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["patch"],
+      "automerge": true,
+      "automergeType": "pr"
+    },
+    {
+      "description": "Auto-merge dev dependency patches and minor updates",
+      "matchManagers": ["pip_requirements", "poetry", "pipenv"],
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true,
+      "automergeType": "pr"
+    },
+    {
+      "description": "Group Python test dependencies",
+      "groupName": "Python test dependencies",
+      "matchDepTypes": ["devDependencies"],
+      "matchPackagePatterns": ["/^pytest/"]
+    },
+    {
+      "description": "Group Python linting tools",
+      "groupName": "Python linters",
+      "matchPackageNames": ["black", "ruff", "mypy"],
+      "matchDepTypes": ["devDependencies"]
+    },
+    {
+      "description": "Use different commit prefix for dev dependencies",
+      "matchDepTypes": ["devDependencies"],
+      "commitMessagePrefix": "chore(dev-deps):"
+    }
+  ]
+}

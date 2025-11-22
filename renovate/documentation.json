@@ -1,0 +1,48 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Documentation site preset - aggressive auto-merge for docs sites like MkDocs, Docusaurus, Sphinx",
+  "extends": [
+    ":pinAllExceptPeerDependencies"
+  ],
+  "schedule": ["before 6am on monday"],
+  "prConcurrentLimit": 5,
+  "platformAutomerge": true,
+  "labels": ["dependencies", "automated"],
+  "reviewers": ["basher83"],
+  "packageRules": [
+    {
+      "description": "GitHub Actions - pin to commit SHA and auto-merge patch/minor",
+      "matchManagers": ["github-actions"],
+      "pinDigests": true,
+      "automerge": true,
+      "automergeType": "pr",
+      "matchUpdateTypes": ["patch", "minor", "pin"]
+    },
+    {
+      "description": "npm packages - group and auto-merge patch/minor updates",
+      "matchManagers": ["npm"],
+      "groupName": "npm dependencies",
+      "automerge": true,
+      "automergeType": "pr",
+      "matchUpdateTypes": ["patch", "minor"]
+    },
+    {
+      "description": "Security updates - high priority, auto-merge",
+      "matchPackagePatterns": ["*"],
+      "automerge": true,
+      "automergeType": "pr",
+      "labels": ["security", "dependencies", "automated"],
+      "reviewersFromCodeOwners": true,
+      "vulnerabilityAlerts": {
+        "enabled": true
+      }
+    },
+    {
+      "description": "Major updates - require manual review",
+      "matchUpdateTypes": ["major"],
+      "automerge": false,
+      "labels": ["major-update", "dependencies"],
+      "reviewersFromCodeOwners": true
+    }
+  ]
+}
