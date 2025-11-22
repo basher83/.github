@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: Checkout this repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
 
       - name: Install yq
         run: |
@@ -95,7 +95,7 @@ jobs:
           yq eval 'group_by(.description | split(" ") | .[0]) | .[] | "  " + (.[0].description | split(" ") | .[0]) + ": " + (length | tostring) + " labels"' transformed-labels.yml | sort | uniq -c | sed 's/^/  /'
 
       - name: Sync labels to this repository
-        uses: micnncim/action-label-syncer@v1.3.0
+        uses: micnncim/action-label-syncer@3abd5ab72fda571e69fffd97bd4e0033dd5f495c # v1.3.0
         with:
           manifest: transformed-labels.yml
           prune: true
