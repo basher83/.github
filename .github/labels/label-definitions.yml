@@ -1,443 +1,119 @@
-# 🏷️ GitHub Labels Configuration
-# Solo Developer Label System - Migration Safe Version
-# Combines existing labels with new solo-dev optimizations
+# GitHub Labels Configuration - Lean Solo Dev Version
 
-# === MISSION STATUS LABELS ===
-mission-status:
-  - name: "🎯 mission-critical"
-    color: "d73a4a"
-    description: "Essential for project success and mission completion"
-    
-  - name: "🚀 ready-for-launch" 
-    color: "0075ca"
-    description: "Ready for implementation and deployment"
-    
-  - name: "🛰️ in-orbit"
+status:
+  - name: "status:backlog"
+    color: "cfd3d7"
+    description: "Not started; in ideas or triage"
+  - name: "status:in-progress"
     color: "fbca04"
     description: "Currently being worked on"
-    
-  - name: "🌟 mission-complete"
-    color: "0e8a16"
-    description: "Successfully completed and verified"
-    
-  - name: "🔧 maintenance-mode"
-    color: "5319e7"
-    description: "Ongoing maintenance and support required"
-
-# === PRIORITY LABELS ===
-priority:
-  - name: "🔴 priority-high"
+  - name: "status:blocked"
     color: "d73a4a"
-    description: "Urgent attention required - high impact"
-    
-  - name: "🟡 priority-medium"
-    color: "fbca04"
-    description: "Important but not urgent - moderate impact"
-    
-  - name: "🟢 priority-low"
-    color: "0e8a16"
-    description: "Nice to have - low impact"
-    
-  - name: "🆘 emergency"
-    color: "b60205"
-    description: "Critical system issue requiring immediate attention"
-
-# === TYPE LABELS ===
-type:
-  - name: "🐛 bug"
-    color: "d73a4a"
-    description: "Something isn't working correctly"
-    
-  - name: "✨ enhancement"
-    color: "a2eeef"
-    description: "New feature or improvement to existing functionality"
-    
-  - name: "📚 documentation"
-    color: "0075ca"
-    description: "Improvements or additions to documentation"
-    
-  - name: "🔒 security"
-    color: "d73a4a"
-    description: "Security-related issue or improvement"
-    
-  - name: "🧹 refactor"
-    color: "5319e7"
-    description: "Code improvement without changing functionality"
-    
-  - name: "🎨 design"
-    color: "e99695"
-    description: "UI/UX design related changes"
-    
-  - name: "🔧 tooling"
+    description: "Blocked or on hold"
+  - name: "status:in-review"
     color: "0052cc"
-    description: "Development tools and build processes"
-    
-  - name: "⚡ performance"
-    color: "fbca04"
-    description: "Performance optimization and improvements"
+    description: "Ready for review or testing"
+  - name: "status:ready-to-merge"
+    color: "0e8a16"
+    description: "Approved and ready to merge"
+  - name: "status:done"
+    color: "0e8a16"
+    description: "Completed and verified"
 
-# === EFFORT LABELS ===
-effort:
-  # Keeping existing effort labels
-  - name: "🥾 effort-small"
-    color: "c2e0c6"
-    description: "Quick fix - less than 2 hours of work"
-    
-  - name: "🚶 effort-medium"
-    color: "fef2c0"
-    description: "Standard task - 2-8 hours of work"
-    
-  - name: "🥾 effort-large"
-    color: "f9d0c4"
-    description: "Complex task - 1-3 days of work"
-    
-  - name: "🏔️ effort-epic"
-    color: "d4c5f9"
-    description: "Major undertaking - more than 3 days of work"
-  
-  # Adding new quick effort label
-  - name: "⚡ effort-quick"
-    color: "d1ecf1"
-    description: "Very quick fix - less than 1 hour of work"
-
-# === TECHNOLOGY LABELS (NEW) ===
-technology:
-  - name: "🐍 python"
-    color: "3776ab"
-    description: "Python development and scripts"
-    
-  - name: "🏗️ terraform"
-    color: "623ce4"
-    description: "Infrastructure as Code with Terraform"
-    
-  - name: "🤖 ansible"
-    color: "ee0000"
-    description: "Configuration management and automation"
-    
-  - name: "🔌 mcp-server"
-    color: "0366d6"
-    description: "Model Context Protocol server development"
-    
-  - name: "🛡️ policy"
+priority:
+  - name: "priority:high"
     color: "b60205"
-    description: "Infrastructure and security policy as code"
-    
-  - name: "☁️ cloud"
+    description: "Urgent and high impact"
+  - name: "priority:medium"
+    color: "fbca04"
+    description: "Important but not urgent"
+  - name: "priority:low"
+    color: "0e8a16"
+    description: "Nice to have; low impact"
+
+type:
+  - name: "type:bug"
+    color: "d73a4a"
+    description: "Something is not working correctly"
+  - name: "type:feature"
+    color: "a2eeef"
+    description: "New feature or enhancement"
+  - name: "type:docs"
+    color: "0075ca"
+    description: "Documentation or content"
+  - name: "type:chore"
+    color: "5319e7"
+    description: "Maintenance, refactor, or tooling"
+  - name: "type:security"
+    color: "d73a4a"
+    description: "Security-related work"
+  - name: "type:performance"
+    color: "fbca04"
+    description: "Performance improvements or optimizations"
+
+effort:
+  - name: "effort:small"
+    color: "c2e0c6"
+    description: "Less than 2 hours of work"
+  - name: "effort:medium"
+    color: "fef2c0"
+    description: "2–8 hours of work"
+  - name: "effort:large"
+    color: "f9d0c4"
+    description: "More than a day of work"
+
+area:
+  - name: "area:infra"
+    color: "623ce4"
+    description: "Infrastructure, networking, and automation"
+  - name: "area:cloud"
     color: "0052cc"
     description: "Cloud platform and services"
-    
-  - name: "🐚 shell"
+  - name: "area:python"
+    color: "3776ab"
+    description: "Python development and tooling"
+  - name: "area:shell"
     color: "89e051"
-    description: "Shell scripts and bash automation"
-
-# === TEAM LABELS (KEEPING FOR NOW) ===
-team:
-  - name: "👨‍🚀 crew-backend"
-    color: "0052cc"
-    description: "Backend development team"
-    
-  - name: "🎨 crew-frontend"
-    color: "5319e7"
-    description: "Frontend development team"
-    
-  - name: "📊 crew-data"
-    color: "0e8a16"
-    description: "Data science and analytics team"
-    
-  - name: "🔧 crew-devops"
-    color: "d73a4a"
-    description: "Infrastructure and DevOps team"
-    
-  - name: "📝 crew-docs"
+    description: "Shell scripts and command-line automation"
+  - name: "area:ci-cd"
     color: "0075ca"
-    description: "Documentation and content team"
-    
-  - name: "🔒 crew-security"
-    color: "b60205"
-    description: "Security and compliance team"
-
-# === WORKFLOW LABELS (ENHANCED) ===
-workflow:
-  # Existing workflow labels
-  - name: "🔍 needs-triage"
-    color: "fbca04"
-    description: "Requires initial review and categorization"
-    
-  - name: "🤝 help-wanted"
-    color: "128a0c"
-    description: "Community assistance welcome"
-    
-  - name: "🟢 good-first-issue"
-    color: "7057ff"
-    description: "Perfect for newcomers to the project"
-    
-  - name: "❓ question"
-    color: "cc317c"
-    description: "Further information requested"
-    
-  - name: "🚫 wontfix"
-    color: "ffffff"
-    description: "Will not be addressed in current scope"
-    
-  - name: "🔄 duplicate"
-    color: "cfd3d7"
-    description: "Duplicate of another issue"
-    
-  - name: "❌ invalid"
-    color: "e4e669"
-    description: "Issue is not valid or actionable"
-  
-  # New solo workflow labels
-  - name: "🧠 thinking"
-    color: "f9d0c4"
-    description: "Researching and planning approach"
-    
-  - name: "⚡ quick-win"
-    color: "34d058"
-    description: "Simple task that can be completed quickly"
-    
-  - name: "🔍 research-needed"
-    color: "fff3cd"
-    description: "Requires investigation before implementation"
-    
-  - name: "📝 draft"
-    color: "d4c5f9"
-    description: "Work in progress - not ready for review"
-    
-  - name: "💭 idea"
-    color: "e99695"
-    description: "Future enhancement idea to consider"
-
-# === AUTOMATION LABELS ===
-automation:
-  - name: "🤖 renovate"
-    color: "0366d6"
-    description: "Automated dependency updates"
-    
-  - name: "🤖 dependabot"
-    color: "0366d6" 
-    description: "Automated security updates"
-    
-  - name: "🏷️ auto-labeled"
-    color: "ededed"
-    description: "Automatically labeled by bot"
-    
-  - name: "🔄 auto-merge"
-    color: "34d058"
-    description: "Approved for automatic merging"
-
-# === STATUS LABELS ===
-status:
-  - name: "🚧 in-progress"
-    color: "fbca04"
-    description: "Work is currently in progress"
-    
-  - name: "⏸️ on-hold"
-    color: "d73a4a"
-    description: "Work is paused pending resolution"
-    
-  - name: "👀 in-review"
-    color: "0052cc"
-    description: "Under review by team members"
-    
-  - name: "✅ ready-to-merge"
+    description: "Continuous integration and deployment pipelines"
+  - name: "area:web"
     color: "0e8a16"
-    description: "Approved and ready for merge"
-    
-  - name: "🕰️ stale"
-    color: "fef2c0"
-    description: "No recent activity - may be closed"
-  
-  # New status labels
-  - name: "👀 needs-testing"
-    color: "17a2b8"
-    description: "Implementation complete, needs testing"
-    
-  - name: "✅ ready-to-deploy"
-    color: "28a745"
-    description: "Tested and ready for deployment"
-
-# === INFRASTRUCTURE SCOPE (NEW) ===
-infra-scope:
-  - name: "🏗️ infrastructure"
-    color: "623ce4"
-    description: "Infrastructure provisioning and management"
-    
-  - name: "📋 policy-engine"
+    description: "APIs, web services, or UI work"
+  - name: "area:security"
     color: "b60205"
-    description: "OPA/Rego policy development and testing"
-    
-  - name: "🔐 secrets-mgmt"
-    color: "d73a4a"
-    description: "Secrets management and SOPS configuration"
-    
-  - name: "🔄 automation"
-    color: "0052cc"
-    description: "Workflow and process automation"
-    
-  - name: "🌐 networking"
-    color: "5319e7"
-    description: "Network configuration and security"
-    
-  - name: "💾 backup-restore"
-    color: "fbca04"
-    description: "Data backup and disaster recovery"
-
-# === PYTHON DEVELOPMENT (NEW) ===
-python:
-  - name: "🧪 testing"
-    color: "0e8a16"
-    description: "Unit tests, integration tests, and test automation"
-    
-  - name: "📦 packaging"
+    description: "Security and policy work"
+  - name: "area:docs"
     color: "0366d6"
-    description: "Python packaging, pyproject.toml, dependencies"
-    
-  - name: "🔍 linting"
-    color: "5319e7"
-    description: "Code quality, formatting, and static analysis"
-    
-  - name: "🎯 typing"
-    color: "0052cc"
-    description: "Type hints and mypy improvements"
-    
-  - name: "⚙️ async"
-    color: "fbca04"
-    description: "Asynchronous programming and async/await"
-    
-  - name: "🔌 cli"
-    color: "6f42c1"
-    description: "Command-line interface development"
+    description: "Knowledge management and documentation"
 
-# === SPECIAL LABELS ===
+env:
+  - name: "env:prod"
+    color: "d73a4a"
+    description: "Production environment"
+  - name: "env:staging"
+    color: "fbca04"
+    description: "Staging or pre-production environment"
+  - name: "env:dev"
+    color: "0e8a16"
+    description: "Development or local environment"
+
+bot:
+  - name: "bot:renovate"
+    color: "0366d6"
+    description: "Automated dependency updates by Renovate"
+  - name: "bot:dependabot"
+    color: "0366d6"
+    description: "Automated security updates by Dependabot"
+
 special:
-  - name: "💎 breaking-change"
+  - name: "breaking-change"
     color: "b60205"
-    description: "Changes that break backward compatibility"
-    
-  - name: "🎉 feature-request"
-    color: "a2eeef"
-    description: "Request for new functionality"
-    
-  - name: "📦 dependencies"
+    description: "Breaks backward compatibility"
+  - name: "dependencies"
     color: "0366d6"
-    description: "Related to project dependencies"
-    
-  - name: "🔧 config"
-    color: "5319e7"
-    description: "Configuration and settings related"
-    
-  - name: "🧪 experimental"
+    description: "Dependency updates or dependency issues"
+  - name: "experimental"
     color: "f9d0c4"
-    description: "Experimental features or changes"
-    
-  - name: "📈 metrics"
-    color: "0e8a16"
-    description: "Performance metrics and monitoring"
-
-# === ENVIRONMENT LABELS ===
-environment:
-  # Keeping existing environments
-  - name: "🌍 production"
-    color: "d73a4a"
-    description: "Production environment issue"
-    
-  - name: "🧪 staging"
-    color: "fbca04"
-    description: "Staging environment issue"
-    
-  - name: "💻 development"
-    color: "0e8a16"
-    description: "Development environment issue"
-    
-  - name: "🧪 testing"
-    color: "0075ca"
-    description: "Testing environment issue"
-  
-  # Adding new solo-friendly environments
-  - name: "🏠 local"
-    color: "6f42c1"
-    description: "Local development environment"
-    
-  - name: "🏃 demo"
-    color: "17a2b8"
-    description: "Demo or proof-of-concept environment"
-
-# === PLATFORM LABELS ===
-platform:
-  - name: "🖥️ desktop"
-    color: "0052cc"
-    description: "Desktop platform specific"
-    
-  - name: "📱 mobile"
-    color: "5319e7"
-    description: "Mobile platform specific"
-    
-  - name: "🌐 web"
-    color: "0e8a16"
-    description: "Web platform specific"
-    
-  - name: "⚙️ api"
-    color: "d73a4a"
-    description: "API related changes"
-  
-  # Adding container/server focus
-  - name: "🖥️ server"
-    color: "0052cc"
-    description: "Server-side platform specific"
-    
-  - name: "📱 container"
-    color: "5319e7"
-    description: "Container and Docker related"
-
-# === SCOPE LABELS ===
-scope:
-  - name: "🔐 auth"
-    color: "d73a4a"
-    description: "Authentication and authorization"
-    
-  - name: "💾 database"
-    color: "0052cc"
-    description: "Database related changes"
-    
-  - name: "🎨 ui"
-    color: "5319e7"
-    description: "User interface changes"
-    
-  - name: "⚡ api"
-    color: "0e8a16"
-    description: "API endpoint changes"
-    
-  - name: "📊 monitoring"
-    color: "fbca04"
-    description: "Monitoring and observability"
-    
-  - name: "🔄 ci-cd"
-    color: "0075ca"
-    description: "Continuous integration and deployment"
-
-# === LEARNING & DOCUMENTATION (NEW) ===
-learning:
-  - name: "📖 tutorial"
-    color: "0075ca"
-    description: "Tutorial or step-by-step guide"
-    
-  - name: "💡 tip"
-    color: "fbca04"
-    description: "Helpful tip or best practice"
-    
-  - name: "🔗 reference"
-    color: "5319e7"
-    description: "Reference documentation or API docs"
-    
-  - name: "📋 template"
-    color: "0052cc"
-    description: "Template or boilerplate code"
-    
-  - name: "🎓 learning"
-    color: "e99695"
-    description: "Learning new technology or concept"
-    
-  - name: "🎉 showcase"
-    color: "a2eeef"
-    description: "Example or demonstration project"
+    description: "Experimental or prototype work"
