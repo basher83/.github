@@ -1,7 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "local>basher83/renovate-config",
-    "local>basher83/renovate-config//presets/github-actions-security.json"
+    "local>basher83/renovate-config"
   ]
 }
