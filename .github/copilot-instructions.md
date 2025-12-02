@@ -75,18 +75,18 @@ This repository has **NO**:
 
 1. **YAML Syntax** (REQUIRED):
    ```bash
-   yq eval '.' .github/workflows/<file>.yml  # Pre-installed at /usr/bin/yq
+   yq eval '.' .github/workflows/<file>.yml  # yq is available in environment
    ```
 
 2. **Shell Scripts** (REQUIRED):
    ```bash
-   shellcheck <script>  # Pre-installed at /usr/bin/shellcheck
+   shellcheck <script>  # shellcheck is available in environment
    ```
 
 3. **Label Transformation Test** (for sync-labels):
    ```bash
    curl -sSL https://raw.githubusercontent.com/basher83/.github/main/.github/labels/label-definitions.yml -o /tmp/test.yml
-   yq eval '[.[] | .[]]' /tmp/test.yml | yq eval 'length' -  # Should output 34
+   yq eval '[.[] | .[]]' /tmp/test.yml | yq eval 'length' -  # Verify produces flat array
    ```
 
 4. **actionlint** (recommended, not pre-installed):
@@ -108,7 +108,7 @@ jobs:
 
 ### sync-labels.yml (✅ Production, 15+ repos)
 
-- Uses `yq v4.45.4` for YAML transformation: `yq eval '[.[] | .[]]'` (nested to flat)
+- Downloads and uses `yq v4.45.4` for YAML transformation: `yq eval '[.[] | .[]]'` (nested to flat)
 - Default source: `.github/labels/label-definitions.yml` from this repo
 - **CRITICAL**: `prune: true` removes labels NOT in central definition
 - Random jitter (0-600s) on `schedule` events only (prevents thundering herd)
