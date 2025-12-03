@@ -1,4 +1,7 @@
 name: Sync Labels (shared)
+permissions:
+  contents: read
+  issues: write
 
 on:
   # Run manually from the Actions tab
