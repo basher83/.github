@@ -1,0 +1,6 @@
+[tools]
+git-cliff = "2.11.0"
+
+[tasks.changelog]
+description = "Generate changelog from git commits"
+run = "git-cliff -o CHANGELOG.md"
