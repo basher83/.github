@@ -1,0 +1,68 @@
+[env]
+_.python.venv = { path = ".venv", create = true }  # create the venv if it doesn't exist
+
+[settings]
+auto_install = true
+not_found_auto_install = true
+task_run_auto_install = true
+
+[settings.status]
+show_tools = true
+show_env = false
+truncate = true
+
+[tools]
+python = "3.13"
+uv = "0.9.17"
+ruff = "0.14.7"
+prek = "0.2.20"
+git-cliff = "2.11.0"
+eza = "0.23.0"
+fd = "10.2.0"
+rg = "14.1.1"
+
+[tasks.ci] # only dependencies to be run
+description = 'Run CI tasks'
+depends = ['deps-ci', 'lint', 'format-check', 'test']
+alias = 'ci'
+
+[tasks.deps]
+description = "Install dependencies"
+run = "uv sync"
+
+[tasks.deps-ci]
+description = "Install dependencies for CI"
+run = "uv sync --frozen"
+
+[tasks.lint]
+description = "Lint with Ruff"
+run = "ruff check ."
+
+[tasks.lint-fix]
+description = "Fix lint issues with Ruff"
+run = "ruff check . --fix"
+
+[tasks.format]
+description = "Format with Ruff"
+run = "ruff format ."
+
+[tasks.format-check]
+description = "Check formatting with Ruff"
+run = "ruff format . --check"
+
+[tasks.test]
+description = "Run tests with pytest"
+run = "uv run pytest"
+
+[tasks.python-upgrade]
+description = "Upgrade Python dependencies"
+run = "uv lock --upgrade"
+
+# === Hooks tasks ===
+[tasks.hooks-install]
+description = "Install prek and infisical hooks"
+run = "prek install -f && infisical scan install --pre-commit-hook"
+
+[tasks.pre-commit-run]
+description = "Run prek hooks"
+run = "prek run --all-files"
