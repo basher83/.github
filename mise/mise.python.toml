@@ -14,7 +14,7 @@ truncate = true
 [tools]
 python = "3.14.3"
 uv = "0.10.4"
-ruff = "0.15.1"
+ruff = "0.15.2"
 prek = "0.2.20"
 git-cliff = "2.11.0"
 eza = "0.23.0"
