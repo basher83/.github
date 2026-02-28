@@ -8,11 +8,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
       - name: Fetch version-cache.json
         id: fetch-old-version
-        uses: actions/cache@8b402f58fbc84540c8b491a91e594a4576fec3d7 # v5
+        uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5
         with:
           path: ./version-cache.json
           key: version-cache.json-${{ github.run_id }}
@@ -21,7 +21,7 @@ jobs:
             
       - name: Test ACL
         id: test-acl
-        uses: tailscale/gitops-acl-action@6191a18b39b577dcc9ff733c89e231ea5d583519 # v1
+        uses: tailscale/gitops-acl-action@4105afd651aa659e0eec9031a10360c39fbc0804 # v1
         with:
           oauth-client-id: ${{ secrets.TS_OAUTH_ID }}
           oauth-secret: ${{ secrets.TS_OAUTH_SECRET}}
@@ -31,7 +31,7 @@ jobs:
       - name: Deploy ACL
         if: github.event_name == 'push' && github.ref_name == 'main'
         id: deploy-acl
-        uses: tailscale/gitops-acl-action@6191a18b39b577dcc9ff733c89e231ea5d583519 # v1
+        uses: tailscale/gitops-acl-action@4105afd651aa659e0eec9031a10360c39fbc0804 # v1
         with:
           oauth-client-id: ${{ secrets.TS_OAUTH_ID }}
           oauth-secret: ${{ secrets.TS_OAUTH_SECRET}}
