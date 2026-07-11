@@ -14,10 +14,10 @@ truncate = true
 [tools]
 python = "3.14.6"
 uv = "0.11.28"
-ruff = "0.15.20"
+ruff = "0.15.21"
 prek = "0.4.8"
 git-cliff = "2.13.1"
-eza = "0.23.4"
+eza = "0.23.5"
 fd = "10.4.2"
 rg = "15.1.0"
 
