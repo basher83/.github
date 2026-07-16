@@ -13,13 +13,13 @@ truncate = true
 
 [tools]
 python = "3.14.6"
-uv = "0.11.28"
-ruff = "0.15.21"
-prek = "0.4.9"
+uv = "0.11.29"
+ruff = "0.15.22"
+prek = "0.4.10"
 git-cliff = "2.13.1"
 eza = "0.23.5"
 fd = "10.4.2"
-rg = "15.1.0"
+rg = "15.2.0"
 
 [tasks.ci] # only dependencies to be run
 description = 'Run CI tasks'
