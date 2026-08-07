@@ -12,8 +12,8 @@ show_env = false
 truncate = true
 
 [tools]
-python = "3.14.6"
-uv = "0.12.1"
+python = "3.14.7"
+uv = "0.12.2"
 ruff = "0.16.1"
 prek = "0.4.12"
 git-cliff = "2.13.1"
