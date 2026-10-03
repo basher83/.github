@@ -12,10 +12,10 @@ show_env = false
 truncate = true
 
 [tools]
-python = "3.14.7"
-uv = "0.12.19"
-ruff = "0.16.9"
-prek = "0.5.3"
+python = "3.14.8"
+uv = "0.12.22"
+ruff = "0.16.10"
+prek = "0.5.4"
 git-cliff = "2.14.2"
 eza = "0.23.5"
 fd = "10.5.0"
