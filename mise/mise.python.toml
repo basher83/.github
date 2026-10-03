@@ -13,7 +13,7 @@ truncate = true
 
 [tools]
 python = "3.14.8"
-uv = "0.12.22"
+uv = "0.12.23"
 ruff = "0.16.10"
 prek = "0.5.4"
 git-cliff = "2.14.2"
