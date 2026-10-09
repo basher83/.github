@@ -1,0 +1,4631 @@
+{
+  "schema_version": 1,
+  "scope": {
+    "historical_card_count": 92,
+    "public_count": 34,
+    "excluded_count": 58,
+    "definition": "Historical 2026-10-06 card intersected with the public owner repository list observed on 2026-10-09. Excluded entries have no metadata in this inventory. This is not a census of private repositories.",
+    "visibility_evidence": "https://api.github.com/users/basher83/repos?per_page=100&type=owner"
+  },
+  "sources": [
+    {
+      "id": "card",
+      "url": "https://github.com/basher83/renovate-config/blob/09d32da0cbd806816725c369e77b4a3d79b6eea4/sources/github-repo-info-card.csv",
+      "observed_date": "2026-10-06",
+      "note": "92-repository historical purpose/language card. Asterisk descriptions were inferred from README/name, not GitHub descriptions."
+    },
+    {
+      "id": "check-gating-research",
+      "url": "https://github.com/basher83/renovate-config/blob/09d32da0cbd806816725c369e77b4a3d79b6eea4/research/2026-10-09-automerge-check-gating.md",
+      "observed_date": "2026-10-09",
+      "note": "Historical survey and hosted observations; not current configuration authority."
+    },
+    {
+      "id": "pr-125",
+      "url": "https://github.com/basher83/renovate-config/pull/125",
+      "observed_date": "2026-10-09"
+    },
+    {
+      "id": "pr-126",
+      "url": "https://github.com/basher83/renovate-config/pull/126",
+      "observed_date": "2026-10-09"
+    },
+    {
+      "id": "pr-127",
+      "url": "https://github.com/basher83/renovate-config/pull/127",
+      "observed_date": "2026-10-09"
+    },
+    {
+      "id": "pr-128",
+      "url": "https://github.com/basher83/renovate-config/pull/128",
+      "observed_date": "2026-10-09"
+    },
+    {
+      "id": "pr-129",
+      "url": "https://github.com/basher83/renovate-config/pull/129",
+      "observed_date": "2026-10-09"
+    },
+    {
+      "id": "workflow-survey",
+      "url": "https://github.com/basher83/.github/issues/100",
+      "observed_date": "2026-10-09"
+    },
+    {
+      "id": "fast-gate",
+      "url": "https://github.com/basher83/.github/pull/99",
+      "observed_date": "2026-10-09"
+    }
+  ],
+  "historical_observations": [
+    {
+      "repository": "basher83/.github",
+      "source": "check-gating-research",
+      "observed_date": "2026-10-09",
+      "fact": "Earlier PR #127 survey found no declared PR workflow.",
+      "superseded_by": "PR #99 adds fast-gate.yml; current pinned observation has a pull_request trigger. No runtime result is inferred."
+    },
+    {
+      "repository": "basher83/Zammad-MCP",
+      "source": "check-gating-research",
+      "observed_date": "2026-10-09",
+      "fact": "Hosted canary #394 observed automerge after dashboard approval; #396 merged while a non-required check still ran.",
+      "limits": "These observations do not establish the runtime or gating behavior of other repositories; exact merge path and app check-read permission remain unverified."
+    }
+  ],
+  "repositories": [
+    {
+      "repository": "basher83/.github-private",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:02.994983+00:00",
+        "evidence": "https://api.github.com/repos/basher83/.github-private"
+      },
+      "observation": {
+        "revision": "3cc883c20a1207a9ad041e7766275a6e9abc2752",
+        "observed_at": "2026-10-09T20:15:02.994983+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/.github-private/tree/3cc883c20a1207a9ad041e7766275a6e9abc2752"
+      },
+      "purpose": {
+        "text": "Write-up of a Copilot prompt-engineering experiment (\"The Emotional Journey of Copilot\").",
+        "basis": "inferred_from_readme_or_name",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": null,
+        "historical_card_language": null,
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "absent",
+        "configs": [],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [],
+        "pr_workflow_declarations": false,
+        "shared_workflow_references": [],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:02.994983+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/.github-private/rules/branches/main",
+          "https://api.github.com/repos/basher83/.github-private/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/.github",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:02.842884+00:00",
+        "evidence": "https://api.github.com/repos/basher83/.github"
+      },
+      "observation": {
+        "revision": "961d24505b80e09f8af8a65c64a756729504a787",
+        "observed_at": "2026-10-09T20:15:02.842884+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/.github/tree/961d24505b80e09f8af8a65c64a756729504a787"
+      },
+      "purpose": {
+        "text": "Shared GitHub workflows.",
+        "basis": "historical_card_description",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": null,
+        "historical_card_language": null,
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "observed",
+        "configs": [
+          {
+            "path": "renovate.json",
+            "extends": [
+              "local>basher83/renovate-config"
+            ],
+            "local_overrides": {},
+            "evidence": "https://github.com/basher83/.github/blob/961d24505b80e09f8af8a65c64a756729504a787/renovate.json"
+          }
+        ],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [
+          {
+            "path": ".github/workflows/fast-gate.yml",
+            "name": "Fast Gate",
+            "triggers": {
+              "pull_request": {
+                "branches": [
+                  "main"
+                ]
+              },
+              "push": {
+                "branches": [
+                  "main"
+                ]
+              },
+              "workflow_dispatch": null
+            },
+            "jobs": [
+              {
+                "id": "fast-gate",
+                "uses": "./.github/workflows/python-mise-fast-pr-gate.yml"
+              }
+            ],
+            "evidence": "https://github.com/basher83/.github/blob/961d24505b80e09f8af8a65c64a756729504a787/.github/workflows/fast-gate.yml"
+          },
+          {
+            "path": ".github/workflows/python-mise-fast-pr-gate.yml",
+            "name": "Python Mise Fast PR Gate",
+            "triggers": {
+              "workflow_call": null
+            },
+            "jobs": [
+              {
+                "id": "fast-pr-gate",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/.github/blob/961d24505b80e09f8af8a65c64a756729504a787/.github/workflows/python-mise-fast-pr-gate.yml"
+          },
+          {
+            "path": ".github/workflows/sync-labels.yml",
+            "name": "Sync Labels from Central Definition",
+            "triggers": {
+              "workflow_call": {
+                "inputs": {
+                  "label_definitions_url": {
+                    "required": false,
+                    "type": "string",
+                    "default": "https://raw.githubusercontent.com/basher83/.github/main/.github/labels/label-definitions.yml"
+                  }
+                }
+              }
+            },
+            "jobs": [
+              {
+                "id": "sync-labels",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/.github/blob/961d24505b80e09f8af8a65c64a756729504a787/.github/workflows/sync-labels.yml"
+          },
+          {
+            "path": ".github/workflows/tailscale-connect-to-tailnet.yml",
+            "name": "Step to connect to tailnet",
+            "triggers": {
+              "workflow_call": null
+            },
+            "jobs": [
+              {
+                "id": "tailnet",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/.github/blob/961d24505b80e09f8af8a65c64a756729504a787/.github/workflows/tailscale-connect-to-tailnet.yml"
+          },
+          {
+            "path": ".github/workflows/tailscale-policy.yml",
+            "name": "Sync Tailscale Policy",
+            "triggers": {
+              "workflow_call": null
+            },
+            "jobs": [
+              {
+                "id": "acls",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/.github/blob/961d24505b80e09f8af8a65c64a756729504a787/.github/workflows/tailscale-policy.yml"
+          }
+        ],
+        "pr_workflow_declarations": true,
+        "shared_workflow_references": [
+          {
+            "caller": ".github/workflows/fast-gate.yml",
+            "job": "fast-gate",
+            "reference": "./.github/workflows/python-mise-fast-pr-gate.yml",
+            "evidence": "https://github.com/basher83/.github/blob/961d24505b80e09f8af8a65c64a756729504a787/.github/workflows/fast-gate.yml",
+            "scope": "local"
+          }
+        ],
+        "actionlint_references": [
+          {
+            "path": "mise.toml",
+            "evidence": "https://github.com/basher83/.github/blob/961d24505b80e09f8af8a65c64a756729504a787/mise.toml"
+          }
+        ],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:02.842884+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/.github/rules/branches/main",
+          "https://api.github.com/repos/basher83/.github/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/andromeda-orchestration",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:02.910078+00:00",
+        "evidence": "https://api.github.com/repos/basher83/andromeda-orchestration"
+      },
+      "observation": {
+        "revision": "d5e65e0a42bd76f18e0c3688f9afe43bce54e820",
+        "observed_at": "2026-10-09T20:15:02.910078+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/andromeda-orchestration/tree/d5e65e0a42bd76f18e0c3688f9afe43bce54e820"
+      },
+      "purpose": {
+        "text": "Ansible homelab automation on Consul, Nomad, and Vault over Proxmox.",
+        "basis": "inferred_from_readme_or_name",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": "Jinja",
+        "historical_card_language": "Jinja",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": true,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "observed",
+        "configs": [
+          {
+            "path": "renovate.json",
+            "extends": [
+              "local>basher83/renovate-config",
+              "local>basher83/renovate-config//presets/python.json",
+              "local>basher83/renovate-config//presets/ansible.json",
+              "local>basher83/renovate-config//presets/docker.json"
+            ],
+            "local_overrides": {},
+            "evidence": "https://github.com/basher83/andromeda-orchestration/blob/d5e65e0a42bd76f18e0c3688f9afe43bce54e820/renovate.json"
+          }
+        ],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [
+          {
+            "path": ".github/workflows/mega-linter.yml",
+            "name": "MegaLinter",
+            "triggers": {
+              "push": null,
+              "pull_request": {
+                "branches": [
+                  "main",
+                  "master"
+                ]
+              }
+            },
+            "jobs": [
+              {
+                "id": "megalinter",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/andromeda-orchestration/blob/d5e65e0a42bd76f18e0c3688f9afe43bce54e820/.github/workflows/mega-linter.yml"
+          },
+          {
+            "path": ".github/workflows/release.yml",
+            "name": "Release",
+            "triggers": {
+              "push": {
+                "tags": [
+                  "v*"
+                ]
+              },
+              "workflow_dispatch": {
+                "inputs": {
+                  "version": {
+                    "description": "Version to release (e.g., v1.0.0)",
+                    "required": true
+                  }
+                }
+              }
+            },
+            "jobs": [
+              {
+                "id": "release",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/andromeda-orchestration/blob/d5e65e0a42bd76f18e0c3688f9afe43bce54e820/.github/workflows/release.yml"
+          },
+          {
+            "path": ".github/workflows/sync-labels.yml",
+            "name": "Use Sync Labels Workflow",
+            "triggers": {
+              "workflow_dispatch": null
+            },
+            "jobs": [
+              {
+                "id": "sync-labels",
+                "uses": "basher83/.github/.github/workflows/sync-labels.yml@main"
+              }
+            ],
+            "evidence": "https://github.com/basher83/andromeda-orchestration/blob/d5e65e0a42bd76f18e0c3688f9afe43bce54e820/.github/workflows/sync-labels.yml"
+          }
+        ],
+        "pr_workflow_declarations": true,
+        "shared_workflow_references": [
+          {
+            "caller": ".github/workflows/sync-labels.yml",
+            "job": "sync-labels",
+            "reference": "basher83/.github/.github/workflows/sync-labels.yml@main",
+            "evidence": "https://github.com/basher83/andromeda-orchestration/blob/d5e65e0a42bd76f18e0c3688f9afe43bce54e820/.github/workflows/sync-labels.yml",
+            "scope": "central"
+          }
+        ],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:02.910078+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/andromeda-orchestration/rules/branches/main",
+          "https://api.github.com/repos/basher83/andromeda-orchestration/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/arscontexta-1",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:02.964604+00:00",
+        "evidence": "https://api.github.com/repos/basher83/arscontexta-1"
+      },
+      "observation": {
+        "revision": "ea36fa4dd03407ad1a22addc996f304ccee6221a",
+        "observed_at": "2026-10-09T20:15:02.964604+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/arscontexta-1/tree/ea36fa4dd03407ad1a22addc996f304ccee6221a"
+      },
+      "purpose": {
+        "text": "Claude Code plugin that builds a personal markdown \"second brain\" from conversation.",
+        "basis": "historical_card_description",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": "Shell",
+        "historical_card_language": "Shell",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": true,
+      "renovate": {
+        "state": "absent",
+        "configs": [],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [],
+        "pr_workflow_declarations": false,
+        "shared_workflow_references": [],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:02.964604+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/arscontexta-1/rules/branches/main",
+          "https://api.github.com/repos/basher83/arscontexta-1/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/assets",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:03.010957+00:00",
+        "evidence": "https://api.github.com/repos/basher83/assets"
+      },
+      "observation": {
+        "revision": "3342e50f1d4d9f4ae93f79d75a334f08a347162f",
+        "observed_at": "2026-10-09T20:15:03.010957+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/assets/tree/3342e50f1d4d9f4ae93f79d75a334f08a347162f"
+      },
+      "purpose": {
+        "text": "Central store for GitHub images and visual assets.",
+        "basis": "historical_card_description",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": "HTML",
+        "historical_card_language": "HTML",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "observed",
+        "configs": [
+          {
+            "path": "renovate.json",
+            "extends": [
+              "config:recommended"
+            ],
+            "local_overrides": {},
+            "evidence": "https://github.com/basher83/assets/blob/3342e50f1d4d9f4ae93f79d75a334f08a347162f/renovate.json"
+          }
+        ],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [],
+        "pr_workflow_declarations": false,
+        "shared_workflow_references": [],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:03.010957+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/assets/rules/branches/main",
+          "https://api.github.com/repos/basher83/assets/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/automation-scripts",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:02.985728+00:00",
+        "evidence": "https://api.github.com/repos/basher83/automation-scripts"
+      },
+      "observation": {
+        "revision": "b02438f58fdaec5946da02f9f5f5dd3063baedd8",
+        "observed_at": "2026-10-09T20:15:02.985728+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/automation-scripts/tree/b02438f58fdaec5946da02f9f5f5dd3063baedd8"
+      },
+      "purpose": {
+        "text": "Bash automation scripts for DevOps and sysadmin tasks.",
+        "basis": "inferred_from_readme_or_name",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": "Shell",
+        "historical_card_language": "Shell",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "observed",
+        "configs": [
+          {
+            "path": "renovate.json",
+            "extends": [
+              "config:recommended"
+            ],
+            "local_overrides": {},
+            "evidence": "https://github.com/basher83/automation-scripts/blob/b02438f58fdaec5946da02f9f5f5dd3063baedd8/renovate.json"
+          }
+        ],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [
+          {
+            "path": ".github/workflows/copilot-setup-steps.yml",
+            "name": "Copilot Setup Steps",
+            "triggers": {
+              "workflow_dispatch": null,
+              "push": {
+                "paths": [
+                  ".github/workflows/copilot-setup-steps.yml"
+                ]
+              },
+              "pull_request": {
+                "paths": [
+                  ".github/workflows/copilot-setup-steps.yml"
+                ]
+              }
+            },
+            "jobs": [
+              {
+                "id": "copilot-setup-steps",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/automation-scripts/blob/b02438f58fdaec5946da02f9f5f5dd3063baedd8/.github/workflows/copilot-setup-steps.yml"
+          },
+          {
+            "path": ".github/workflows/shellcheck.yml",
+            "name": "ShellCheck",
+            "triggers": {
+              "push": {
+                "branches": [
+                  "main",
+                  "develop"
+                ],
+                "paths": [
+                  "**.sh",
+                  ".github/workflows/shellcheck.yml",
+                  ".shellcheckrc"
+                ]
+              },
+              "pull_request": {
+                "branches": [
+                  "main"
+                ],
+                "paths": [
+                  "**.sh",
+                  ".github/workflows/shellcheck.yml",
+                  ".shellcheckrc"
+                ]
+              },
+              "workflow_dispatch": null
+            },
+            "jobs": [
+              {
+                "id": "shellcheck",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "shellcheck-diff",
+                "if": "github.event_name == 'pull_request'",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/automation-scripts/blob/b02438f58fdaec5946da02f9f5f5dd3063baedd8/.github/workflows/shellcheck.yml"
+          },
+          {
+            "path": ".github/workflows/sync-labels.yml",
+            "name": "Use Sync Labels Workflow",
+            "triggers": {
+              "workflow_dispatch": null
+            },
+            "jobs": [
+              {
+                "id": "sync-labels",
+                "uses": "basher83/.github/.github/workflows/sync-labels.yml@main"
+              }
+            ],
+            "evidence": "https://github.com/basher83/automation-scripts/blob/b02438f58fdaec5946da02f9f5f5dd3063baedd8/.github/workflows/sync-labels.yml"
+          }
+        ],
+        "pr_workflow_declarations": true,
+        "shared_workflow_references": [
+          {
+            "caller": ".github/workflows/sync-labels.yml",
+            "job": "sync-labels",
+            "reference": "basher83/.github/.github/workflows/sync-labels.yml@main",
+            "evidence": "https://github.com/basher83/automation-scripts/blob/b02438f58fdaec5946da02f9f5f5dd3063baedd8/.github/workflows/sync-labels.yml",
+            "scope": "central"
+          }
+        ],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:02.985728+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/automation-scripts/rules/branches/main",
+          "https://api.github.com/repos/basher83/automation-scripts/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/basher83",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:04.189488+00:00",
+        "evidence": "https://api.github.com/repos/basher83/basher83"
+      },
+      "observation": {
+        "revision": "754bc09c33992740714ba1811dd5233b5f41ecc7",
+        "observed_at": "2026-10-09T20:15:04.189488+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/basher83/tree/754bc09c33992740714ba1811dd5233b5f41ecc7"
+      },
+      "purpose": {
+        "text": "GitHub profile README.",
+        "basis": "inferred_from_readme_or_name",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": null,
+        "historical_card_language": null,
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "observed",
+        "configs": [
+          {
+            "path": "renovate.json",
+            "extends": [
+              "config:recommended"
+            ],
+            "local_overrides": {},
+            "evidence": "https://github.com/basher83/basher83/blob/754bc09c33992740714ba1811dd5233b5f41ecc7/renovate.json"
+          }
+        ],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [
+          {
+            "path": ".github/workflows/octo-lang.yml",
+            "name": "Octo my README",
+            "triggers": {
+              "workflow_dispatch": null
+            },
+            "jobs": [
+              {
+                "id": "get_lang_gen_octo",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/basher83/blob/754bc09c33992740714ba1811dd5233b5f41ecc7/.github/workflows/octo-lang.yml"
+          },
+          {
+            "path": ".github/workflows/update-timestamp.yml",
+            "name": "Update Last Updated Badge",
+            "triggers": {
+              "push": {
+                "branches": [
+                  "main"
+                ],
+                "paths-ignore": [
+                  "README.md"
+                ]
+              },
+              "schedule": [
+                {
+                  "cron": "0 0 * * 0"
+                }
+              ],
+              "workflow_dispatch": null
+            },
+            "jobs": [
+              {
+                "id": "update-timestamp",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/basher83/blob/754bc09c33992740714ba1811dd5233b5f41ecc7/.github/workflows/update-timestamp.yml"
+          }
+        ],
+        "pr_workflow_declarations": false,
+        "shared_workflow_references": [],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:04.189488+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/basher83/rules/branches/main",
+          "https://api.github.com/repos/basher83/basher83/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/claw-code",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:04.290439+00:00",
+        "evidence": "https://api.github.com/repos/basher83/claw-code"
+      },
+      "observation": {
+        "revision": "6816f71d35193c2113b4c41c4240da0fa37c79ed",
+        "observed_at": "2026-10-09T20:15:04.290439+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/claw-code/tree/6816f71d35193c2113b4c41c4240da0fa37c79ed"
+      },
+      "purpose": {
+        "text": "Fork of a hugely starred AI coding-agent harness, being rewritten in Rust.",
+        "basis": "historical_card_description",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": null,
+        "historical_card_language": "Rust",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": true,
+      "renovate": {
+        "state": "absent",
+        "configs": [],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [],
+        "pr_workflow_declarations": false,
+        "shared_workflow_references": [],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:04.290439+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/claw-code/rules/branches/main",
+          "https://api.github.com/repos/basher83/claw-code/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/docs",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:04.931534+00:00",
+        "evidence": "https://api.github.com/repos/basher83/docs"
+      },
+      "observation": {
+        "revision": "4d07303597594b46849e57daffc99847dcafe5cb",
+        "observed_at": "2026-10-09T20:15:04.931534+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/docs/tree/4d07303597594b46849e57daffc99847dcafe5cb"
+      },
+      "purpose": {
+        "text": "Personal docs and notes for projects and the homelab.",
+        "basis": "historical_card_description",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": "Shell",
+        "historical_card_language": "Shell",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "observed",
+        "configs": [
+          {
+            "path": "renovate.json",
+            "extends": [
+              "local>basher83/renovate-config"
+            ],
+            "local_overrides": {},
+            "evidence": "https://github.com/basher83/docs/blob/4d07303597594b46849e57daffc99847dcafe5cb/renovate.json"
+          }
+        ],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [
+          {
+            "path": ".github/workflows/autofix-ci.yml",
+            "name": "autofix.ci",
+            "triggers": {
+              "workflow_dispatch": null,
+              "push": {
+                "branches-ignore": [
+                  "main"
+                ],
+                "paths": [
+                  "**/*.md",
+                  "**/*.mdx",
+                  "**/*.py",
+                  "**/*.yml",
+                  "**/*.yaml",
+                  "**/*.json",
+                  "**/*.toml",
+                  "pyproject.toml",
+                  "ruff.toml",
+                  ".markdownlint.json",
+                  ".prettierrc.json",
+                  ".prettierignore",
+                  ".mise.toml",
+                  ".github/workflows/autofix-ci.yml"
+                ]
+              },
+              "pull_request": {
+                "branches": [
+                  "main"
+                ],
+                "paths": [
+                  "**/*.md",
+                  "**/*.mdx",
+                  "**/*.py",
+                  "**/*.yml",
+                  "**/*.yaml",
+                  "**/*.json",
+                  "**/*.toml",
+                  "pyproject.toml",
+                  "ruff.toml",
+                  ".markdownlint.json",
+                  ".prettierrc.json",
+                  ".prettierignore",
+                  ".mise.toml",
+                  ".github/workflows/autofix-ci.yml"
+                ]
+              },
+              "workflow_call": null
+            },
+            "jobs": [
+              {
+                "id": "autofix",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/docs/blob/4d07303597594b46849e57daffc99847dcafe5cb/.github/workflows/autofix-ci.yml"
+          },
+          {
+            "path": ".github/workflows/docs-quality.yml",
+            "name": "Docs Quality",
+            "triggers": {
+              "workflow_dispatch": null,
+              "pull_request": {
+                "branches": [
+                  "main"
+                ],
+                "paths": [
+                  "**/*.md",
+                  ".markdownlint.json",
+                  ".prettierrc.json",
+                  ".prettierignore",
+                  ".mise.toml",
+                  ".github/workflows/docs-quality.yml"
+                ]
+              },
+              "push": {
+                "branches": [
+                  "main"
+                ],
+                "paths": [
+                  "**/*.md",
+                  ".markdownlint.json",
+                  ".prettierrc.json",
+                  ".prettierignore",
+                  ".mise.toml",
+                  ".github/workflows/docs-quality.yml"
+                ]
+              }
+            },
+            "jobs": [
+              {
+                "id": "markdown-quality",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "security-config",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/docs/blob/4d07303597594b46849e57daffc99847dcafe5cb/.github/workflows/docs-quality.yml"
+          },
+          {
+            "path": ".github/workflows/sync-labels.yml",
+            "name": "Sync Labels (shared)",
+            "triggers": {
+              "workflow_dispatch": null,
+              "schedule": [
+                {
+                  "cron": "0 0 * * 1"
+                }
+              ]
+            },
+            "jobs": [
+              {
+                "id": "sync-labels",
+                "uses": "basher83/.github/.github/workflows/sync-labels.yml@1bec6d63c4296c8c32b7b7bdd9fbbc87c2e8c51b"
+              }
+            ],
+            "evidence": "https://github.com/basher83/docs/blob/4d07303597594b46849e57daffc99847dcafe5cb/.github/workflows/sync-labels.yml"
+          },
+          {
+            "path": ".github/workflows/update-doc-trees.yml",
+            "name": "Update Documentation Trees",
+            "triggers": {
+              "schedule": [
+                {
+                  "cron": "0 6 * * 1"
+                }
+              ],
+              "workflow_dispatch": null
+            },
+            "jobs": [
+              {
+                "id": "update-trees",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/docs/blob/4d07303597594b46849e57daffc99847dcafe5cb/.github/workflows/update-doc-trees.yml"
+          }
+        ],
+        "pr_workflow_declarations": true,
+        "shared_workflow_references": [
+          {
+            "caller": ".github/workflows/sync-labels.yml",
+            "job": "sync-labels",
+            "reference": "basher83/.github/.github/workflows/sync-labels.yml@1bec6d63c4296c8c32b7b7bdd9fbbc87c2e8c51b",
+            "evidence": "https://github.com/basher83/docs/blob/4d07303597594b46849e57daffc99847dcafe5cb/.github/workflows/sync-labels.yml",
+            "scope": "central"
+          }
+        ],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:04.931534+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/docs/rules/branches/main",
+          "https://api.github.com/repos/basher83/docs/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/domain-chassis",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:05.477783+00:00",
+        "evidence": "https://api.github.com/repos/basher83/domain-chassis"
+      },
+      "observation": {
+        "revision": "7b495e556b9844b36a7c54e91173a2fd86ae7dc9",
+        "observed_at": "2026-10-09T20:15:05.477783+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/domain-chassis/tree/7b495e556b9844b36a7c54e91173a2fd86ae7dc9"
+      },
+      "purpose": {
+        "text": "Shared operating method for all domains: gates, session context, document review.",
+        "basis": "historical_card_description",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": "Python",
+        "historical_card_language": "Python",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "absent",
+        "configs": [],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [],
+        "pr_workflow_declarations": false,
+        "shared_workflow_references": [],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:05.477783+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/domain-chassis/rules/branches/main",
+          "https://api.github.com/repos/basher83/domain-chassis/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/dotfiles",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:05.750141+00:00",
+        "evidence": "https://api.github.com/repos/basher83/dotfiles"
+      },
+      "observation": {
+        "revision": "1e2900ca49d9f11b0d3544889f5c78f8628b5f3f",
+        "observed_at": "2026-10-09T20:15:05.750141+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/dotfiles/tree/1e2900ca49d9f11b0d3544889f5c78f8628b5f3f"
+      },
+      "purpose": {
+        "text": "Personal dotfiles.",
+        "basis": "inferred_from_readme_or_name",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": "Shell",
+        "historical_card_language": "Shell",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "observed",
+        "configs": [
+          {
+            "path": "renovate.json",
+            "extends": [
+              "config:recommended"
+            ],
+            "local_overrides": {},
+            "evidence": "https://github.com/basher83/dotfiles/blob/1e2900ca49d9f11b0d3544889f5c78f8628b5f3f/renovate.json"
+          }
+        ],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [],
+        "pr_workflow_declarations": false,
+        "shared_workflow_references": [],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:05.750141+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/dotfiles/rules/branches/main",
+          "https://api.github.com/repos/basher83/dotfiles/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/forgeflare-hooks",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:05.669861+00:00",
+        "evidence": "https://api.github.com/repos/basher83/forgeflare-hooks"
+      },
+      "observation": {
+        "revision": "5ac79ea2a80f32f00ca340d87a88022b7adb8069",
+        "observed_at": "2026-10-09T20:15:05.669861+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/forgeflare-hooks/tree/5ac79ea2a80f32f00ca340d87a88022b7adb8069"
+      },
+      "purpose": {
+        "text": "Forgeflare variant with a programmable hook system for steering the agent.",
+        "basis": "inferred_from_readme_or_name",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": "Rust",
+        "historical_card_language": "Rust",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "observed",
+        "configs": [
+          {
+            "path": "renovate.json",
+            "extends": [
+              "local>basher83/renovate-config",
+              "local>basher83/renovate-config//presets/rust.json"
+            ],
+            "local_overrides": {},
+            "evidence": "https://github.com/basher83/forgeflare-hooks/blob/5ac79ea2a80f32f00ca340d87a88022b7adb8069/renovate.json"
+          }
+        ],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [
+          {
+            "path": ".github/workflows/ci.yml",
+            "name": "CI",
+            "triggers": {
+              "push": {
+                "branches": [
+                  "main"
+                ],
+                "tags": [
+                  "v*"
+                ],
+                "paths-ignore": [
+                  "**.md",
+                  "LICENSE",
+                  "specs/**",
+                  ".forgeflare/**",
+                  "renovate.json",
+                  ".gitignore",
+                  "loop.sh"
+                ]
+              },
+              "pull_request": {
+                "branches": [
+                  "main"
+                ],
+                "paths-ignore": [
+                  "**.md",
+                  "LICENSE",
+                  "specs/**",
+                  ".forgeflare/**",
+                  "renovate.json",
+                  ".gitignore",
+                  "loop.sh"
+                ]
+              },
+              "workflow_call": null
+            },
+            "jobs": [
+              {
+                "id": "lint",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "audit",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "test",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "build",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/forgeflare-hooks/blob/5ac79ea2a80f32f00ca340d87a88022b7adb8069/.github/workflows/ci.yml"
+          },
+          {
+            "path": ".github/workflows/release.yml",
+            "name": "Release",
+            "triggers": {
+              "push": {
+                "tags": [
+                  "v*"
+                ]
+              }
+            },
+            "jobs": [
+              {
+                "id": "build",
+                "runs-on": "${{ matrix.runner }}"
+              },
+              {
+                "id": "release",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/forgeflare-hooks/blob/5ac79ea2a80f32f00ca340d87a88022b7adb8069/.github/workflows/release.yml"
+          }
+        ],
+        "pr_workflow_declarations": true,
+        "shared_workflow_references": [],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:05.669861+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/forgeflare-hooks/rules/branches/main",
+          "https://api.github.com/repos/basher83/forgeflare-hooks/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/forgeflare",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:05.716119+00:00",
+        "evidence": "https://api.github.com/repos/basher83/forgeflare"
+      },
+      "observation": {
+        "revision": "578b286031daea7a0c5ae32db3f9f8a58dd44dae",
+        "observed_at": "2026-10-09T20:15:05.716119+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/forgeflare/tree/578b286031daea7a0c5ae32db3f9f8a58dd44dae"
+      },
+      "purpose": {
+        "text": "Rust coding agent built on Claude, shipped as a single binary.",
+        "basis": "inferred_from_readme_or_name",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": "Rust",
+        "historical_card_language": "Rust",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "observed",
+        "configs": [
+          {
+            "path": "renovate.json",
+            "extends": [
+              "local>basher83/renovate-config",
+              "local>basher83/renovate-config//presets/rust.json"
+            ],
+            "local_overrides": {},
+            "evidence": "https://github.com/basher83/forgeflare/blob/578b286031daea7a0c5ae32db3f9f8a58dd44dae/renovate.json"
+          }
+        ],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [
+          {
+            "path": ".github/workflows/ci.yml",
+            "name": "CI",
+            "triggers": {
+              "push": {
+                "branches": [
+                  "main"
+                ],
+                "tags": [
+                  "v*"
+                ],
+                "paths-ignore": [
+                  "**.md",
+                  "LICENSE",
+                  "specs/**",
+                  "reference/**",
+                  "renovate.json",
+                  ".gitignore",
+                  "loop.sh"
+                ]
+              },
+              "pull_request": {
+                "branches": [
+                  "main"
+                ],
+                "paths-ignore": [
+                  "**.md",
+                  "LICENSE",
+                  "specs/**",
+                  "reference/**",
+                  "renovate.json",
+                  ".gitignore",
+                  "loop.sh"
+                ]
+              },
+              "workflow_call": null
+            },
+            "jobs": [
+              {
+                "id": "lint",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "audit",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "test",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "build",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/forgeflare/blob/578b286031daea7a0c5ae32db3f9f8a58dd44dae/.github/workflows/ci.yml"
+          },
+          {
+            "path": ".github/workflows/release.yml",
+            "name": "Release",
+            "triggers": {
+              "push": {
+                "tags": [
+                  "v*"
+                ]
+              }
+            },
+            "jobs": [
+              {
+                "id": "ci",
+                "uses": "./.github/workflows/ci.yml"
+              },
+              {
+                "id": "build",
+                "runs-on": "${{ matrix.runner }}"
+              },
+              {
+                "id": "release",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/forgeflare/blob/578b286031daea7a0c5ae32db3f9f8a58dd44dae/.github/workflows/release.yml"
+          }
+        ],
+        "pr_workflow_declarations": true,
+        "shared_workflow_references": [
+          {
+            "caller": ".github/workflows/release.yml",
+            "job": "ci",
+            "reference": "./.github/workflows/ci.yml",
+            "evidence": "https://github.com/basher83/forgeflare/blob/578b286031daea7a0c5ae32db3f9f8a58dd44dae/.github/workflows/release.yml",
+            "scope": "local"
+          }
+        ],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:05.716119+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/forgeflare/rules/branches/main",
+          "https://api.github.com/repos/basher83/forgeflare/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/github-actions",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:06.178903+00:00",
+        "evidence": "https://api.github.com/repos/basher83/github-actions"
+      },
+      "observation": {
+        "revision": "a682c62e42090d438a7424e49296a1f31e1dba77",
+        "observed_at": "2026-10-09T20:15:06.178903+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/github-actions/tree/a682c62e42090d438a7424e49296a1f31e1dba77"
+      },
+      "purpose": {
+        "text": "Reusable GitHub Actions workflows for basher83 repos.",
+        "basis": "historical_card_description",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": null,
+        "historical_card_language": null,
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "absent",
+        "configs": [],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [],
+        "pr_workflow_declarations": false,
+        "shared_workflow_references": [],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:06.178903+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/github-actions/rules/branches/main",
+          "https://api.github.com/repos/basher83/github-actions/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/Hallowbranch-Restore",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:06.692506+00:00",
+        "evidence": "https://api.github.com/repos/basher83/Hallowbranch-Restore"
+      },
+      "observation": {
+        "revision": "bc2459fc705de590bd9119691d99f717b255dcd0",
+        "observed_at": "2026-10-09T20:15:06.692506+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/Hallowbranch-Restore/tree/bc2459fc705de590bd9119691d99f717b255dcd0"
+      },
+      "purpose": {
+        "text": "Family photo restoration.",
+        "basis": "historical_card_description",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": "TypeScript",
+        "historical_card_language": "TypeScript",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "observed",
+        "configs": [
+          {
+            "path": "renovate.json",
+            "extends": [
+              "local>basher83/renovate-config"
+            ],
+            "local_overrides": {},
+            "evidence": "https://github.com/basher83/Hallowbranch-Restore/blob/bc2459fc705de590bd9119691d99f717b255dcd0/renovate.json"
+          }
+        ],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [
+          {
+            "path": ".github/workflows/ci.yml",
+            "name": "CI",
+            "triggers": {
+              "push": {
+                "branches": [
+                  "main"
+                ]
+              },
+              "pull_request": {
+                "branches": [
+                  "main"
+                ]
+              }
+            },
+            "jobs": [
+              {
+                "id": "lint-format-test",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/Hallowbranch-Restore/blob/bc2459fc705de590bd9119691d99f717b255dcd0/.github/workflows/ci.yml"
+          }
+        ],
+        "pr_workflow_declarations": true,
+        "shared_workflow_references": [],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:06.692506+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/Hallowbranch-Restore/rules/branches/main",
+          "https://api.github.com/repos/basher83/Hallowbranch-Restore/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/hello-komodo",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:07.166930+00:00",
+        "evidence": "https://api.github.com/repos/basher83/hello-komodo"
+      },
+      "observation": {
+        "revision": "c4351c44c3425d124a5f8b38602a08c837190fbb",
+        "observed_at": "2026-10-09T20:15:07.166930+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/hello-komodo/tree/c4351c44c3425d124a5f8b38602a08c837190fbb"
+      },
+      "purpose": {
+        "text": "Ansible repo that manages Komodo.",
+        "basis": "historical_card_description",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": "Shell",
+        "historical_card_language": "Shell",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "observed",
+        "configs": [
+          {
+            "path": "renovate.json",
+            "extends": [
+              "local>basher83/renovate-config",
+              "local>basher83/renovate-config//presets/ansible.json"
+            ],
+            "local_overrides": {},
+            "evidence": "https://github.com/basher83/hello-komodo/blob/c4351c44c3425d124a5f8b38602a08c837190fbb/renovate.json"
+          }
+        ],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [
+          {
+            "path": ".github/workflows/use-sync-labels.yml",
+            "name": "Use Sync Labels Workflow",
+            "triggers": {
+              "schedule": [
+                {
+                  "cron": "0 0 * * 1"
+                }
+              ],
+              "workflow_dispatch": null
+            },
+            "jobs": [
+              {
+                "id": "sync-labels",
+                "uses": "basher83/.github/.github/workflows/sync-labels.yml@1a67b5ba025b532fa01e883c50398753249a728c"
+              }
+            ],
+            "evidence": "https://github.com/basher83/hello-komodo/blob/c4351c44c3425d124a5f8b38602a08c837190fbb/.github/workflows/use-sync-labels.yml"
+          }
+        ],
+        "pr_workflow_declarations": false,
+        "shared_workflow_references": [
+          {
+            "caller": ".github/workflows/use-sync-labels.yml",
+            "job": "sync-labels",
+            "reference": "basher83/.github/.github/workflows/sync-labels.yml@1a67b5ba025b532fa01e883c50398753249a728c",
+            "evidence": "https://github.com/basher83/hello-komodo/blob/c4351c44c3425d124a5f8b38602a08c837190fbb/.github/workflows/use-sync-labels.yml",
+            "scope": "central"
+          }
+        ],
+        "actionlint_references": [
+          {
+            "path": ".mise.toml",
+            "evidence": "https://github.com/basher83/hello-komodo/blob/c4351c44c3425d124a5f8b38602a08c837190fbb/.mise.toml"
+          }
+        ],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:07.166930+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/hello-komodo/rules/branches/main",
+          "https://api.github.com/repos/basher83/hello-komodo/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/Hercules-Power-Templates",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:07.349093+00:00",
+        "evidence": "https://api.github.com/repos/basher83/Hercules-Power-Templates"
+      },
+      "observation": {
+        "revision": "fa7169a82fb4087c4b75d41c159757a97ee5aa1d",
+        "observed_at": "2026-10-09T20:15:07.349093+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/Hercules-Power-Templates/tree/fa7169a82fb4087c4b75d41c159757a97ee5aa1d"
+      },
+      "purpose": {
+        "text": "Bash scripts that create Proxmox VM templates.",
+        "basis": "historical_card_description",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": "Shell",
+        "historical_card_language": "Shell",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "observed",
+        "configs": [
+          {
+            "path": "renovate.json",
+            "extends": [
+              "local>basher83/renovate-config"
+            ],
+            "local_overrides": {},
+            "evidence": "https://github.com/basher83/Hercules-Power-Templates/blob/fa7169a82fb4087c4b75d41c159757a97ee5aa1d/renovate.json"
+          }
+        ],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [],
+        "pr_workflow_declarations": false,
+        "shared_workflow_references": [],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:07.349093+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/Hercules-Power-Templates/rules/branches/main",
+          "https://api.github.com/repos/basher83/Hercules-Power-Templates/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/lunar-claude",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:07.956856+00:00",
+        "evidence": "https://api.github.com/repos/basher83/lunar-claude"
+      },
+      "observation": {
+        "revision": "e81cabf81e7c58eb90b2dc656c8bc15d4a23227b",
+        "observed_at": "2026-10-09T20:15:07.956856+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/lunar-claude/tree/e81cabf81e7c58eb90b2dc656c8bc15d4a23227b"
+      },
+      "purpose": {
+        "text": "Personal Claude Code configuration.",
+        "basis": "historical_card_description",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": "Python",
+        "historical_card_language": "Python",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "observed",
+        "configs": [
+          {
+            "path": "renovate.json",
+            "extends": [
+              "local>basher83/renovate-config"
+            ],
+            "local_overrides": {},
+            "evidence": "https://github.com/basher83/lunar-claude/blob/e81cabf81e7c58eb90b2dc656c8bc15d4a23227b/renovate.json"
+          }
+        ],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [
+          {
+            "path": ".github/workflows/ci.yml",
+            "name": "ci",
+            "triggers": {
+              "workflow_dispatch": null,
+              "pull_request": null,
+              "push": {
+                "tags": [
+                  "*"
+                ],
+                "branches": [
+                  "main"
+                ]
+              }
+            },
+            "jobs": [
+              {
+                "id": "ci",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/lunar-claude/blob/e81cabf81e7c58eb90b2dc656c8bc15d4a23227b/.github/workflows/ci.yml"
+          },
+          {
+            "path": ".github/workflows/pr-check.yml",
+            "name": "PR Check",
+            "triggers": {
+              "pull_request": {
+                "branches": [
+                  "main"
+                ]
+              },
+              "push": {
+                "branches": [
+                  "main"
+                ]
+              }
+            },
+            "jobs": [
+              {
+                "id": "ci",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/lunar-claude/blob/e81cabf81e7c58eb90b2dc656c8bc15d4a23227b/.github/workflows/pr-check.yml"
+          },
+          {
+            "path": ".github/workflows/release.yml",
+            "name": "Release",
+            "triggers": {
+              "push": {
+                "tags": [
+                  "v*"
+                ]
+              }
+            },
+            "jobs": [
+              {
+                "id": "validate",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "release",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/lunar-claude/blob/e81cabf81e7c58eb90b2dc656c8bc15d4a23227b/.github/workflows/release.yml"
+          }
+        ],
+        "pr_workflow_declarations": true,
+        "shared_workflow_references": [],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:07.956856+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/lunar-claude/rules/branches/main",
+          "https://api.github.com/repos/basher83/lunar-claude/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/lunar-research",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:07.882245+00:00",
+        "evidence": "https://api.github.com/repos/basher83/lunar-research"
+      },
+      "observation": {
+        "revision": "c6462a8052c46eb1086b35f91bec14a9f34d5fe0",
+        "observed_at": "2026-10-09T20:15:07.882245+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/lunar-research/tree/c6462a8052c46eb1086b35f91bec14a9f34d5fe0"
+      },
+      "purpose": {
+        "text": "Claude Code plugin for multi-agent research with a synthesizer agent.",
+        "basis": "historical_card_description",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": "Shell",
+        "historical_card_language": "Shell",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "absent",
+        "configs": [],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [],
+        "pr_workflow_declarations": false,
+        "shared_workflow_references": [],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:07.882245+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/lunar-research/rules/branches/main",
+          "https://api.github.com/repos/basher83/lunar-research/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/mothership-gitops",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:07.951224+00:00",
+        "evidence": "https://api.github.com/repos/basher83/mothership-gitops"
+      },
+      "observation": {
+        "revision": "17055573c0a03cb799b52c7e10d429d92358ee4b",
+        "observed_at": "2026-10-09T20:15:07.951224+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/mothership-gitops/tree/17055573c0a03cb799b52c7e10d429d92358ee4b"
+      },
+      "purpose": {
+        "text": "GitOps manifests for the talos-prod-01 Kubernetes cluster.",
+        "basis": "historical_card_description",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": "TypeScript",
+        "historical_card_language": "TypeScript",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "observed",
+        "configs": [
+          {
+            "path": "renovate.json",
+            "extends": [
+              "local>basher83/renovate-config",
+              "local>basher83/renovate-config//presets/kubernetes.json"
+            ],
+            "local_overrides": {
+              "argocd": {
+                "managerFilePatterns": [
+                  "/^apps/.*\\.ya?ml$/"
+                ]
+              },
+              "packageRules": [
+                {
+                  "description": "Auto-merge ArgoCD-managed chart patch updates (PR merge)",
+                  "matchManagers": [
+                    "argocd"
+                  ],
+                  "matchUpdateTypes": [
+                    "patch"
+                  ],
+                  "automerge": true
+                },
+                {
+                  "description": "Radar chart: require manual review at every update level",
+                  "matchManagers": [
+                    "argocd"
+                  ],
+                  "matchPackageNames": [
+                    "radar"
+                  ],
+                  "automerge": false
+                },
+                {
+                  "description": "Group ArgoCD-managed chart minor updates for Monday review",
+                  "matchManagers": [
+                    "argocd"
+                  ],
+                  "matchUpdateTypes": [
+                    "minor"
+                  ],
+                  "groupName": "ArgoCD Charts (Minor)",
+                  "schedule": [
+                    "before 5am on Monday"
+                  ]
+                },
+                {
+                  "description": "Require approval for ArgoCD-managed chart major updates",
+                  "matchManagers": [
+                    "argocd"
+                  ],
+                  "matchUpdateTypes": [
+                    "major"
+                  ],
+                  "dependencyDashboardApproval": true
+                },
+                {
+                  "description": "Substrate charts (storage, secrets): no automerge at any level",
+                  "matchManagers": [
+                    "argocd"
+                  ],
+                  "matchPackageNames": [
+                    "longhorn",
+                    "external-secrets"
+                  ],
+                  "automerge": false
+                },
+                {
+                  "description": "Label ArgoCD chart PRs",
+                  "matchManagers": [
+                    "argocd"
+                  ],
+                  "addLabels": [
+                    "kubernetes",
+                    "infrastructure"
+                  ]
+                }
+              ]
+            },
+            "evidence": "https://github.com/basher83/mothership-gitops/blob/17055573c0a03cb799b52c7e10d429d92358ee4b/renovate.json"
+          }
+        ],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [
+          {
+            "path": ".github/workflows/fast-gate.yml",
+            "name": "Fast Gate",
+            "triggers": {
+              "pull_request": null,
+              "push": {
+                "branches": [
+                  "main",
+                  "renovate/**"
+                ]
+              }
+            },
+            "jobs": [
+              {
+                "id": "fast-gate",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/mothership-gitops/blob/17055573c0a03cb799b52c7e10d429d92358ee4b/.github/workflows/fast-gate.yml"
+          }
+        ],
+        "pr_workflow_declarations": true,
+        "shared_workflow_references": [],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:07.951224+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/mothership-gitops/rules/branches/main",
+          "https://api.github.com/repos/basher83/mothership-gitops/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/omni-infra-provider-proxmox",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:08.996630+00:00",
+        "evidence": "https://api.github.com/repos/basher83/omni-infra-provider-proxmox"
+      },
+      "observation": {
+        "revision": "fd21629a87da0af2657613b137301c374d7c87d7",
+        "observed_at": "2026-10-09T20:15:08.996630+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/omni-infra-provider-proxmox/tree/fd21629a87da0af2657613b137301c374d7c87d7"
+      },
+      "purpose": {
+        "text": "Proxmox infrastructure provider for Sidero Omni.",
+        "basis": "historical_card_description",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": "Go",
+        "historical_card_language": "Go",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": true,
+      "renovate": {
+        "state": "observed",
+        "configs": [
+          {
+            "path": ".github/renovate.json",
+            "extends": [
+              ":dependencyDashboard",
+              ":gitSignOff",
+              ":semanticCommitScopeDisabled",
+              "schedule:earlyMondays"
+            ],
+            "local_overrides": {
+              "prHeader": "Update Request | Renovate Bot",
+              "packageRules": [
+                {
+                  "groupName": "dependencies",
+                  "matchUpdateTypes": [
+                    "major",
+                    "minor",
+                    "patch",
+                    "pin",
+                    "digest"
+                  ]
+                },
+                {
+                  "enabled": false,
+                  "matchFileNames": [
+                    "Dockerfile"
+                  ]
+                },
+                {
+                  "enabled": false,
+                  "matchFileNames": [
+                    ".github/workflows/*.yaml"
+                  ]
+                }
+              ],
+              "separateMajorMinor": false,
+              "draftPR": true
+            },
+            "evidence": "https://github.com/basher83/omni-infra-provider-proxmox/blob/fd21629a87da0af2657613b137301c374d7c87d7/.github/renovate.json"
+          }
+        ],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [
+          {
+            "path": ".github/workflows/ci.yaml",
+            "name": "default",
+            "triggers": {
+              "push": {
+                "branches": [
+                  "main",
+                  "release-*"
+                ],
+                "tags": [
+                  "v*"
+                ]
+              },
+              "pull_request": {
+                "branches": [
+                  "main",
+                  "release-*"
+                ]
+              }
+            },
+            "jobs": [
+              {
+                "id": "default",
+                "if": "(!startsWith(github.head_ref, 'renovate/') && !startsWith(github.head_ref, 'dependabot/'))",
+                "runs-on": {
+                  "group": "large"
+                }
+              },
+              {
+                "id": "integration-test",
+                "if": "github.event_name == 'pull_request'",
+                "runs-on": {
+                  "group": "large"
+                }
+              },
+              {
+                "id": "integration-test-ha",
+                "if": "github.event_name == 'pull_request'",
+                "runs-on": {
+                  "group": "large"
+                }
+              },
+              {
+                "id": "lint",
+                "if": "github.event_name == 'pull_request'",
+                "runs-on": {
+                  "group": "generic"
+                }
+              },
+              {
+                "id": "unit-tests",
+                "if": "github.event_name == 'pull_request'",
+                "runs-on": {
+                  "group": "generic"
+                }
+              }
+            ],
+            "evidence": "https://github.com/basher83/omni-infra-provider-proxmox/blob/fd21629a87da0af2657613b137301c374d7c87d7/.github/workflows/ci.yaml"
+          },
+          {
+            "path": ".github/workflows/lock.yml",
+            "name": "Lock old issues",
+            "triggers": {
+              "schedule": [
+                {
+                  "cron": "0 2 * * *"
+                }
+              ]
+            },
+            "jobs": [
+              {
+                "id": "action",
+                "runs-on": [
+                  "ubuntu-latest"
+                ]
+              }
+            ],
+            "evidence": "https://github.com/basher83/omni-infra-provider-proxmox/blob/fd21629a87da0af2657613b137301c374d7c87d7/.github/workflows/lock.yml"
+          },
+          {
+            "path": ".github/workflows/slack-notify-ci-failure.yaml",
+            "name": "slack-notify-failure",
+            "triggers": {
+              "workflow_run": {
+                "workflows": [
+                  "default"
+                ],
+                "types": [
+                  "completed"
+                ],
+                "branches": [
+                  "main"
+                ]
+              }
+            },
+            "jobs": [
+              {
+                "id": "slack-notify",
+                "if": "github.event.workflow_run.conclusion == 'failure' && github.event.workflow_run.event != 'pull_request'",
+                "runs-on": {
+                  "group": "generic"
+                }
+              }
+            ],
+            "evidence": "https://github.com/basher83/omni-infra-provider-proxmox/blob/fd21629a87da0af2657613b137301c374d7c87d7/.github/workflows/slack-notify-ci-failure.yaml"
+          },
+          {
+            "path": ".github/workflows/slack-notify.yaml",
+            "name": "slack-notify",
+            "triggers": {
+              "workflow_run": {
+                "workflows": [
+                  "default"
+                ],
+                "types": [
+                  "completed"
+                ]
+              }
+            },
+            "jobs": [
+              {
+                "id": "slack-notify",
+                "if": "github.event.workflow_run.conclusion != 'skipped'",
+                "runs-on": {
+                  "group": "generic"
+                }
+              }
+            ],
+            "evidence": "https://github.com/basher83/omni-infra-provider-proxmox/blob/fd21629a87da0af2657613b137301c374d7c87d7/.github/workflows/slack-notify.yaml"
+          },
+          {
+            "path": ".github/workflows/stale.yml",
+            "name": "Close stale issues and PRs",
+            "triggers": {
+              "schedule": [
+                {
+                  "cron": "30 1 * * *"
+                }
+              ]
+            },
+            "jobs": [
+              {
+                "id": "stale",
+                "runs-on": [
+                  "ubuntu-latest"
+                ]
+              }
+            ],
+            "evidence": "https://github.com/basher83/omni-infra-provider-proxmox/blob/fd21629a87da0af2657613b137301c374d7c87d7/.github/workflows/stale.yml"
+          }
+        ],
+        "pr_workflow_declarations": true,
+        "shared_workflow_references": [],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:08.996630+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/omni-infra-provider-proxmox/rules/branches/main",
+          "https://api.github.com/repos/basher83/omni-infra-provider-proxmox/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/Omni-Scale",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:09.198924+00:00",
+        "evidence": "https://api.github.com/repos/basher83/Omni-Scale"
+      },
+      "observation": {
+        "revision": "d16352a1117824e4ab6604e6b1132ff3375279e2",
+        "observed_at": "2026-10-09T20:15:09.198924+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/Omni-Scale/tree/d16352a1117824e4ab6604e6b1132ff3375279e2"
+      },
+      "purpose": {
+        "text": "Deploys Sidero Omni (Kubernetes management) behind Tailscale with Auth0 login.",
+        "basis": "historical_card_description",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": "Shell",
+        "historical_card_language": "Shell",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "observed",
+        "configs": [
+          {
+            "path": "renovate.json",
+            "extends": [
+              "local>basher83/renovate-config",
+              "local>basher83/renovate-config//presets/kubernetes.json"
+            ],
+            "local_overrides": {
+              "customManagers": [
+                {
+                  "customType": "regex",
+                  "description": "Update Talos version in cluster configs (nested talos.version format)",
+                  "managerFilePatterns": [
+                    "/clusters/.+\\.ya?ml$/"
+                  ],
+                  "matchStrings": [
+                    "talos:\\s*\\n\\s*version:\\s*['\"]?(?<currentValue>v[\\d.]+)['\"]?"
+                  ],
+                  "depNameTemplate": "siderolabs/talos",
+                  "datasourceTemplate": "github-releases"
+                },
+                {
+                  "customType": "regex",
+                  "description": "Update Kubernetes version in cluster configs (nested kubernetes.version format)",
+                  "managerFilePatterns": [
+                    "/clusters/.+\\.ya?ml$/"
+                  ],
+                  "matchStrings": [
+                    "kubernetes:\\s*\\n\\s*version:\\s*['\"]?(?<currentValue>v[\\d.]+)['\"]?"
+                  ],
+                  "depNameTemplate": "kubernetes/kubernetes",
+                  "datasourceTemplate": "github-releases"
+                }
+              ]
+            },
+            "evidence": "https://github.com/basher83/Omni-Scale/blob/d16352a1117824e4ab6604e6b1132ff3375279e2/renovate.json"
+          }
+        ],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [
+          {
+            "path": ".github/workflows/ci.yml",
+            "name": "CI",
+            "triggers": {
+              "push": {
+                "branches": [
+                  "main"
+                ]
+              },
+              "pull_request": null
+            },
+            "jobs": [
+              {
+                "id": "validate",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/Omni-Scale/blob/d16352a1117824e4ab6604e6b1132ff3375279e2/.github/workflows/ci.yml"
+          }
+        ],
+        "pr_workflow_declarations": true,
+        "shared_workflow_references": [],
+        "actionlint_references": [
+          {
+            "path": ".github/workflows/ci.yml",
+            "evidence": "https://github.com/basher83/Omni-Scale/blob/d16352a1117824e4ab6604e6b1132ff3375279e2/.github/workflows/ci.yml"
+          },
+          {
+            "path": ".pre-commit-config.yaml",
+            "evidence": "https://github.com/basher83/Omni-Scale/blob/d16352a1117824e4ab6604e6b1132ff3375279e2/.pre-commit-config.yaml"
+          },
+          {
+            "path": "mise.toml",
+            "evidence": "https://github.com/basher83/Omni-Scale/blob/d16352a1117824e4ab6604e6b1132ff3375279e2/mise.toml"
+          }
+        ],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:09.198924+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/Omni-Scale/rules/branches/main",
+          "https://api.github.com/repos/basher83/Omni-Scale/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/Proxmox-OpenAPI",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:09.148533+00:00",
+        "evidence": "https://api.github.com/repos/basher83/Proxmox-OpenAPI"
+      },
+      "observation": {
+        "revision": "f758f63588f9aaedd2f67fc8c346a7f6c8acb53c",
+        "observed_at": "2026-10-09T20:15:09.148533+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/Proxmox-OpenAPI/tree/f758f63588f9aaedd2f67fc8c346a7f6c8acb53c"
+      },
+      "purpose": {
+        "text": "OpenAPI specs for Proxmox VE and Proxmox Backup Server.",
+        "basis": "historical_card_description",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": "JavaScript",
+        "historical_card_language": "JavaScript",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": true,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "observed",
+        "configs": [
+          {
+            "path": "renovate.json",
+            "extends": [
+              "local>basher83/renovate-config",
+              "local>basher83/renovate-config//presets/python.json"
+            ],
+            "local_overrides": {},
+            "evidence": "https://github.com/basher83/Proxmox-OpenAPI/blob/f758f63588f9aaedd2f67fc8c346a7f6c8acb53c/renovate.json"
+          }
+        ],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [
+          {
+            "path": ".github/workflows/release.yml",
+            "name": "Release",
+            "triggers": {
+              "push": {
+                "tags": [
+                  "v*.*.*"
+                ]
+              }
+            },
+            "jobs": [
+              {
+                "id": "release",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/Proxmox-OpenAPI/blob/f758f63588f9aaedd2f67fc8c346a7f6c8acb53c/.github/workflows/release.yml"
+          },
+          {
+            "path": ".github/workflows/update-api-specs-parallel.yml",
+            "name": "Update API Specs (Parallel)",
+            "triggers": {
+              "workflow_dispatch": {
+                "inputs": {
+                  "create_pr": {
+                    "description": "Create PR for changes",
+                    "required": false,
+                    "default": true,
+                    "type": "boolean"
+                  }
+                }
+              }
+            },
+            "jobs": [
+              {
+                "id": "update-specs",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "create-pr",
+                "if": "github.event.inputs.create_pr == 'true' && (needs.update-specs.outputs.pve_changed == 'true' || needs.update-specs.outputs.pbs_changed == 'true')",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/Proxmox-OpenAPI/blob/f758f63588f9aaedd2f67fc8c346a7f6c8acb53c/.github/workflows/update-api-specs-parallel.yml"
+          },
+          {
+            "path": ".github/workflows/update-api-specs.yml",
+            "name": "Update Proxmox API Specifications",
+            "triggers": {
+              "schedule": [
+                {
+                  "cron": "0 2 * * 0"
+                }
+              ],
+              "workflow_dispatch": {
+                "inputs": {
+                  "api_type": {
+                    "description": "API type to update",
+                    "required": true,
+                    "default": "both",
+                    "type": "choice",
+                    "options": [
+                      "both",
+                      "pve",
+                      "pbs"
+                    ]
+                  },
+                  "create_pr": {
+                    "description": "Create PR for changes",
+                    "required": false,
+                    "default": true,
+                    "type": "boolean"
+                  }
+                }
+              }
+            },
+            "jobs": [
+              {
+                "id": "update-pve-specs",
+                "if": "${{ github.event.inputs.api_type == 'both' || github.event.inputs.api_type == 'pve' || github.event_name == 'schedule' }}",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "update-pbs-specs",
+                "if": "${{ github.event.inputs.api_type == 'both' || github.event.inputs.api_type == 'pbs' || github.event_name == 'schedule' }}",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "create-pr",
+                "if": "always() && (needs.update-pve-specs.result == 'success' || needs.update-pbs-specs.result == 'success')",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "notify-completion",
+                "if": "always()",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/Proxmox-OpenAPI/blob/f758f63588f9aaedd2f67fc8c346a7f6c8acb53c/.github/workflows/update-api-specs.yml"
+          },
+          {
+            "path": ".github/workflows/use-sync-labels.yml",
+            "name": "Use Sync Labels Workflow",
+            "triggers": {
+              "workflow_dispatch": null
+            },
+            "jobs": [
+              {
+                "id": "sync-labels",
+                "uses": "basher83/.github/.github/workflows/sync-labels.yml@9f26f1a7c1de5470dac16daa0f38085dc8975fb2"
+              }
+            ],
+            "evidence": "https://github.com/basher83/Proxmox-OpenAPI/blob/f758f63588f9aaedd2f67fc8c346a7f6c8acb53c/.github/workflows/use-sync-labels.yml"
+          }
+        ],
+        "pr_workflow_declarations": false,
+        "shared_workflow_references": [
+          {
+            "caller": ".github/workflows/use-sync-labels.yml",
+            "job": "sync-labels",
+            "reference": "basher83/.github/.github/workflows/sync-labels.yml@9f26f1a7c1de5470dac16daa0f38085dc8975fb2",
+            "evidence": "https://github.com/basher83/Proxmox-OpenAPI/blob/f758f63588f9aaedd2f67fc8c346a7f6c8acb53c/.github/workflows/use-sync-labels.yml",
+            "scope": "central"
+          }
+        ],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:09.148533+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/Proxmox-OpenAPI/rules/branches/main",
+          "https://api.github.com/repos/basher83/Proxmox-OpenAPI/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/ProxmoxMCP",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:09.533127+00:00",
+        "evidence": "https://api.github.com/repos/basher83/ProxmoxMCP"
+      },
+      "observation": {
+        "revision": "88dca772663e465a7c4e5d8806641f74243e9328",
+        "observed_at": "2026-10-09T20:15:09.533127+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/ProxmoxMCP/tree/88dca772663e465a7c4e5d8806641f74243e9328"
+      },
+      "purpose": {
+        "text": "MCP server for Proxmox.",
+        "basis": "historical_card_description",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": "Python",
+        "historical_card_language": "Python",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": true,
+        "development_status": null
+      },
+      "fork": true,
+      "renovate": {
+        "state": "absent",
+        "configs": [],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [
+          {
+            "path": ".github/workflows/auto-add-to-project.yml",
+            "name": "Auto-add to Project",
+            "triggers": {
+              "issues": {
+                "types": [
+                  "opened"
+                ]
+              },
+              "pull_request": {
+                "types": [
+                  "opened"
+                ]
+              }
+            },
+            "jobs": [
+              {
+                "id": "add-to-project",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/ProxmoxMCP/blob/88dca772663e465a7c4e5d8806641f74243e9328/.github/workflows/auto-add-to-project.yml"
+          },
+          {
+            "path": ".github/workflows/autofix.yml",
+            "name": "autofix.ci",
+            "triggers": {
+              "pull_request": null,
+              "push": {
+                "branches": [
+                  "main"
+                ]
+              }
+            },
+            "jobs": [
+              {
+                "id": "autofix",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/ProxmoxMCP/blob/88dca772663e465a7c4e5d8806641f74243e9328/.github/workflows/autofix.yml"
+          },
+          {
+            "path": ".github/workflows/claude-auto-review.yml",
+            "name": "Claude Auto Review",
+            "triggers": {
+              "workflow_dispatch": null
+            },
+            "jobs": [
+              {
+                "id": "auto-review",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "quality-checks",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/ProxmoxMCP/blob/88dca772663e465a7c4e5d8806641f74243e9328/.github/workflows/claude-auto-review.yml"
+          },
+          {
+            "path": ".github/workflows/claude-issue-assignment.yml",
+            "name": "Claude Code Issue Assignment",
+            "triggers": {
+              "workflow_dispatch": null
+            },
+            "jobs": [
+              {
+                "id": "claude-issue-handler",
+                "if": "contains(github.event.issue.assignees.*.login, 'claude-code-bot') || contains(github.event.issue.labels.*.name, 'claude-code')",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/ProxmoxMCP/blob/88dca772663e465a7c4e5d8806641f74243e9328/.github/workflows/claude-issue-assignment.yml"
+          },
+          {
+            "path": ".github/workflows/markdown-lint.yml",
+            "name": "📝 Markdown Linting",
+            "triggers": {
+              "push": {
+                "branches": [
+                  "main",
+                  "develop"
+                ],
+                "paths": [
+                  "**.md"
+                ]
+              },
+              "pull_request": {
+                "branches": [
+                  "main",
+                  "develop"
+                ],
+                "paths": [
+                  "**.md"
+                ]
+              },
+              "workflow_dispatch": null
+            },
+            "jobs": [
+              {
+                "id": "markdown-lint",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "markdown-autofix",
+                "if": "github.event_name == 'pull_request'",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "markdown-summary",
+                "if": "always()",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/ProxmoxMCP/blob/88dca772663e465a7c4e5d8806641f74243e9328/.github/workflows/markdown-lint.yml"
+          },
+          {
+            "path": ".github/workflows/yaml-lint.yml",
+            "name": "YAML Linting",
+            "triggers": {
+              "pull_request": {
+                "paths": [
+                  "**.yml",
+                  "**.yaml",
+                  ".yamllint.yml",
+                  "scripts/yaml-lint.sh"
+                ]
+              },
+              "push": {
+                "branches": [
+                  "main"
+                ],
+                "paths": [
+                  "**.yml",
+                  "**.yaml",
+                  ".yamllint.yml",
+                  "scripts/yaml-lint.sh"
+                ]
+              }
+            },
+            "jobs": [
+              {
+                "id": "yaml-lint",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/ProxmoxMCP/blob/88dca772663e465a7c4e5d8806641f74243e9328/.github/workflows/yaml-lint.yml"
+          }
+        ],
+        "pr_workflow_declarations": true,
+        "shared_workflow_references": [],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:09.533127+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/ProxmoxMCP/rules/branches/main",
+          "https://api.github.com/repos/basher83/ProxmoxMCP/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/ProxSyncBox",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:10.069179+00:00",
+        "evidence": "https://api.github.com/repos/basher83/ProxSyncBox"
+      },
+      "observation": {
+        "revision": "672cad1e046a5752ca023d4139824bcd6f0a9e0e",
+        "observed_at": "2026-10-09T20:15:10.069179+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/ProxSyncBox/tree/672cad1e046a5752ca023d4139824bcd6f0a9e0e"
+      },
+      "purpose": {
+        "text": "Desktop app that syncs Proxmox VMs, containers, and nodes into NetBox.",
+        "basis": "historical_card_description",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": "Python",
+        "historical_card_language": "Python",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": true,
+      "renovate": {
+        "state": "absent",
+        "configs": [],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [
+          {
+            "path": ".github/workflows/autofix.yml",
+            "name": "autofix.ci",
+            "triggers": {
+              "pull_request": null,
+              "push": {
+                "branches": [
+                  "main"
+                ]
+              }
+            },
+            "jobs": [
+              {
+                "id": "autofix",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/ProxSyncBox/blob/672cad1e046a5752ca023d4139824bcd6f0a9e0e/.github/workflows/autofix.yml"
+          },
+          {
+            "path": ".github/workflows/ci.yml",
+            "name": "CI",
+            "triggers": {
+              "push": {
+                "branches": [
+                  "main",
+                  "develop"
+                ]
+              },
+              "pull_request": {
+                "branches": [
+                  "main"
+                ]
+              },
+              "workflow_dispatch": null
+            },
+            "jobs": [
+              {
+                "id": "lint",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "test",
+                "runs-on": "${{ matrix.os }}"
+              },
+              {
+                "id": "security",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "build",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/ProxSyncBox/blob/672cad1e046a5752ca023d4139824bcd6f0a9e0e/.github/workflows/ci.yml"
+          }
+        ],
+        "pr_workflow_declarations": true,
+        "shared_workflow_references": [],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:10.069179+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/ProxSyncBox/rules/branches/main",
+          "https://api.github.com/repos/basher83/ProxSyncBox/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/radiant-filament",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:10.795660+00:00",
+        "evidence": "https://api.github.com/repos/basher83/radiant-filament"
+      },
+      "observation": {
+        "revision": "8f6adcef97ce291e8db10585f43552b5a1eda499",
+        "observed_at": "2026-10-09T20:15:10.795660+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/radiant-filament/tree/8f6adcef97ce291e8db10585f43552b5a1eda499"
+      },
+      "purpose": {
+        "text": "CLI tool for Google Gemini Deep Research.",
+        "basis": "inferred_from_readme_or_name",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": "Python",
+        "historical_card_language": "Python",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "observed",
+        "configs": [
+          {
+            "path": "renovate.json",
+            "extends": [
+              "local>basher83/renovate-config"
+            ],
+            "local_overrides": {},
+            "evidence": "https://github.com/basher83/radiant-filament/blob/8f6adcef97ce291e8db10585f43552b5a1eda499/renovate.json"
+          }
+        ],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [
+          {
+            "path": ".github/workflows/copilot-setup-steps.yml",
+            "name": "Copilot Setup Steps",
+            "triggers": {
+              "workflow_dispatch": null,
+              "push": {
+                "paths": [
+                  ".github/workflows/copilot-setup-steps.yml"
+                ]
+              },
+              "pull_request": {
+                "paths": [
+                  ".github/workflows/copilot-setup-steps.yml"
+                ]
+              }
+            },
+            "jobs": [
+              {
+                "id": "copilot-setup-steps",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/radiant-filament/blob/8f6adcef97ce291e8db10585f43552b5a1eda499/.github/workflows/copilot-setup-steps.yml"
+          },
+          {
+            "path": ".github/workflows/use-python-mise-fast-pr-gate.yml",
+            "name": "Python Mise PR Gate",
+            "triggers": {
+              "workflow_dispatch": null,
+              "pull_request": {
+                "branches": [
+                  "main"
+                ]
+              },
+              "push": {
+                "branches": [
+                  "main"
+                ]
+              }
+            },
+            "jobs": [
+              {
+                "id": "fast-pr-gate",
+                "uses": "basher83/.github/.github/workflows/python-mise-fast-pr-gate.yml@9f26f1a7c1de5470dac16daa0f38085dc8975fb2"
+              }
+            ],
+            "evidence": "https://github.com/basher83/radiant-filament/blob/8f6adcef97ce291e8db10585f43552b5a1eda499/.github/workflows/use-python-mise-fast-pr-gate.yml"
+          }
+        ],
+        "pr_workflow_declarations": true,
+        "shared_workflow_references": [
+          {
+            "caller": ".github/workflows/use-python-mise-fast-pr-gate.yml",
+            "job": "fast-pr-gate",
+            "reference": "basher83/.github/.github/workflows/python-mise-fast-pr-gate.yml@9f26f1a7c1de5470dac16daa0f38085dc8975fb2",
+            "evidence": "https://github.com/basher83/radiant-filament/blob/8f6adcef97ce291e8db10585f43552b5a1eda499/.github/workflows/use-python-mise-fast-pr-gate.yml",
+            "scope": "central"
+          }
+        ],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:10.795660+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/radiant-filament/rules/branches/main",
+          "https://api.github.com/repos/basher83/radiant-filament/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/renovate-config",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:11.447590+00:00",
+        "evidence": "https://api.github.com/repos/basher83/renovate-config"
+      },
+      "observation": {
+        "revision": "09d32da0cbd806816725c369e77b4a3d79b6eea4",
+        "observed_at": "2026-10-09T20:15:11.447590+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/renovate-config/tree/09d32da0cbd806816725c369e77b4a3d79b6eea4"
+      },
+      "purpose": {
+        "text": "Personal Renovate dependency-update presets.",
+        "basis": "historical_card_description",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": "Python",
+        "historical_card_language": "TypeScript",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "observed",
+        "configs": [
+          {
+            "path": "renovate.json",
+            "extends": [
+              "local>basher83/renovate-config"
+            ],
+            "local_overrides": {},
+            "evidence": "https://github.com/basher83/renovate-config/blob/09d32da0cbd806816725c369e77b4a3d79b6eea4/renovate.json"
+          }
+        ],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [
+          {
+            "path": ".github/workflows/ci.yml",
+            "name": "CI",
+            "triggers": {
+              "pull_request": null,
+              "push": {
+                "branches": [
+                  "main"
+                ]
+              }
+            },
+            "jobs": [
+              {
+                "id": "validate",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/renovate-config/blob/09d32da0cbd806816725c369e77b4a3d79b6eea4/.github/workflows/ci.yml"
+          }
+        ],
+        "pr_workflow_declarations": true,
+        "shared_workflow_references": [],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:11.447590+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/renovate-config/rules/branches/main",
+          "https://api.github.com/repos/basher83/renovate-config/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/Sombrero-Edge-Control",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:11.549805+00:00",
+        "evidence": "https://api.github.com/repos/basher83/Sombrero-Edge-Control"
+      },
+      "observation": {
+        "revision": "f270d1c06ffa8a6a86fd11f1527d31906faa8f77",
+        "observed_at": "2026-10-09T20:15:11.549805+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/Sombrero-Edge-Control/tree/f270d1c06ffa8a6a86fd11f1527d31906faa8f77"
+      },
+      "purpose": {
+        "text": "Terraform for the IaC control-node VM.",
+        "basis": "historical_card_description",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": "Shell",
+        "historical_card_language": "Shell",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "observed",
+        "configs": [
+          {
+            "path": "renovate.json",
+            "extends": [
+              "config:recommended",
+              ":semanticCommits",
+              ":dependencyDashboard",
+              "schedule:earlyMondays"
+            ],
+            "local_overrides": {
+              "timezone": "UTC",
+              "prConcurrentLimit": 3,
+              "prCreation": "not-pending",
+              "packageRules": [
+                {
+                  "description": "Auto-merge Terraform provider patches",
+                  "matchManagers": [
+                    "terraform"
+                  ],
+                  "matchUpdateTypes": [
+                    "patch"
+                  ],
+                  "automerge": true,
+                  "automergeType": "pr"
+                },
+                {
+                  "description": "Group Ansible collection updates",
+                  "matchManagers": [
+                    "ansible",
+                    "ansible-galaxy"
+                  ],
+                  "groupName": "ansible-collections",
+                  "groupSlug": "ansible"
+                },
+                {
+                  "description": "Pin infrastructure tools for stability",
+                  "matchManagers": [
+                    "mise"
+                  ],
+                  "matchPackageNames": [
+                    "terraform",
+                    "packer",
+                    "ansible-core"
+                  ],
+                  "rangeStrategy": "pin"
+                },
+                {
+                  "description": "Auto-merge GitHub Actions patches and minor updates",
+                  "matchManagers": [
+                    "github-actions"
+                  ],
+                  "matchUpdateTypes": [
+                    "patch",
+                    "minor"
+                  ],
+                  "automerge": true,
+                  "automergeType": "pr"
+                },
+                {
+                  "description": "Require approval for major Terraform updates",
+                  "matchPackagePatterns": [
+                    "terraform"
+                  ],
+                  "matchUpdateTypes": [
+                    "major"
+                  ],
+                  "dependencyDashboardApproval": true
+                },
+                {
+                  "description": "Group all GitHub Actions updates",
+                  "matchManagers": [
+                    "github-actions"
+                  ],
+                  "groupName": "github-actions",
+                  "groupSlug": "actions"
+                },
+                {
+                  "description": "Group Python dependencies",
+                  "matchManagers": [
+                    "pip_requirements"
+                  ],
+                  "groupName": "python-dependencies"
+                },
+                {
+                  "description": "Require approval for Proxmox provider major updates",
+                  "matchDatasources": [
+                    "terraform-provider"
+                  ],
+                  "matchPackageNames": [
+                    "bpg/proxmox"
+                  ],
+                  "matchUpdateTypes": [
+                    "major"
+                  ],
+                  "dependencyDashboardApproval": true
+                }
+              ],
+              "regexManagers": [
+                {
+                  "description": "Update mise tool versions",
+                  "fileMatch": [
+                    "\\.mise\\.toml$"
+                  ],
+                  "matchStrings": [
+                    "^(?<depName>terraform)\\s*=\\s*\"(?<currentValue>[^\"]+)\"",
+                    "^(?<depName>packer)\\s*=\\s*\"(?<currentValue>[^\"]+)\"",
+                    "^(?<depName>ansible-core)\\s*=\\s*\"(?<currentValue>[^\"]+)\""
+                  ],
+                  "datasourceTemplate": "github-releases",
+                  "lookupNameTemplate": "{{#if (equals depName \"terraform\")}}hashicorp/terraform{{/if}}{{#if (equals depName \"packer\")}}hashicorp/packer{{/if}}{{#if (equals depName \"ansible-core\")}}ansible/ansible{{/if}}"
+                },
+                {
+                  "description": "Update Packer plugin versions",
+                  "fileMatch": [
+                    "packer/.*\\.pkr\\.hcl$"
+                  ],
+                  "matchStrings": [
+                    "source\\s*=\\s*\"github\\.com/(?<depName>[^\"]+)\"\\s*\\n\\s*version\\s*=\\s*\"(?<currentValue>[^\"]+)\""
+                  ],
+                  "datasourceTemplate": "github-releases"
+                }
+              ],
+              "customManagers": [
+                {
+                  "customType": "regex",
+                  "description": "Update Ansible Galaxy requirements",
+                  "fileMatch": [
+                    "ansible/requirements\\.yml$"
+                  ],
+                  "matchStrings": [
+                    "- name:\\s+(?<depName>[^\\n]+)\\s+version:\\s+\"(?<currentValue>[^\"]+)\""
+                  ],
+                  "datasourceTemplate": "galaxy-collection",
+                  "versioningTemplate": "semver"
+                }
+              ],
+              "commitMessagePrefix": "chore(deps):",
+              "commitMessageAction": "update",
+              "commitMessageTopic": "{{depName}}",
+              "commitMessageExtra": "to {{newVersion}}",
+              "labels": [
+                "dependencies",
+                "renovate"
+              ],
+              "vulnerabilityAlerts": {
+                "enabled": true,
+                "labels": [
+                  "security"
+                ]
+              }
+            },
+            "evidence": "https://github.com/basher83/Sombrero-Edge-Control/blob/f270d1c06ffa8a6a86fd11f1527d31906faa8f77/renovate.json"
+          }
+        ],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [
+          {
+            "path": ".github/workflows/ci.yml",
+            "name": "CI",
+            "triggers": {
+              "workflow_dispatch": null,
+              "push": {
+                "branches": [
+                  "main",
+                  "develop"
+                ]
+              },
+              "pull_request": {
+                "branches": [
+                  "main"
+                ]
+              },
+              "schedule": [
+                {
+                  "cron": "0 9 * * 1"
+                }
+              ]
+            },
+            "jobs": [
+              {
+                "id": "terraform-format",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "terraform-validate",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "tflint",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "terraform-docs",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "yaml-lint",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "shellcheck",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "markdown-lint",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "secret-scan",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "kics-scan",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "test-summary",
+                "if": "github.event_name != 'schedule'",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/Sombrero-Edge-Control/blob/f270d1c06ffa8a6a86fd11f1527d31906faa8f77/.github/workflows/ci.yml"
+          },
+          {
+            "path": ".github/workflows/documentation.yml",
+            "name": "Generate terraform docs",
+            "triggers": {
+              "pull_request": null
+            },
+            "jobs": [
+              {
+                "id": "docs",
+                "if": "${{ !startsWith(github.actor, 'renovate') }}",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/Sombrero-Edge-Control/blob/f270d1c06ffa8a6a86fd11f1527d31906faa8f77/.github/workflows/documentation.yml"
+          },
+          {
+            "path": ".github/workflows/mega-linter.yml",
+            "name": "MegaLinter",
+            "triggers": {
+              "push": null,
+              "pull_request": {
+                "branches": [
+                  "main",
+                  "master"
+                ]
+              }
+            },
+            "jobs": [
+              {
+                "id": "megalinter",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/Sombrero-Edge-Control/blob/f270d1c06ffa8a6a86fd11f1527d31906faa8f77/.github/workflows/mega-linter.yml"
+          },
+          {
+            "path": ".github/workflows/use-sync-labels.yml",
+            "name": "Use Sync Labels Workflow",
+            "triggers": {
+              "schedule": [
+                {
+                  "cron": "0 0 * * 1"
+                }
+              ],
+              "workflow_dispatch": null
+            },
+            "jobs": [
+              {
+                "id": "sync-labels",
+                "uses": "basher83/.github/.github/workflows/sync-labels.yml@7332a946a16984232bc2a5225882ec3f8d7de670"
+              }
+            ],
+            "evidence": "https://github.com/basher83/Sombrero-Edge-Control/blob/f270d1c06ffa8a6a86fd11f1527d31906faa8f77/.github/workflows/use-sync-labels.yml"
+          }
+        ],
+        "pr_workflow_declarations": true,
+        "shared_workflow_references": [
+          {
+            "caller": ".github/workflows/use-sync-labels.yml",
+            "job": "sync-labels",
+            "reference": "basher83/.github/.github/workflows/sync-labels.yml@7332a946a16984232bc2a5225882ec3f8d7de670",
+            "evidence": "https://github.com/basher83/Sombrero-Edge-Control/blob/f270d1c06ffa8a6a86fd11f1527d31906faa8f77/.github/workflows/use-sync-labels.yml",
+            "scope": "central"
+          }
+        ],
+        "actionlint_references": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "evidence": "https://github.com/basher83/Sombrero-Edge-Control/blob/f270d1c06ffa8a6a86fd11f1527d31906faa8f77/.pre-commit-config.yaml"
+          }
+        ],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:11.549805+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/Sombrero-Edge-Control/rules/branches/main",
+          "https://api.github.com/repos/basher83/Sombrero-Edge-Control/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/Supernova-MicroK8s-Infra",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:11.648146+00:00",
+        "evidence": "https://api.github.com/repos/basher83/Supernova-MicroK8s-Infra"
+      },
+      "observation": {
+        "revision": "68e15d0d058f923fb0d9cd1804a39027c4e7bf0c",
+        "observed_at": "2026-10-09T20:15:11.648146+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/Supernova-MicroK8s-Infra/tree/68e15d0d058f923fb0d9cd1804a39027c4e7bf0c"
+      },
+      "purpose": {
+        "text": "Terraform and Ansible for a MicroK8s cluster.",
+        "basis": "historical_card_description",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": "HCL",
+        "historical_card_language": "HCL",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "observed",
+        "configs": [
+          {
+            "path": "renovate.json",
+            "extends": [
+              "local>basher83/renovate-config",
+              "local>basher83/renovate-config//presets/python.json",
+              "local>basher83/renovate-config//presets/ansible.json",
+              "local>basher83/renovate-config//presets/terraform-tofu.json",
+              "local>basher83/renovate-config//presets/github-actions-security.json"
+            ],
+            "local_overrides": {},
+            "evidence": "https://github.com/basher83/Supernova-MicroK8s-Infra/blob/68e15d0d058f923fb0d9cd1804a39027c4e7bf0c/renovate.json"
+          }
+        ],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [
+          {
+            "path": ".github/workflows/documentation.yml",
+            "name": "Generate terraform docs",
+            "triggers": {
+              "pull_request": null
+            },
+            "jobs": [
+              {
+                "id": "docs",
+                "if": "${{ !startsWith(github.actor, 'renovate') }}",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/Supernova-MicroK8s-Infra/blob/68e15d0d058f923fb0d9cd1804a39027c4e7bf0c/.github/workflows/documentation.yml"
+          },
+          {
+            "path": ".github/workflows/use-sync-labels.yml",
+            "name": "Use Sync Labels Workflow",
+            "triggers": {
+              "schedule": [
+                {
+                  "cron": "0 0 * * 1"
+                }
+              ],
+              "workflow_dispatch": null
+            },
+            "jobs": [
+              {
+                "id": "sync-labels",
+                "uses": "basher83/.github/.github/workflows/sync-labels.yml@fc1339252d074236baa7f64352c4459e1a3dd107"
+              }
+            ],
+            "evidence": "https://github.com/basher83/Supernova-MicroK8s-Infra/blob/68e15d0d058f923fb0d9cd1804a39027c4e7bf0c/.github/workflows/use-sync-labels.yml"
+          }
+        ],
+        "pr_workflow_declarations": true,
+        "shared_workflow_references": [
+          {
+            "caller": ".github/workflows/use-sync-labels.yml",
+            "job": "sync-labels",
+            "reference": "basher83/.github/.github/workflows/sync-labels.yml@fc1339252d074236baa7f64352c4459e1a3dd107",
+            "evidence": "https://github.com/basher83/Supernova-MicroK8s-Infra/blob/68e15d0d058f923fb0d9cd1804a39027c4e7bf0c/.github/workflows/use-sync-labels.yml",
+            "scope": "central"
+          }
+        ],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:11.648146+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/Supernova-MicroK8s-Infra/rules/branches/main",
+          "https://api.github.com/repos/basher83/Supernova-MicroK8s-Infra/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/tailnet-microservices",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:12.069585+00:00",
+        "evidence": "https://api.github.com/repos/basher83/tailnet-microservices"
+      },
+      "observation": {
+        "revision": "21a80eec18610f15134baae757a2fcfc87f1859d",
+        "observed_at": "2026-10-09T20:15:12.069585+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/tailnet-microservices/tree/21a80eec18610f15134baae757a2fcfc87f1859d"
+      },
+      "purpose": {
+        "text": "Single-binary Rust services with built-in Tailscale networking.",
+        "basis": "historical_card_description",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": "Rust",
+        "historical_card_language": "Rust",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "observed",
+        "configs": [
+          {
+            "path": "renovate.json",
+            "extends": [
+              "local>basher83/renovate-config",
+              "local>basher83/renovate-config//presets/rust.json"
+            ],
+            "local_overrides": {},
+            "evidence": "https://github.com/basher83/tailnet-microservices/blob/21a80eec18610f15134baae757a2fcfc87f1859d/renovate.json"
+          }
+        ],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [
+          {
+            "path": ".github/workflows/ci.yml",
+            "name": "CI",
+            "triggers": {
+              "push": {
+                "branches": [
+                  "main"
+                ],
+                "tags": [
+                  "v*"
+                ],
+                "paths-ignore": [
+                  "**.md",
+                  "LICENSE",
+                  "specs/**",
+                  "renovate.json",
+                  ".gitignore",
+                  "loop.sh",
+                  "*.example.toml",
+                  "k8s/**",
+                  ".github/workflows/manifests.yml"
+                ]
+              },
+              "pull_request": {
+                "branches": [
+                  "main"
+                ],
+                "paths-ignore": [
+                  "**.md",
+                  "LICENSE",
+                  "specs/**",
+                  "renovate.json",
+                  ".gitignore",
+                  "loop.sh",
+                  "*.example.toml",
+                  "k8s/**",
+                  ".github/workflows/manifests.yml"
+                ]
+              }
+            },
+            "jobs": [
+              {
+                "id": "lint",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "audit",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "test",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "build",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "docker",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "deploy",
+                "if": "github.event_name == 'push' && github.ref == 'refs/heads/main'",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/tailnet-microservices/blob/21a80eec18610f15134baae757a2fcfc87f1859d/.github/workflows/ci.yml"
+          },
+          {
+            "path": ".github/workflows/manifests.yml",
+            "name": "Kubernetes Manifests",
+            "triggers": {
+              "push": {
+                "branches": [
+                  "main"
+                ],
+                "paths": [
+                  "k8s/**",
+                  "mise.toml",
+                  ".github/workflows/manifests.yml"
+                ]
+              },
+              "pull_request": {
+                "branches": [
+                  "main"
+                ],
+                "paths": [
+                  "k8s/**",
+                  "mise.toml",
+                  ".github/workflows/manifests.yml"
+                ]
+              }
+            },
+            "jobs": [
+              {
+                "id": "validate",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/tailnet-microservices/blob/21a80eec18610f15134baae757a2fcfc87f1859d/.github/workflows/manifests.yml"
+          }
+        ],
+        "pr_workflow_declarations": true,
+        "shared_workflow_references": [],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:12.069585+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/tailnet-microservices/rules/branches/main",
+          "https://api.github.com/repos/basher83/tailnet-microservices/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/the-agent-toolshed",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:12.261399+00:00",
+        "evidence": "https://api.github.com/repos/basher83/the-agent-toolshed"
+      },
+      "observation": {
+        "revision": "980d3df31cc4a9f30a267e9bb224375d98ad7cfe",
+        "observed_at": "2026-10-09T20:15:12.261399+00:00",
+        "default_branch": "entire/checkpoints/v1",
+        "evidence": "https://github.com/basher83/the-agent-toolshed/tree/980d3df31cc4a9f30a267e9bb224375d98ad7cfe"
+      },
+      "purpose": {
+        "text": "Tools, prompts, and experiments for agentic workflows (3I workshop).",
+        "basis": "historical_card_description",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": null,
+        "historical_card_language": null,
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "unknown",
+        "configs": [],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated.",
+        "reason": "Recursive tree query at the observed revision returned HTTP 404; file absence could not be established."
+      },
+      "ci": {
+        "state": "unknown",
+        "workflows": [],
+        "pr_workflow_declarations": null,
+        "shared_workflow_references": [],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null,
+        "reason": "Recursive tree query at the observed revision returned HTTP 404; file absence could not be established."
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:12.261399+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/the-agent-toolshed/rules/branches/entire%2Fcheckpoints%2Fv1",
+          "https://api.github.com/repos/basher83/the-agent-toolshed/branches/entire%2Fcheckpoints%2Fv1/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed.",
+        "Recursive tree query at the observed revision returned HTTP 404; file absence could not be established."
+      ]
+    },
+    {
+      "repository": "basher83/Triangulum-Prime",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:13.075637+00:00",
+        "evidence": "https://api.github.com/repos/basher83/Triangulum-Prime"
+      },
+      "observation": {
+        "revision": "32c06140ca203fa8bfa73204b50c7144dfa82a16",
+        "observed_at": "2026-10-09T20:15:13.075637+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/Triangulum-Prime/tree/32c06140ca203fa8bfa73204b50c7144dfa82a16"
+      },
+      "purpose": {
+        "text": "Main homelab Terraform repo, integrated with Scalr.",
+        "basis": "historical_card_description",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": "HCL",
+        "historical_card_language": "HCL",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "observed",
+        "configs": [
+          {
+            "path": "renovate.json",
+            "extends": [
+              "local>basher83/renovate-config",
+              "local>basher83/renovate-config//presets/terraform-tofu.json",
+              "local>basher83/renovate-config//presets/github-actions-security.json"
+            ],
+            "local_overrides": {},
+            "evidence": "https://github.com/basher83/Triangulum-Prime/blob/32c06140ca203fa8bfa73204b50c7144dfa82a16/renovate.json"
+          }
+        ],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [],
+        "pr_workflow_declarations": false,
+        "shared_workflow_references": [],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:13.075637+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/Triangulum-Prime/rules/branches/main",
+          "https://api.github.com/repos/basher83/Triangulum-Prime/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/Virgo-Core",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:13.939682+00:00",
+        "evidence": "https://api.github.com/repos/basher83/Virgo-Core"
+      },
+      "observation": {
+        "revision": "635a51ec8f1578dbbb9caac59eaf79d2c61a1b88",
+        "observed_at": "2026-10-09T20:15:13.939682+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/Virgo-Core/tree/635a51ec8f1578dbbb9caac59eaf79d2c61a1b88"
+      },
+      "purpose": {
+        "text": "Integration of Proxmox, NetBox, and PowerDNS.",
+        "basis": "historical_card_description",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": "HCL",
+        "historical_card_language": "HCL",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "observed",
+        "configs": [
+          {
+            "path": "renovate.json",
+            "extends": [
+              "local>basher83/renovate-config",
+              "local>basher83/renovate-config//presets/python.json",
+              "local>basher83/renovate-config//presets/ansible.json",
+              "local>basher83/renovate-config//presets/terraform-tofu.json"
+            ],
+            "local_overrides": {},
+            "evidence": "https://github.com/basher83/Virgo-Core/blob/635a51ec8f1578dbbb9caac59eaf79d2c61a1b88/renovate.json"
+          }
+        ],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [
+          {
+            "path": ".github/workflows/use-sync-labels.yml",
+            "name": "Use Sync Labels Workflow",
+            "triggers": {
+              "schedule": [
+                {
+                  "cron": "0 0 * * 1"
+                }
+              ],
+              "workflow_dispatch": null
+            },
+            "jobs": [
+              {
+                "id": "sync-labels",
+                "uses": "basher83/.github/.github/workflows/sync-labels.yml@91d659ec9b5212af8b130d0c29f8d985c5e3f459"
+              }
+            ],
+            "evidence": "https://github.com/basher83/Virgo-Core/blob/635a51ec8f1578dbbb9caac59eaf79d2c61a1b88/.github/workflows/use-sync-labels.yml"
+          },
+          {
+            "path": ".github/workflows/validate.yml",
+            "name": "Validate",
+            "triggers": {
+              "push": {
+                "branches": [
+                  "main"
+                ]
+              },
+              "pull_request": {
+                "branches": [
+                  "main"
+                ]
+              }
+            },
+            "jobs": [
+              {
+                "id": "validate",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/Virgo-Core/blob/635a51ec8f1578dbbb9caac59eaf79d2c61a1b88/.github/workflows/validate.yml"
+          }
+        ],
+        "pr_workflow_declarations": true,
+        "shared_workflow_references": [
+          {
+            "caller": ".github/workflows/use-sync-labels.yml",
+            "job": "sync-labels",
+            "reference": "basher83/.github/.github/workflows/sync-labels.yml@91d659ec9b5212af8b130d0c29f8d985c5e3f459",
+            "evidence": "https://github.com/basher83/Virgo-Core/blob/635a51ec8f1578dbbb9caac59eaf79d2c61a1b88/.github/workflows/use-sync-labels.yml",
+            "scope": "central"
+          }
+        ],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-09T20:15:13.939682+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/Virgo-Core/rules/branches/main",
+          "https://api.github.com/repos/basher83/Virgo-Core/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    },
+    {
+      "repository": "basher83/Zammad-MCP",
+      "visibility": {
+        "value": "public",
+        "observed_at": "2026-10-09T20:15:13.383096+00:00",
+        "evidence": "https://api.github.com/repos/basher83/Zammad-MCP"
+      },
+      "observation": {
+        "revision": "0553fb3e27e181e14091d65b8094601c66ee44d8",
+        "observed_at": "2026-10-09T20:15:13.383096+00:00",
+        "default_branch": "main",
+        "evidence": "https://github.com/basher83/Zammad-MCP/tree/0553fb3e27e181e14091d65b8094601c66ee44d8"
+      },
+      "purpose": {
+        "text": "MCP server letting AI assistants work with Zammad tickets, users, and orgs.",
+        "basis": "historical_card_description",
+        "observed_date": "2026-10-06",
+        "source": "card"
+      },
+      "stack": {
+        "primary_language": "Python",
+        "historical_card_language": "Python",
+        "frameworks": null
+      },
+      "lifecycle": {
+        "archived": false,
+        "development_status": null
+      },
+      "fork": false,
+      "renovate": {
+        "state": "observed",
+        "configs": [
+          {
+            "path": "renovate.json",
+            "extends": [
+              "local>basher83/renovate-config",
+              "local>basher83/renovate-config//presets/python-mcp.json",
+              "local>basher83/renovate-config//presets/github-actions-security.json",
+              "local>basher83/renovate-config//presets/docker.json"
+            ],
+            "local_overrides": {
+              "labels": [
+                "dependencies",
+                "renovate"
+              ],
+              "assignees": [
+                "basher83"
+              ],
+              "commitMessagePrefix": "chore(deps):",
+              "packageRules": [
+                {
+                  "description": "Keep Python pinned below 3.14 until MCP SDK v1.x officially supports it",
+                  "matchDepNames": [
+                    "python"
+                  ],
+                  "allowedVersions": "<3.14"
+                },
+                {
+                  "description": "Update the uv pins in mise.toml and the uv-pre-commit hook in one PR (scripts/validate.sh fails when they differ)",
+                  "matchDepNames": [
+                    "uv",
+                    "astral-sh/uv-pre-commit"
+                  ],
+                  "groupName": "uv version pins"
+                },
+                {
+                  "description": "Require approval for FastMCP major updates; they move together with the MCP SDK major (#353)",
+                  "matchPackageNames": [
+                    "fastmcp"
+                  ],
+                  "matchUpdateTypes": [
+                    "major"
+                  ],
+                  "dependencyDashboardApproval": true
+                },
+                {
+                  "description": "Require approval for major Zammad API updates",
+                  "matchPackageNames": [
+                    "zammad-py"
+                  ],
+                  "matchUpdateTypes": [
+                    "major"
+                  ],
+                  "dependencyDashboardApproval": true
+                }
+              ]
+            },
+            "evidence": "https://github.com/basher83/Zammad-MCP/blob/0553fb3e27e181e14091d65b8094601c66ee44d8/renovate.json"
+          }
+        ],
+        "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
+      },
+      "ci": {
+        "state": "observed",
+        "workflows": [
+          {
+            "path": ".github/workflows/docker-publish.yml",
+            "name": "Build and Publish Docker Image",
+            "triggers": {
+              "push": {
+                "branches": [
+                  "main"
+                ],
+                "tags": [
+                  "v*"
+                ]
+              },
+              "pull_request": {
+                "branches": [
+                  "main"
+                ]
+              },
+              "workflow_dispatch": null
+            },
+            "jobs": [
+              {
+                "id": "build-and-push",
+                "if": "github.repository == 'basher83/Zammad-MCP'",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/Zammad-MCP/blob/0553fb3e27e181e14091d65b8094601c66ee44d8/.github/workflows/docker-publish.yml"
+          },
+          {
+            "path": ".github/workflows/security-scan.yml",
+            "name": "Security Scan",
+            "triggers": {
+              "push": {
+                "branches": [
+                  "main"
+                ]
+              },
+              "pull_request": {
+                "branches": [
+                  "main"
+                ]
+              },
+              "schedule": [
+                {
+                  "cron": "0 9 * * 1"
+                }
+              ],
+              "workflow_dispatch": null
+            },
+            "jobs": [
+              {
+                "id": "security-scan",
+                "if": "github.repository == 'basher83/Zammad-MCP'",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/Zammad-MCP/blob/0553fb3e27e181e14091d65b8094601c66ee44d8/.github/workflows/security-scan.yml"
+          },
+          {
+            "path": ".github/workflows/tests.yml",
+            "name": "Tests and Coverage",
+            "triggers": {
+              "push": {
+                "branches": [
+                  "main"
+                ]
+              },
+              "pull_request": {
+                "branches": [
+                  "main"
+                ]
+              },
+              "workflow_dispatch": null
+            },
+            "jobs": [
+              {
+                "id": "validate",
+                "if": "github.repository == 'basher83/Zammad-MCP'",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "tests",
+                "if": "github.repository == 'basher83/Zammad-MCP'",
+                "runs-on": "ubuntu-latest"
+              },
+              {
+                "id": "test-and-coverage",
+                "if": "always()",
+                "runs-on": "ubuntu-latest"
+              }
+            ],
+            "evidence": "https://github.com/basher83/Zammad-MCP/blob/0553fb3e27e181e14091d65b8094601c66ee44d8/.github/workflows/tests.yml"
+          }
+        ],
+        "pr_workflow_declarations": true,
+        "shared_workflow_references": [],
+        "actionlint_references": [],
+        "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
+        "runtime_result": null
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [
+          "security-scan",
+          "test-and-coverage"
+        ],
+        "observed_at": "2026-10-09T20:15:13.383096+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/Zammad-MCP/rules/branches/main",
+          "https://api.github.com/repos/basher83/Zammad-MCP/branches/main/protection"
+        ],
+        "scope": "Default branch only; effective active rules plus classic branch protection. Bypasses and merge queues are not evaluated."
+      },
+      "unknowns": [
+        "Frameworks/dependencies beyond GitHub primary language were not surveyed.",
+        "Development stage/maintenance commitment is unknown; archived is a GitHub flag.",
+        "Workflow declarations are not evidence of successful execution or full PR coverage.",
+        "Effective Renovate policy after inherited preset resolution and platform/app settings is not evaluated.",
+        "Approved adoption exceptions were not surveyed."
+      ]
+    }
+  ],
+  "proposals": [
+    {
+      "repository": "basher83/.github-private",
+      "type": "adoption_candidate",
+      "proposal": "Review whether a project-appropriate PR gate or central fast gate would help; no migration selected.",
+      "basis": "No pull_request or pull_request_target declaration in observed default-branch workflows.",
+      "evidence": "https://github.com/basher83/.github-private/tree/3cc883c20a1207a9ad041e7766275a6e9abc2752"
+    },
+    {
+      "repository": "basher83/.github",
+      "type": "tooling_candidate",
+      "proposal": "Review actionlint references for migration to jactionlint; tool substitution has not been approved or tested.",
+      "basis": "Scoped text-reference survey and .github issue #100.",
+      "evidence": "https://github.com/basher83/.github/blob/961d24505b80e09f8af8a65c64a756729504a787/mise.toml"
+    },
+    {
+      "repository": "basher83/arscontexta-1",
+      "type": "adoption_candidate",
+      "proposal": "Review whether a project-appropriate PR gate or central fast gate would help; no migration selected.",
+      "basis": "No pull_request or pull_request_target declaration in observed default-branch workflows.",
+      "evidence": "https://github.com/basher83/arscontexta-1/tree/ea36fa4dd03407ad1a22addc996f304ccee6221a"
+    },
+    {
+      "repository": "basher83/assets",
+      "type": "adoption_candidate",
+      "proposal": "Review whether a project-appropriate PR gate or central fast gate would help; no migration selected.",
+      "basis": "No pull_request or pull_request_target declaration in observed default-branch workflows.",
+      "evidence": "https://github.com/basher83/assets/tree/3342e50f1d4d9f4ae93f79d75a334f08a347162f"
+    },
+    {
+      "repository": "basher83/basher83",
+      "type": "adoption_candidate",
+      "proposal": "Review whether a project-appropriate PR gate or central fast gate would help; no migration selected.",
+      "basis": "No pull_request or pull_request_target declaration in observed default-branch workflows.",
+      "evidence": "https://github.com/basher83/basher83/tree/754bc09c33992740714ba1811dd5233b5f41ecc7"
+    },
+    {
+      "repository": "basher83/claw-code",
+      "type": "adoption_candidate",
+      "proposal": "Review whether a project-appropriate PR gate or central fast gate would help; no migration selected.",
+      "basis": "No pull_request or pull_request_target declaration in observed default-branch workflows.",
+      "evidence": "https://github.com/basher83/claw-code/tree/6816f71d35193c2113b4c41c4240da0fa37c79ed"
+    },
+    {
+      "repository": "basher83/domain-chassis",
+      "type": "adoption_candidate",
+      "proposal": "Review whether a project-appropriate PR gate or central fast gate would help; no migration selected.",
+      "basis": "No pull_request or pull_request_target declaration in observed default-branch workflows.",
+      "evidence": "https://github.com/basher83/domain-chassis/tree/7b495e556b9844b36a7c54e91173a2fd86ae7dc9"
+    },
+    {
+      "repository": "basher83/dotfiles",
+      "type": "adoption_candidate",
+      "proposal": "Review whether a project-appropriate PR gate or central fast gate would help; no migration selected.",
+      "basis": "No pull_request or pull_request_target declaration in observed default-branch workflows.",
+      "evidence": "https://github.com/basher83/dotfiles/tree/1e2900ca49d9f11b0d3544889f5c78f8628b5f3f"
+    },
+    {
+      "repository": "basher83/github-actions",
+      "type": "adoption_candidate",
+      "proposal": "Review whether a project-appropriate PR gate or central fast gate would help; no migration selected.",
+      "basis": "No pull_request or pull_request_target declaration in observed default-branch workflows.",
+      "evidence": "https://github.com/basher83/github-actions/tree/a682c62e42090d438a7424e49296a1f31e1dba77"
+    },
+    {
+      "repository": "basher83/hello-komodo",
+      "type": "adoption_candidate",
+      "proposal": "Review whether a project-appropriate PR gate or central fast gate would help; no migration selected.",
+      "basis": "No pull_request or pull_request_target declaration in observed default-branch workflows.",
+      "evidence": "https://github.com/basher83/hello-komodo/tree/c4351c44c3425d124a5f8b38602a08c837190fbb"
+    },
+    {
+      "repository": "basher83/hello-komodo",
+      "type": "tooling_candidate",
+      "proposal": "Review actionlint references for migration to jactionlint; tool substitution has not been approved or tested.",
+      "basis": "Scoped text-reference survey and .github issue #100.",
+      "evidence": "https://github.com/basher83/hello-komodo/blob/c4351c44c3425d124a5f8b38602a08c837190fbb/.mise.toml"
+    },
+    {
+      "repository": "basher83/Hercules-Power-Templates",
+      "type": "adoption_candidate",
+      "proposal": "Review whether a project-appropriate PR gate or central fast gate would help; no migration selected.",
+      "basis": "No pull_request or pull_request_target declaration in observed default-branch workflows.",
+      "evidence": "https://github.com/basher83/Hercules-Power-Templates/tree/fa7169a82fb4087c4b75d41c159757a97ee5aa1d"
+    },
+    {
+      "repository": "basher83/lunar-research",
+      "type": "adoption_candidate",
+      "proposal": "Review whether a project-appropriate PR gate or central fast gate would help; no migration selected.",
+      "basis": "No pull_request or pull_request_target declaration in observed default-branch workflows.",
+      "evidence": "https://github.com/basher83/lunar-research/tree/c6462a8052c46eb1086b35f91bec14a9f34d5fe0"
+    },
+    {
+      "repository": "basher83/Omni-Scale",
+      "type": "tooling_candidate",
+      "proposal": "Review actionlint references for migration to jactionlint; tool substitution has not been approved or tested.",
+      "basis": "Scoped text-reference survey and .github issue #100.",
+      "evidence": "https://github.com/basher83/Omni-Scale/blob/d16352a1117824e4ab6604e6b1132ff3375279e2/.github/workflows/ci.yml"
+    },
+    {
+      "repository": "basher83/Sombrero-Edge-Control",
+      "type": "tooling_candidate",
+      "proposal": "Review actionlint references for migration to jactionlint; tool substitution has not been approved or tested.",
+      "basis": "Scoped text-reference survey and .github issue #100.",
+      "evidence": "https://github.com/basher83/Sombrero-Edge-Control/blob/f270d1c06ffa8a6a86fd11f1527d31906faa8f77/.pre-commit-config.yaml"
+    },
+    {
+      "repository": "basher83/Triangulum-Prime",
+      "type": "adoption_candidate",
+      "proposal": "Review whether a project-appropriate PR gate or central fast gate would help; no migration selected.",
+      "basis": "No pull_request or pull_request_target declaration in observed default-branch workflows.",
+      "evidence": "https://github.com/basher83/Triangulum-Prime/tree/32c06140ca203fa8bfa73204b50c7144dfa82a16"
+    },
+    {
+      "repository": "basher83/.github",
+      "type": "shared_workflow_upkeep",
+      "proposal": "Review checkout v4 and mise-action v3 pins in python-mise-fast-pr-gate.yml; update compatibility and action digests in a separate PR if selected.",
+      "basis": "Current shared workflow source contains the older major pins noted in issue #100.",
+      "evidence": "https://github.com/basher83/.github/tree/961d24505b80e09f8af8a65c64a756729504a787"
+    }
+  ],
+  "adoption_exceptions": null
+}
