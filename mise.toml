@@ -8,7 +8,7 @@ description = "Generate changelog from git commits"
 run = "git-cliff -o CHANGELOG.md"
 
 [tasks.ci]
-description = "Lint workflows and validate the public inventory and generated overview"
+description = "Lint workflows and validate the repository inventory and generated overview"
 run = [
   "actionlint .github/workflows/*.yml .github/use-workflows/*.yml .github/workflow-templates/*.yml",
   "python3 portfolio/inventory.py --check",

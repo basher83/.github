@@ -10,10 +10,28 @@ import unittest
 import inventory
 
 
+def private_sample():
+    data = sample()
+    original = data['repositories'][0]
+    repo = {key: copy.deepcopy(original[key]) for key in ('repository', 'visibility', 'observation', 'required_checks')}
+    repo['visibility']['value'] = 'private'
+    repo['management'] = {
+        'renovate': {'state': 'observed', 'extends': [{'reference': 'local>basher83/renovate-config', 'evidence': 'https://github.com/basher83/example/blob/' + 'a' * 40 + '/renovate.json'}], 'has_local_overrides': True},
+        'workflows': {'state': 'observed', 'pr_workflow_declarations': True, 'shared_workflow_references': [{'reference': 'basher83/.github/.github/workflows/python-mise-fast-pr-gate.yml@main', 'evidence': 'https://github.com/basher83/example/blob/' + 'a' * 40 + '/.github/workflows/ci.yml'}], 'declared_check_names': ['lint']},
+        'tools': {'state': 'observed', 'versions': [{'tool': 'python', 'version': '3.13.16', 'evidence': 'https://github.com/basher83/example/blob/' + 'a' * 40 + '/mise.toml'}]},
+    }
+    repo['required_checks']['reason'] = 'query_failed_or_value_withheld'
+    repo['required_checks']['observed_at'] = original['visibility']['observed_at']
+    repo['unknowns'] = ['runtime_unknown']
+    data['repositories'] = [repo]
+    data['scope'].update(public_count=0, private_count=1)
+    return data
+
+
 def sample():
     return {
-        'schema_version': 1,
-        'scope': {'historical_card_count': 92, 'public_count': 1, 'excluded_count': 91},
+        'schema_version': 2,
+        'scope': {'historical_card_count': 92, 'public_count': 1, 'private_count': 0, 'included_count': 1, 'excluded_count': 91},
         'sources': [{'id': 'card', 'url': 'https://github.com/example/repo', 'observed_date': '2026-10-06'}],
         'repositories': [{
             'repository': 'basher83/example',
@@ -34,11 +52,73 @@ def sample():
 
 
 class InventoryTests(unittest.TestCase):
-    def test_rejects_private_or_unverified_visibility(self):
-        for value in ('private', None, 'unknown'):
+    def test_rejects_unverified_visibility(self):
+        for value in (None, 'unknown'):
             data = sample()
             data['repositories'][0]['visibility']['value'] = value
-            with self.assertRaisesRegex(ValueError, 'public'):
+            with self.assertRaises(ValueError):
+                inventory.validate(data)
+
+    def test_accepts_bounded_private_management_metadata(self):
+        data = private_sample()
+        inventory.validate(data)
+        rendered = inventory.render(data)
+        self.assertIn('private', rendered)
+        self.assertIn('3.13.16', rendered)
+        self.assertIn('python-mise-fast-pr-gate.yml@main', rendered)
+        self.assertIn('publication boundary', rendered.lower())
+
+    def test_rejects_private_source_bodies_and_unrelated_content(self):
+        for key in ('purpose', 'stack', 'application_code', 'architecture', 'logs'):
+            data = private_sample()
+            data['repositories'][0][key] = 'unrelated private material'
+            with self.assertRaises(ValueError):
+                inventory.validate(data)
+        for key in ('run', 'env', 'workflow_body', 'local_overrides', 'registry_url'):
+            data = private_sample()
+            data['repositories'][0]['management']['workflows'][key] = 'private material'
+            with self.assertRaises(ValueError):
+                inventory.validate(data)
+
+    def test_rejects_addresses_secrets_and_ambiguous_tool_values(self):
+        for version in ('https://registry.internal/tool', '10.0.0.1', '${TOKEN}', 'ghp_123secret', '/private/path', 'git@host:tool', '1.0.ghp_sensitive', 'lts/registry.private.company'):
+            data = private_sample()
+            data['repositories'][0]['management']['tools']['versions'][0]['version'] = version
+            with self.assertRaises(ValueError):
+                inventory.validate(data)
+        data = private_sample()
+        data['repositories'][0]['unknowns'] = ['the password is secret']
+        with self.assertRaises(ValueError):
+            inventory.validate(data)
+
+    def test_rejects_private_registry_preset_and_address_check_name(self):
+        data = private_sample()
+        data['repositories'][0]['management']['renovate']['extends'][0]['reference'] = 'registry.private.company'
+        with self.assertRaises(ValueError):
+            inventory.validate(data)
+        data = private_sample()
+        data['repositories'][0]['management']['workflows']['declared_check_names'] = ['registry.private.company']
+        with self.assertRaises(ValueError):
+            inventory.validate(data)
+
+    def test_private_free_text_cannot_bypass_boundary_via_history_or_proposals(self):
+        for section in ('historical_observations', 'proposals'):
+            data = private_sample()
+            data[section] = [{'repository': 'basher83/example', 'fact': 'private source body'}]
+            with self.assertRaises(ValueError):
+                inventory.validate(data)
+
+    def test_private_tool_name_cannot_be_registry_address(self):
+        data = private_sample()
+        data['repositories'][0]['management']['tools']['versions'][0]['tool'] = 'registry.private.company'
+        with self.assertRaises(ValueError):
+            inventory.validate(data)
+
+    def test_private_evidence_must_be_pinned_management_file(self):
+        for path in ('src/application.py', 'manifests/prod.yml', 'mise.toml?secret=xyz'):
+            data = private_sample()
+            data['repositories'][0]['management']['tools']['versions'][0]['evidence'] = 'https://github.com/basher83/example/blob/' + 'a' * 40 + '/' + path
+            with self.assertRaises(ValueError):
                 inventory.validate(data)
 
     def test_requires_visibility_date_and_immutable_revision(self):

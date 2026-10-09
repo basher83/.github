@@ -87,9 +87,10 @@ See our [detailed roadmap](ROADMAP.md) for upcoming features and current progres
 
 *Built with ❤️ to streamline CI/CD across all projects*
 
-## Public repository inventory
+## Repository management inventory
 
-The [public repository inventory](portfolio/README.md) records repository purpose, direct Renovate policy,
+The [repository management inventory](portfolio/README.md) records public repository purpose, direct Renovate policy,
 workflow declarations and required checks with dated evidence and explicit unknowns.
+Private entries expose only the operator-approved shared-management facts; internal contents stay private.
 Its [canonical data](portfolio/repositories.yaml) is shared portfolio context; proposals are kept separate
 from observed configuration.
