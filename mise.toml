@@ -1,6 +1,12 @@
 [tools]
 git-cliff = "2.14.2"
+actionlint = "1.7.12"
+shellcheck = "0.11.0"
 
 [tasks.changelog]
 description = "Generate changelog from git commits"
 run = "git-cliff -o CHANGELOG.md"
+
+[tasks.ci]
+description = "Lint workflows, callers, and templates with actionlint and shellcheck"
+run = "actionlint .github/workflows/*.yml .github/use-workflows/*.yml .github/workflow-templates/*.yml"

@@ -1,0 +1,17 @@
+# Runs this repository's own `mise run ci` through the shared fast gate, so changes to the reusable
+# workflows (including Renovate updates) are linted and the gate itself is exercised before merge.
+name: Fast Gate
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fast-gate:
+    uses: ./.github/workflows/python-mise-fast-pr-gate.yml
