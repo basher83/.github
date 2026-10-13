@@ -7,7 +7,7 @@ Canonical data: [repositories.yaml](repositories.yaml). This YAML file uses JSON
 
 `portfolio/repositories.yaml` is the canonical repository inventory (since 2026-10-13). **Owner:** GitHub steward (automation agent). **Refresh:** GitHub steward opens PRs against portfolio/repositories.yaml using read-only inventory captures. **Freshness:** Weekly check against live GitHub state. [Decision evidence](https://github.com/basher83/.github/pull/101).
 
-The 2026-10-06 card contained 92 entries. Visibility was checked on 2026-10-09 to 2026-10-13; 92 entries are included (34 public, 58 private), with 0 excluded. Central Renovate preset extenders (non-archived basher83): 30 as of 2026-10-12 ([steward-inventory-2026-10-12](https://github.com/basher83/renovate-config/blob/cursor/mise-terraform-preset-fixes-47f1/sources/evaluate/2026-10-12-d017-consumer-inventory.json)). The initial public-only restriction was superseded by the operator-approved publication boundary below.
+The 2026-10-06 card contained 92 entries. Visibility was checked on 2026-10-09 to 2026-10-13; 92 entries are included (34 public, 58 private), with 0 excluded. Central Renovate preset extenders (non-archived basher83): 30 as of 2026-10-12 ([steward-inventory-2026-10-12](https://github.com/basher83/renovate-config/blob/13e6a1a64d869a872d489a8fa19d8b59d362ee37/sources/evaluate/2026-10-12-d017-consumer-inventory.json)). The initial public-only restriction was superseded by the operator-approved publication boundary below.
 
 ## Publication boundary
 
@@ -83,7 +83,7 @@ Dates and revisions below apply to file observations. Check requirements are mut
 
 ### basher83/.github
 
-Observed 2026-10-13T15:30:00+00:00; [revision 2fa56e7f284d](https://github.com/basher83/.github/tree/2fa56e7f284d3bae03087604d6dcdffd719efb0b). [Visibility API](https://api.github.com/repos/basher83/.github).
+Observed 2026-10-13T03:50:37+00:00; [revision 2fa56e7f284d](https://github.com/basher83/.github/tree/2fa56e7f284d3bae03087604d6dcdffd719efb0b). [Visibility API](https://api.github.com/repos/basher83/.github).
 
 - Renovate [renovate.json](https://github.com/basher83/.github/blob/2fa56e7f284d3bae03087604d6dcdffd719efb0b/renovate.json): direct presets `local>basher83/renovate-config`; local override fields none. Full values are in canonical data.
 - Workflow [.github/workflows/fast-gate.yml](https://github.com/basher83/.github/blob/2fa56e7f284d3bae03087604d6dcdffd719efb0b/.github/workflows/fast-gate.yml): `pull_request`, `push`, `workflow_dispatch`. Filters and job conditions are in canonical data.
@@ -289,7 +289,7 @@ Observed 2026-10-09T20:15:07.882245+00:00; [revision c6462a8052c4](https://githu
 
 ### basher83/mothership-gitops
 
-Observed 2026-10-13T15:30:00+00:00; [revision 570542a84d3d](https://github.com/basher83/mothership-gitops/tree/570542a84d3df96f36e2b284d862648bfdfc73c9). [Visibility API](https://api.github.com/repos/basher83/mothership-gitops).
+Observed 2026-10-13T03:50:37+00:00; [revision 570542a84d3d](https://github.com/basher83/mothership-gitops/tree/570542a84d3df96f36e2b284d862648bfdfc73c9). [Visibility API](https://api.github.com/repos/basher83/mothership-gitops).
 
 - Renovate [renovate.json](https://github.com/basher83/mothership-gitops/blob/570542a84d3df96f36e2b284d862648bfdfc73c9/renovate.json): direct presets `local>basher83/renovate-config`, `local>basher83/renovate-config//presets/kubernetes.json`; local override fields `argocd`, `packageRules`. Full values are in canonical data.
 - Workflow [.github/workflows/fast-gate.yml](https://github.com/basher83/mothership-gitops/blob/570542a84d3df96f36e2b284d862648bfdfc73c9/.github/workflows/fast-gate.yml): `pull_request`, `push`. Filters and job conditions are in canonical data.
@@ -362,18 +362,18 @@ Observed 2026-10-09T20:15:10.069179+00:00; [revision 672cad1e046a](https://githu
 
 ### basher83/radiant-filament
 
-Observed 2026-10-13T15:30:00+00:00; [revision c004c57b1396](https://github.com/basher83/radiant-filament/tree/c004c57b13969a0ff53bb72ac6863fd29509751e). [Visibility API](https://api.github.com/repos/basher83/radiant-filament).
+Observed 2026-10-13T03:50:37+00:00; [revision c004c57b1396](https://github.com/basher83/radiant-filament/tree/c004c57b13969a0ff53bb72ac6863fd29509751e). [Visibility API](https://api.github.com/repos/basher83/radiant-filament).
 
 - Renovate [renovate.json](https://github.com/basher83/radiant-filament/blob/c004c57b13969a0ff53bb72ac6863fd29509751e/renovate.json): direct presets `local>basher83/renovate-config`; local override fields none. Full values are in canonical data.
 - Workflow [.github/workflows/copilot-setup-steps.yml](https://github.com/basher83/radiant-filament/blob/c004c57b13969a0ff53bb72ac6863fd29509751e/.github/workflows/copilot-setup-steps.yml): `pull_request`, `push`, `workflow_dispatch`. Filters and job conditions are in canonical data.
 - Workflow [.github/workflows/use-python-mise-fast-pr-gate.yml](https://github.com/basher83/radiant-filament/blob/c004c57b13969a0ff53bb72ac6863fd29509751e/.github/workflows/use-python-mise-fast-pr-gate.yml): `pull_request`, `push`, `workflow_dispatch`. Filters and job conditions are in canonical data.
-- Shared call (central): `basher83/.github/.github/workflows/python-mise-fast-pr-gate.yml@9f26f1a7c1de5470dac16daa0f38085dc8975fb2` from [.github/workflows/use-python-mise-fast-pr-gate.yml, job fast-pr-gate](https://github.com/basher83/radiant-filament/blob/c004c57b13969a0ff53bb72ac6863fd29509751e/.github/workflows/use-python-mise-fast-pr-gate.yml).
+- Shared call (central): `basher83/.github/.github/workflows/python-mise-fast-pr-gate.yml@2fa56e7f284d3bae03087604d6dcdffd719efb0b` from [.github/workflows/use-python-mise-fast-pr-gate.yml, job fast-pr-gate](https://github.com/basher83/radiant-filament/blob/c004c57b13969a0ff53bb72ac6863fd29509751e/.github/workflows/use-python-mise-fast-pr-gate.yml).
 - actionlint references (scoped scan): none observed.
 - Required checks: none. [API evidence 1](https://api.github.com/repos/basher83/radiant-filament/rules/branches/main) [API evidence 2](https://api.github.com/repos/basher83/radiant-filament/branches/main/protection).
 
 ### basher83/renovate-config
 
-Observed 2026-10-13T15:30:00+00:00; [revision bfc28e00db6e](https://github.com/basher83/renovate-config/tree/bfc28e00db6e53bc7ca627d5ba662f9b68a2c570). [Visibility API](https://api.github.com/repos/basher83/renovate-config).
+Observed 2026-10-13T03:50:37+00:00; [revision bfc28e00db6e](https://github.com/basher83/renovate-config/tree/bfc28e00db6e53bc7ca627d5ba662f9b68a2c570). [Visibility API](https://api.github.com/repos/basher83/renovate-config).
 
 - Renovate [renovate.json](https://github.com/basher83/renovate-config/blob/bfc28e00db6e53bc7ca627d5ba662f9b68a2c570/renovate.json): direct presets `local>basher83/renovate-config`; local override fields none. Full values are in canonical data.
 - Workflow [.github/workflows/ci.yml](https://github.com/basher83/renovate-config/blob/bfc28e00db6e53bc7ca627d5ba662f9b68a2c570/.github/workflows/ci.yml): `pull_request`, `push`. Filters and job conditions are in canonical data.
@@ -449,7 +449,7 @@ Observed 2026-10-09T20:15:13.939682+00:00; [revision 635a51ec8f15](https://githu
 
 ### basher83/Zammad-MCP
 
-Observed 2026-10-13T15:30:00+00:00; [revision 28cb731d40c3](https://github.com/basher83/Zammad-MCP/tree/28cb731d40c3359581afb0ce37e7cd20a5431e6b). [Visibility API](https://api.github.com/repos/basher83/Zammad-MCP).
+Observed 2026-10-13T03:50:37+00:00; [revision 28cb731d40c3](https://github.com/basher83/Zammad-MCP/tree/28cb731d40c3359581afb0ce37e7cd20a5431e6b). [Visibility API](https://api.github.com/repos/basher83/Zammad-MCP).
 
 - Renovate [renovate.json](https://github.com/basher83/Zammad-MCP/blob/28cb731d40c3359581afb0ce37e7cd20a5431e6b/renovate.json): direct presets `local>basher83/renovate-config`, `local>basher83/renovate-config//presets/python-mcp.json`, `local>basher83/renovate-config//presets/github-actions-security.json`, `local>basher83/renovate-config//presets/docker.json`; local override fields `assignees`, `commitMessagePrefix`, `labels`, `packageRules`. Full values are in canonical data.
 - Workflow [.github/workflows/docker-publish.yml](https://github.com/basher83/Zammad-MCP/blob/28cb731d40c3359581afb0ce37e7cd20a5431e6b/.github/workflows/docker-publish.yml): `pull_request`, `push`, `workflow_dispatch`. Filters and job conditions are in canonical data.
@@ -928,7 +928,7 @@ Observed 2026-10-09T20:45:51.338769+00:00; [revision 6e5093d627bd](https://githu
 
 ### basher83/personal-computing (private)
 
-Observed 2026-10-13T15:30:00+00:00; [revision e5d60f9a5df9](https://github.com/basher83/personal-computing/tree/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393). [Visibility API](https://api.github.com/repos/basher83/personal-computing).
+Observed 2026-10-13T03:50:37+00:00; [revision e5d60f9a5df9](https://github.com/basher83/personal-computing/tree/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393). [Visibility API](https://api.github.com/repos/basher83/personal-computing).
 
 - Renovate: observed; local overrides present: True. Override contents withheld.
 - Direct preset: `config:best-practices`. [Evidence](https://github.com/basher83/personal-computing/blob/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393/renovate.json).
@@ -1183,7 +1183,7 @@ Observed 2026-10-09T20:45:57.276961+00:00; [revision 60804c4183ea](https://githu
 
 ### basher83/The-Mothership-Homelab (private)
 
-Observed 2026-10-13T15:30:00+00:00; [revision dca49dfee64e](https://github.com/basher83/The-Mothership-Homelab/tree/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41). [Visibility API](https://api.github.com/repos/basher83/The-Mothership-Homelab).
+Observed 2026-10-13T03:50:37+00:00; [revision dca49dfee64e](https://github.com/basher83/The-Mothership-Homelab/tree/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41). [Visibility API](https://api.github.com/repos/basher83/The-Mothership-Homelab).
 
 - Renovate: observed; local overrides present: False. Override contents withheld.
 - Direct preset: `local>basher83/renovate-config`. [Evidence](https://github.com/basher83/The-Mothership-Homelab/blob/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41/renovate.json).
@@ -1193,7 +1193,7 @@ Observed 2026-10-13T15:30:00+00:00; [revision dca49dfee64e](https://github.com/b
 - Direct preset: `local>basher83/renovate-config//presets/docker.json`. [Evidence](https://github.com/basher83/The-Mothership-Homelab/blob/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41/renovate.json).
 - Direct preset: `local>basher83/renovate-config//presets/github-actions-security.json`. [Evidence](https://github.com/basher83/The-Mothership-Homelab/blob/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41/renovate.json).
 - Workflow survey: observed; PR declaration: True.
-- Shared workflow configured: `basher83/.github/.github/workflows/sync-labels.yml@9f26f1a7c1de5470dac16daa0f38085dc8975fb2`. [Evidence](https://github.com/basher83/The-Mothership-Homelab/blob/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41/.github/workflows/use-sync-labels.yml).
+- Shared workflow configured: `basher83/.github/.github/workflows/sync-labels.yml@2fa56e7f284d3bae03087604d6dcdffd719efb0b`. [Evidence](https://github.com/basher83/The-Mothership-Homelab/blob/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41/.github/workflows/use-sync-labels.yml).
 - Declared check names: `ansible-lint`, `dependency-review`, `docker-lint`, `docs-check`, `label`, `lint-scripts`, `stale`, `sync-labels`, `terraform-lint`, `trufflehog`. Job IDs/names only; matrix-expanded/reusable check names are not resolved.
 - Tool version survey: absent.
 - Required checks: none. [API evidence 1](https://api.github.com/repos/basher83/The-Mothership-Homelab/rules/branches/main) [API evidence 2](https://api.github.com/repos/basher83/The-Mothership-Homelab/branches/main/protection).
@@ -1260,11 +1260,11 @@ Observed 2026-10-09T20:45:59.065740+00:00; [revision 17bcdd753780](https://githu
 
 - 2026-10-09, basher83/.github: Earlier PR #127 survey found no declared PR workflow. PR #99 adds fast-gate.yml; current pinned observation has a pull_request trigger. No runtime result is inferred. [Historical source](https://github.com/basher83/renovate-config/blob/09d32da0cbd806816725c369e77b4a3d79b6eea4/research/2026-10-09-automerge-check-gating.md).
 - 2026-10-09, basher83/Zammad-MCP: Hosted canary #394 observed automerge after dashboard approval; #396 merged while a non-required check still ran. These observations do not establish the runtime or gating behavior of other repositories; exact merge path and app check-read permission remain unverified. [Historical source](https://github.com/basher83/renovate-config/blob/09d32da0cbd806816725c369e77b4a3d79b6eea4/research/2026-10-09-automerge-check-gating.md).
-- 2026-10-12, basher83/claw-code: Repository no longer exists on GitHub (404 on owner API); last pinned observation retained. Deletion date and visibility at deletion are not recorded in the steward inventory. [Historical source](https://github.com/basher83/renovate-config/blob/cursor/mise-terraform-preset-fixes-47f1/sources/evaluate/2026-10-12-d017-consumer-inventory.json).
-- 2026-10-12, basher83/arscontexta-1: Repository no longer exists on GitHub (404 on owner API); last pinned observation retained. Deletion date and visibility at deletion are not recorded in the steward inventory. [Historical source](https://github.com/basher83/renovate-config/blob/cursor/mise-terraform-preset-fixes-47f1/sources/evaluate/2026-10-12-d017-consumer-inventory.json).
-- 2026-10-12, basher83/Hallowbranch-Restore: Repository archived on GitHub; absent from steward non-archived inventory. Archived flag verified via public GitHub API on 2026-10-13. [Historical source](https://github.com/basher83/renovate-config/blob/cursor/mise-terraform-preset-fixes-47f1/sources/evaluate/2026-10-12-d017-consumer-inventory.json).
-- 2026-10-12, basher83/Sombrero-Edge-Control: Repository archived on GitHub; absent from steward non-archived inventory. Archived flag verified via public GitHub API on 2026-10-13. [Historical source](https://github.com/basher83/renovate-config/blob/cursor/mise-terraform-preset-fixes-47f1/sources/evaluate/2026-10-12-d017-consumer-inventory.json).
-- 2026-10-12, basher83/Proxmox-OpenAPI: Repository remains archived; absent from steward non-archived inventory. Already archived in inventory; steward confirms non-inclusion only. [Historical source](https://github.com/basher83/renovate-config/blob/cursor/mise-terraform-preset-fixes-47f1/sources/evaluate/2026-10-12-d017-consumer-inventory.json).
+- 2026-10-12, basher83/claw-code: Repository absent from the steward capture and no longer reachable on GitHub (owner API 404 during the 2026-10-13 refresh); last pinned observation retained. The 404 comes from the refresh API check, not the steward capture, which does not list this repository. Deletion date is not recorded. [Historical source](https://github.com/basher83/renovate-config/blob/13e6a1a64d869a872d489a8fa19d8b59d362ee37/sources/evaluate/2026-10-12-d017-consumer-inventory.json).
+- 2026-10-12, basher83/arscontexta-1: Repository absent from the steward non-archived set and no longer reachable on GitHub (owner API 404 during the 2026-10-13 refresh); last pinned observation retained. The 404 comes from the refresh API check; the steward capture records only that the repository left its non-archived set. Deletion date is not recorded. [Historical source](https://github.com/basher83/renovate-config/blob/13e6a1a64d869a872d489a8fa19d8b59d362ee37/sources/evaluate/2026-10-12-d017-consumer-inventory.json).
+- 2026-10-12, basher83/Hallowbranch-Restore: Repository archived on GitHub; absent from steward non-archived inventory. Archived flag verified via public GitHub API on 2026-10-13. [Historical source](https://github.com/basher83/renovate-config/blob/13e6a1a64d869a872d489a8fa19d8b59d362ee37/sources/evaluate/2026-10-12-d017-consumer-inventory.json).
+- 2026-10-12, basher83/Sombrero-Edge-Control: Repository archived on GitHub; absent from steward non-archived inventory. Archived flag verified via public GitHub API on 2026-10-13. [Historical source](https://github.com/basher83/renovate-config/blob/13e6a1a64d869a872d489a8fa19d8b59d362ee37/sources/evaluate/2026-10-12-d017-consumer-inventory.json).
+- 2026-10-12, basher83/Proxmox-OpenAPI: Repository remains archived; absent from steward non-archived inventory. Already archived in inventory; steward confirms non-inclusion only. [Historical source](https://github.com/basher83/renovate-config/blob/13e6a1a64d869a872d489a8fa19d8b59d362ee37/sources/evaluate/2026-10-12-d017-consumer-inventory.json).
 
 ## Proposals awaiting a separate decision
 
@@ -1313,4 +1313,4 @@ Validation guards the recorded visibility, provenance and generated output. It i
 - [fast-gate](https://github.com/basher83/.github/pull/99), source observation date 2026-10-09.
 - [scope-comment](https://github.com/basher83/.github/pull/101#issuecomment-6088873863), source observation date 2026-10-09.
 - [boundary-comment](https://github.com/basher83/.github/pull/101#issuecomment-6088920406), source observation date 2026-10-09.
-- [steward-inventory-2026-10-12](https://github.com/basher83/renovate-config/blob/cursor/mise-terraform-preset-fixes-47f1/sources/evaluate/2026-10-12-d017-consumer-inventory.json), source observation date 2026-10-12. Read-only consumer inventory of 86 non-archived basher83 repositories; authoritative refresh input for this update.
+- [steward-inventory-2026-10-12](https://github.com/basher83/renovate-config/blob/13e6a1a64d869a872d489a8fa19d8b59d362ee37/sources/evaluate/2026-10-12-d017-consumer-inventory.json), source observation date 2026-10-12. Read-only consumer inventory of 86 non-archived basher83 repositories; authoritative refresh input for this update.

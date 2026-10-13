@@ -81,7 +81,7 @@ def private_boundary(repo):
     allowed = {'state', 'checks', 'observed_at', 'evidence'}
     if checks['state'] == 'unknown':
         allowed.add('reason')
-        require(checks['reason'] == 'query_failed_or_value_withheld')
+        require(checks.get('reason') == 'query_failed_or_value_withheld')
     keys(checks, allowed)
     require(checks['checks'] is None or all(safe_name(check) for check in checks['checks']))
     require(all(re.fullmatch(r'https://api.github.com/repos/' + re.escape(name) + r'/(?:rules/branches/[A-Za-z0-9_.%+-]+|branches/[A-Za-z0-9_.%+-]+/protection)', value) for value in checks['evidence']))
@@ -156,6 +156,16 @@ def validate(data):
         require(entry['repository'] in names, 'Proposal/history references an excluded repository')
         require(entry['repository'] in {r['repository'] for r in data['repositories'] if r['visibility']['value'] == 'public'}, 'Private free-text proposals/history are outside publication boundary')
     return data
+
+
+def unique_keys(pairs):
+    """Reject duplicate JSON keys, which json.loads would otherwise silently overwrite."""
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError(f'Duplicate key: {key}')
+        result[key] = value
+    return result
 
 
 def cell(value):
@@ -333,7 +343,7 @@ def main():
     parser.add_argument('--check', action='store_true')
     args = parser.parse_args()
     try:
-        data = validate(json.loads((args.directory / 'repositories.yaml').read_text()))
+        data = validate(json.loads((args.directory / 'repositories.yaml').read_text(), object_pairs_hook=unique_keys))
         overview = render(data)
         path = args.directory / 'README.md'
         if args.check:

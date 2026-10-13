@@ -108,6 +108,12 @@ class InventoryTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 inventory.validate(data)
 
+    def test_private_unknown_required_checks_need_reason(self):
+        data = private_sample()
+        del data['repositories'][0]['required_checks']['reason']
+        with self.assertRaisesRegex(ValueError, 'publication boundary'):
+            inventory.validate(data)
+
     def test_private_tool_name_cannot_be_registry_address(self):
         data = private_sample()
         data['repositories'][0]['management']['tools']['versions'][0]['tool'] = 'registry.private.company'
@@ -183,6 +189,15 @@ class InventoryTests(unittest.TestCase):
             self.assertIn('stale', result.stderr)
             subprocess.run([sys.executable, inventory.__file__, '--directory', str(root)], check=True, capture_output=True)
             subprocess.run([sys.executable, inventory.__file__, '--directory', str(root), '--check'], check=True, capture_output=True)
+
+    def test_rejects_duplicate_json_keys(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            text = json.dumps(sample())
+            (root / 'repositories.yaml').write_text(text.replace('"visibility": {', '"visibility": {"value": "private"}, "visibility": {', 1))
+            result = subprocess.run([sys.executable, inventory.__file__, '--directory', str(root), '--check'], capture_output=True, text=True)
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn('Duplicate key: visibility', result.stderr)
 
 
 if __name__ == '__main__':
