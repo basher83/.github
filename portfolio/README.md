@@ -32,6 +32,7 @@ Renovate fields record direct presets and local configuration only. Inherited pr
 | Private workflow/config survey | 54 | 4 unknown |
 | Private direct Renovate config | 20 present | 34 absent; 4 unknown |
 | Private tool versions | 14 repositories | Values outside safe version syntax are withheld; alternate tool manifests not surveyed |
+| Private unpinned tool versions | 8 repositories | 35 tool entries use latest/stable/lts, partial or wildcard versions; recorded as observed, not approved |
 | Public primary language | 28 | 6 unknown |
 | Public workflow declarations | 33 | 1 unknown; 20 declare PR triggers |
 | Public direct Renovate config | 25 present | 8 absent in searched paths; 1 unknown; effective policy unknown for all |
@@ -556,7 +557,7 @@ Observed 2026-10-09T20:45:43.612366+00:00; [revision b41b3b1c164e](https://githu
 - Workflow survey: observed; PR declaration: False.
 - Declared check names: none observed. Job IDs/names only; matrix-expanded/reusable check names are not resolved.
 - Tool version survey: observed.
-- Tool `uv`: `latest`. [Evidence](https://github.com/basher83/agent-skills-factory/blob/b41b3b1c164ea3ab46df12ae8e9c56d561f87b56/mise.toml).
+- Tool `uv`: `latest` (unpinned). [Evidence](https://github.com/basher83/agent-skills-factory/blob/b41b3b1c164ea3ab46df12ae8e9c56d561f87b56/mise.toml).
 - Required checks: none. [API evidence 1](https://api.github.com/repos/basher83/agent-skills-factory/rules/branches/main) [API evidence 2](https://api.github.com/repos/basher83/agent-skills-factory/branches/main/protection).
 - Unknown/withheld categories: `alternate_config_paths_not_surveyed`, `effective_policy_unknown`, `private_override_values_withheld`, `private_purpose_and_stack_withheld`, `runtime_unknown`.
 
@@ -568,8 +569,8 @@ Observed 2026-10-09T20:45:43.613875+00:00; [revision cee1e067b719](https://githu
 - Workflow survey: observed; PR declaration: False.
 - Declared check names: none observed. Job IDs/names only; matrix-expanded/reusable check names are not resolved.
 - Tool version survey: observed.
-- Tool `python`: `latest`. [Evidence](https://github.com/basher83/agent-vault-design/blob/cee1e067b7194711b5a7dde9b73e20a9224bd258/mise.toml).
-- Tool `uv`: `latest`. [Evidence](https://github.com/basher83/agent-vault-design/blob/cee1e067b7194711b5a7dde9b73e20a9224bd258/mise.toml).
+- Tool `python`: `latest` (unpinned). [Evidence](https://github.com/basher83/agent-vault-design/blob/cee1e067b7194711b5a7dde9b73e20a9224bd258/mise.toml).
+- Tool `uv`: `latest` (unpinned). [Evidence](https://github.com/basher83/agent-vault-design/blob/cee1e067b7194711b5a7dde9b73e20a9224bd258/mise.toml).
 - Required checks: none. [API evidence 1](https://api.github.com/repos/basher83/agent-vault-design/rules/branches/main) [API evidence 2](https://api.github.com/repos/basher83/agent-vault-design/branches/main/protection).
 - Unknown/withheld categories: `alternate_config_paths_not_surveyed`, `effective_policy_unknown`, `private_override_values_withheld`, `private_purpose_and_stack_withheld`, `runtime_unknown`, `tool_value_withheld`.
 
@@ -848,11 +849,11 @@ Observed 2026-10-09T20:45:50.191602+00:00; [revision 67cfc84632d7](https://githu
 - Workflow survey: observed; PR declaration: True.
 - Declared check names: `ci`, `verify`. Job IDs/names only; matrix-expanded/reusable check names are not resolved.
 - Tool version survey: observed.
-- Tool `git-cliff`: `latest`. [Evidence](https://github.com/basher83/llm-observability-stack/blob/67cfc84632d7df59bc7ecb59684cb4482a01b1e0/mise.toml).
-- Tool `hk`: `latest`. [Evidence](https://github.com/basher83/llm-observability-stack/blob/67cfc84632d7df59bc7ecb59684cb4482a01b1e0/mise.toml).
-- Tool `pkl`: `latest`. [Evidence](https://github.com/basher83/llm-observability-stack/blob/67cfc84632d7df59bc7ecb59684cb4482a01b1e0/mise.toml).
-- Tool `ripgrep`: `latest`. [Evidence](https://github.com/basher83/llm-observability-stack/blob/67cfc84632d7df59bc7ecb59684cb4482a01b1e0/mise.toml).
-- Tool `uv`: `latest`. [Evidence](https://github.com/basher83/llm-observability-stack/blob/67cfc84632d7df59bc7ecb59684cb4482a01b1e0/mise.toml).
+- Tool `git-cliff`: `latest` (unpinned). [Evidence](https://github.com/basher83/llm-observability-stack/blob/67cfc84632d7df59bc7ecb59684cb4482a01b1e0/mise.toml).
+- Tool `hk`: `latest` (unpinned). [Evidence](https://github.com/basher83/llm-observability-stack/blob/67cfc84632d7df59bc7ecb59684cb4482a01b1e0/mise.toml).
+- Tool `pkl`: `latest` (unpinned). [Evidence](https://github.com/basher83/llm-observability-stack/blob/67cfc84632d7df59bc7ecb59684cb4482a01b1e0/mise.toml).
+- Tool `ripgrep`: `latest` (unpinned). [Evidence](https://github.com/basher83/llm-observability-stack/blob/67cfc84632d7df59bc7ecb59684cb4482a01b1e0/mise.toml).
+- Tool `uv`: `latest` (unpinned). [Evidence](https://github.com/basher83/llm-observability-stack/blob/67cfc84632d7df59bc7ecb59684cb4482a01b1e0/mise.toml).
 - Required checks: none. [API evidence 1](https://api.github.com/repos/basher83/llm-observability-stack/rules/branches/main) [API evidence 2](https://api.github.com/repos/basher83/llm-observability-stack/branches/main/protection).
 - Unknown/withheld categories: `alternate_config_paths_not_surveyed`, `effective_policy_unknown`, `private_override_values_withheld`, `private_purpose_and_stack_withheld`, `runtime_unknown`.
 
@@ -888,13 +889,13 @@ Observed 2026-10-09T20:45:50.577541+00:00; [revision e1e82eaa6bc7](https://githu
 - Workflow survey: observed; PR declaration: True.
 - Declared check names: `ci`. Job IDs/names only; matrix-expanded/reusable check names are not resolved.
 - Tool version survey: observed.
-- Tool `hk`: `latest`. [Evidence](https://github.com/basher83/nanny-rs-via-pi-until-done/blob/e1e82eaa6bc7854b4a98042fb9f8b2bfe8bc104c/mise.toml).
-- Tool `rust`: `latest`. [Evidence](https://github.com/basher83/nanny-rs-via-pi-until-done/blob/e1e82eaa6bc7854b4a98042fb9f8b2bfe8bc104c/mise.toml).
-- Tool `pkl`: `latest`. [Evidence](https://github.com/basher83/nanny-rs-via-pi-until-done/blob/e1e82eaa6bc7854b4a98042fb9f8b2bfe8bc104c/mise.toml).
-- Tool `git-cliff`: `latest`. [Evidence](https://github.com/basher83/nanny-rs-via-pi-until-done/blob/e1e82eaa6bc7854b4a98042fb9f8b2bfe8bc104c/mise.toml).
-- Tool `taplo`: `latest`. [Evidence](https://github.com/basher83/nanny-rs-via-pi-until-done/blob/e1e82eaa6bc7854b4a98042fb9f8b2bfe8bc104c/mise.toml).
-- Tool `shellcheck`: `latest`. [Evidence](https://github.com/basher83/nanny-rs-via-pi-until-done/blob/e1e82eaa6bc7854b4a98042fb9f8b2bfe8bc104c/mise.toml).
-- Tool `uv`: `latest`. [Evidence](https://github.com/basher83/nanny-rs-via-pi-until-done/blob/e1e82eaa6bc7854b4a98042fb9f8b2bfe8bc104c/mise.toml).
+- Tool `hk`: `latest` (unpinned). [Evidence](https://github.com/basher83/nanny-rs-via-pi-until-done/blob/e1e82eaa6bc7854b4a98042fb9f8b2bfe8bc104c/mise.toml).
+- Tool `rust`: `latest` (unpinned). [Evidence](https://github.com/basher83/nanny-rs-via-pi-until-done/blob/e1e82eaa6bc7854b4a98042fb9f8b2bfe8bc104c/mise.toml).
+- Tool `pkl`: `latest` (unpinned). [Evidence](https://github.com/basher83/nanny-rs-via-pi-until-done/blob/e1e82eaa6bc7854b4a98042fb9f8b2bfe8bc104c/mise.toml).
+- Tool `git-cliff`: `latest` (unpinned). [Evidence](https://github.com/basher83/nanny-rs-via-pi-until-done/blob/e1e82eaa6bc7854b4a98042fb9f8b2bfe8bc104c/mise.toml).
+- Tool `taplo`: `latest` (unpinned). [Evidence](https://github.com/basher83/nanny-rs-via-pi-until-done/blob/e1e82eaa6bc7854b4a98042fb9f8b2bfe8bc104c/mise.toml).
+- Tool `shellcheck`: `latest` (unpinned). [Evidence](https://github.com/basher83/nanny-rs-via-pi-until-done/blob/e1e82eaa6bc7854b4a98042fb9f8b2bfe8bc104c/mise.toml).
+- Tool `uv`: `latest` (unpinned). [Evidence](https://github.com/basher83/nanny-rs-via-pi-until-done/blob/e1e82eaa6bc7854b4a98042fb9f8b2bfe8bc104c/mise.toml).
 - Required checks: none. [API evidence 1](https://api.github.com/repos/basher83/nanny-rs-via-pi-until-done/rules/branches/main) [API evidence 2](https://api.github.com/repos/basher83/nanny-rs-via-pi-until-done/branches/main/protection).
 - Unknown/withheld categories: `alternate_config_paths_not_surveyed`, `effective_policy_unknown`, `private_override_values_withheld`, `private_purpose_and_stack_withheld`, `runtime_unknown`.
 
@@ -910,8 +911,8 @@ Observed 2026-10-09T20:45:51.221495+00:00; [revision 30c69a04af05](https://githu
 - Tool `git-cliff`: `2.13.1`. [Evidence](https://github.com/basher83/openprose-workflows/blob/30c69a04af0563c409b2bc8cd1a22e989f2e76d1/mise.toml).
 - Tool `hk`: `1.48.0`. [Evidence](https://github.com/basher83/openprose-workflows/blob/30c69a04af0563c409b2bc8cd1a22e989f2e76d1/mise.toml).
 - Tool `pkl`: `0.31.1`. [Evidence](https://github.com/basher83/openprose-workflows/blob/30c69a04af0563c409b2bc8cd1a22e989f2e76d1/mise.toml).
-- Tool `python`: `3.13`. [Evidence](https://github.com/basher83/openprose-workflows/blob/30c69a04af0563c409b2bc8cd1a22e989f2e76d1/mise.toml).
-- Tool `uv`: `latest`. [Evidence](https://github.com/basher83/openprose-workflows/blob/30c69a04af0563c409b2bc8cd1a22e989f2e76d1/mise.toml).
+- Tool `python`: `3.13` (unpinned). [Evidence](https://github.com/basher83/openprose-workflows/blob/30c69a04af0563c409b2bc8cd1a22e989f2e76d1/mise.toml).
+- Tool `uv`: `latest` (unpinned). [Evidence](https://github.com/basher83/openprose-workflows/blob/30c69a04af0563c409b2bc8cd1a22e989f2e76d1/mise.toml).
 - Required checks: none. [API evidence 1](https://api.github.com/repos/basher83/openprose-workflows/rules/branches/main) [API evidence 2](https://api.github.com/repos/basher83/openprose-workflows/branches/main/protection).
 - Unknown/withheld categories: `alternate_config_paths_not_surveyed`, `effective_policy_unknown`, `private_override_values_withheld`, `private_purpose_and_stack_withheld`, `runtime_unknown`.
 
@@ -965,10 +966,10 @@ Observed 2026-10-09T20:45:52.579590+00:00; [revision 88ad8f2c84c2](https://githu
 - Workflow survey: observed; PR declaration: True.
 - Declared check names: `ci`. Job IDs/names only; matrix-expanded/reusable check names are not resolved.
 - Tool version survey: observed.
-- Tool `git-cliff`: `latest`. [Evidence](https://github.com/basher83/pi-dev-config/blob/88ad8f2c84c21d2b26cf24551824a87d86a503ad/mise.toml).
-- Tool `hk`: `latest`. [Evidence](https://github.com/basher83/pi-dev-config/blob/88ad8f2c84c21d2b26cf24551824a87d86a503ad/mise.toml).
-- Tool `jq`: `latest`. [Evidence](https://github.com/basher83/pi-dev-config/blob/88ad8f2c84c21d2b26cf24551824a87d86a503ad/mise.toml).
-- Tool `pkl`: `latest`. [Evidence](https://github.com/basher83/pi-dev-config/blob/88ad8f2c84c21d2b26cf24551824a87d86a503ad/mise.toml).
+- Tool `git-cliff`: `latest` (unpinned). [Evidence](https://github.com/basher83/pi-dev-config/blob/88ad8f2c84c21d2b26cf24551824a87d86a503ad/mise.toml).
+- Tool `hk`: `latest` (unpinned). [Evidence](https://github.com/basher83/pi-dev-config/blob/88ad8f2c84c21d2b26cf24551824a87d86a503ad/mise.toml).
+- Tool `jq`: `latest` (unpinned). [Evidence](https://github.com/basher83/pi-dev-config/blob/88ad8f2c84c21d2b26cf24551824a87d86a503ad/mise.toml).
+- Tool `pkl`: `latest` (unpinned). [Evidence](https://github.com/basher83/pi-dev-config/blob/88ad8f2c84c21d2b26cf24551824a87d86a503ad/mise.toml).
 - Required checks: none. [API evidence 1](https://api.github.com/repos/basher83/pi-dev-config/rules/branches/main) [API evidence 2](https://api.github.com/repos/basher83/pi-dev-config/branches/main/protection).
 - Unknown/withheld categories: `alternate_config_paths_not_surveyed`, `effective_policy_unknown`, `private_override_values_withheld`, `private_purpose_and_stack_withheld`, `runtime_unknown`.
 
@@ -1160,13 +1161,13 @@ Observed 2026-10-09T20:45:57.050061+00:00; [revision 19aecda6093e](https://githu
 - Workflow survey: observed; PR declaration: True.
 - Declared check names: `ci`. Job IDs/names only; matrix-expanded/reusable check names are not resolved.
 - Tool version survey: observed.
-- Tool `git-cliff`: `latest`. [Evidence](https://github.com/basher83/skill-creator/blob/19aecda6093eedd0bea7287d431ccf75453303f3/mise.toml).
-- Tool `hk`: `latest`. [Evidence](https://github.com/basher83/skill-creator/blob/19aecda6093eedd0bea7287d431ccf75453303f3/mise.toml).
-- Tool `pkl`: `latest`. [Evidence](https://github.com/basher83/skill-creator/blob/19aecda6093eedd0bea7287d431ccf75453303f3/mise.toml).
-- Tool `python`: `latest`. [Evidence](https://github.com/basher83/skill-creator/blob/19aecda6093eedd0bea7287d431ccf75453303f3/mise.toml).
-- Tool `ruff`: `latest`. [Evidence](https://github.com/basher83/skill-creator/blob/19aecda6093eedd0bea7287d431ccf75453303f3/mise.toml).
-- Tool `uv`: `latest`. [Evidence](https://github.com/basher83/skill-creator/blob/19aecda6093eedd0bea7287d431ccf75453303f3/mise.toml).
-- Tool `shellcheck`: `latest`. [Evidence](https://github.com/basher83/skill-creator/blob/19aecda6093eedd0bea7287d431ccf75453303f3/mise.toml).
+- Tool `git-cliff`: `latest` (unpinned). [Evidence](https://github.com/basher83/skill-creator/blob/19aecda6093eedd0bea7287d431ccf75453303f3/mise.toml).
+- Tool `hk`: `latest` (unpinned). [Evidence](https://github.com/basher83/skill-creator/blob/19aecda6093eedd0bea7287d431ccf75453303f3/mise.toml).
+- Tool `pkl`: `latest` (unpinned). [Evidence](https://github.com/basher83/skill-creator/blob/19aecda6093eedd0bea7287d431ccf75453303f3/mise.toml).
+- Tool `python`: `latest` (unpinned). [Evidence](https://github.com/basher83/skill-creator/blob/19aecda6093eedd0bea7287d431ccf75453303f3/mise.toml).
+- Tool `ruff`: `latest` (unpinned). [Evidence](https://github.com/basher83/skill-creator/blob/19aecda6093eedd0bea7287d431ccf75453303f3/mise.toml).
+- Tool `uv`: `latest` (unpinned). [Evidence](https://github.com/basher83/skill-creator/blob/19aecda6093eedd0bea7287d431ccf75453303f3/mise.toml).
+- Tool `shellcheck`: `latest` (unpinned). [Evidence](https://github.com/basher83/skill-creator/blob/19aecda6093eedd0bea7287d431ccf75453303f3/mise.toml).
 - Required checks: none. [API evidence 1](https://api.github.com/repos/basher83/skill-creator/rules/branches/main) [API evidence 2](https://api.github.com/repos/basher83/skill-creator/branches/main/protection).
 - Unknown/withheld categories: `alternate_config_paths_not_surveyed`, `effective_policy_unknown`, `private_override_values_withheld`, `private_purpose_and_stack_withheld`, `runtime_unknown`.
 
@@ -1209,13 +1210,13 @@ Observed 2026-10-09T20:45:57.613866+00:00; [revision 8e566da94025](https://githu
 - Workflow survey: observed; PR declaration: True.
 - Declared check names: `ci`. Job IDs/names only; matrix-expanded/reusable check names are not resolved.
 - Tool version survey: observed.
-- Tool `git-cliff`: `latest`. [Evidence](https://github.com/basher83/the-range/blob/8e566da940251081fb62e7b327f250c0ac38d1cc/mise.toml).
-- Tool `hk`: `latest`. [Evidence](https://github.com/basher83/the-range/blob/8e566da940251081fb62e7b327f250c0ac38d1cc/mise.toml).
-- Tool `pkl`: `latest`. [Evidence](https://github.com/basher83/the-range/blob/8e566da940251081fb62e7b327f250c0ac38d1cc/mise.toml).
-- Tool `python`: `latest`. [Evidence](https://github.com/basher83/the-range/blob/8e566da940251081fb62e7b327f250c0ac38d1cc/mise.toml).
-- Tool `ruff`: `latest`. [Evidence](https://github.com/basher83/the-range/blob/8e566da940251081fb62e7b327f250c0ac38d1cc/mise.toml).
-- Tool `uv`: `latest`. [Evidence](https://github.com/basher83/the-range/blob/8e566da940251081fb62e7b327f250c0ac38d1cc/mise.toml).
-- Tool `shellcheck`: `latest`. [Evidence](https://github.com/basher83/the-range/blob/8e566da940251081fb62e7b327f250c0ac38d1cc/mise.toml).
+- Tool `git-cliff`: `latest` (unpinned). [Evidence](https://github.com/basher83/the-range/blob/8e566da940251081fb62e7b327f250c0ac38d1cc/mise.toml).
+- Tool `hk`: `latest` (unpinned). [Evidence](https://github.com/basher83/the-range/blob/8e566da940251081fb62e7b327f250c0ac38d1cc/mise.toml).
+- Tool `pkl`: `latest` (unpinned). [Evidence](https://github.com/basher83/the-range/blob/8e566da940251081fb62e7b327f250c0ac38d1cc/mise.toml).
+- Tool `python`: `latest` (unpinned). [Evidence](https://github.com/basher83/the-range/blob/8e566da940251081fb62e7b327f250c0ac38d1cc/mise.toml).
+- Tool `ruff`: `latest` (unpinned). [Evidence](https://github.com/basher83/the-range/blob/8e566da940251081fb62e7b327f250c0ac38d1cc/mise.toml).
+- Tool `uv`: `latest` (unpinned). [Evidence](https://github.com/basher83/the-range/blob/8e566da940251081fb62e7b327f250c0ac38d1cc/mise.toml).
+- Tool `shellcheck`: `latest` (unpinned). [Evidence](https://github.com/basher83/the-range/blob/8e566da940251081fb62e7b327f250c0ac38d1cc/mise.toml).
 - Required checks: none. [API evidence 1](https://api.github.com/repos/basher83/the-range/rules/branches/main) [API evidence 2](https://api.github.com/repos/basher83/the-range/branches/main/protection).
 - Unknown/withheld categories: `alternate_config_paths_not_surveyed`, `effective_policy_unknown`, `private_override_values_withheld`, `private_purpose_and_stack_withheld`, `runtime_unknown`.
 

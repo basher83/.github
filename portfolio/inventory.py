@@ -83,6 +83,10 @@ def private_boundary(repo):
         allowed.add('reason')
         require(checks.get('reason') == 'query_failed_or_value_withheld')
     keys(checks, allowed)
+    try:
+        require(datetime.datetime.fromisoformat(checks['observed_at']).tzinfo is not None)
+    except (ValueError, TypeError):
+        require(False)
     require(checks['checks'] is None or all(safe_name(check) for check in checks['checks']))
     require(all(re.fullmatch(r'https://api.github.com/repos/' + re.escape(name) + r'/(?:rules/branches/[A-Za-z0-9_.%+-]+|branches/[A-Za-z0-9_.%+-]+/protection)', value) for value in checks['evidence']))
     require(set(repo['unknowns']) <= PRIVATE_UNKNOWNS)
@@ -168,6 +172,11 @@ def unique_keys(pairs):
     return result
 
 
+def pinned(version):
+    """Exact x.y.z versions are pinned; latest/stable/lts, partial and wildcard versions float."""
+    return bool(re.fullmatch(r'v?\d+\.\d+\.\d+(?:[-+][A-Za-z0-9]+(?:[.-][A-Za-z0-9]+)*)?', version))
+
+
 def cell(value):
     return str(value).replace('|', r'\|').replace('\n', ' ')
 
@@ -229,6 +238,7 @@ def render(data):
         f'| Private workflow/config survey | {sum(r["management"]["workflows"]["state"] == "observed" for r in private_repos)} | {sum(r["management"]["workflows"]["state"] == "unknown" for r in private_repos)} unknown |',
         f'| Private direct Renovate config | {sum(r["management"]["renovate"]["state"] == "observed" for r in private_repos)} present | {sum(r["management"]["renovate"]["state"] == "absent" for r in private_repos)} absent; {sum(r["management"]["renovate"]["state"] == "unknown" for r in private_repos)} unknown |',
         f'| Private tool versions | {sum(bool(r["management"]["tools"]["versions"]) for r in private_repos)} repositories | Values outside safe version syntax are withheld; alternate tool manifests not surveyed |',
+        f'| Private unpinned tool versions | {sum(any(not pinned(t["version"]) for t in r["management"]["tools"]["versions"]) for r in private_repos)} repositories | {sum(not pinned(t["version"]) for r in private_repos for t in r["management"]["tools"]["versions"])} tool entries use latest/stable/lts, partial or wildcard versions; recorded as observed, not approved |',
         f'| Public primary language | {sum(r["stack"]["primary_language"] is not None for r in repos)} | {sum(r["stack"]["primary_language"] is None for r in repos)} unknown |',
         f'| Public workflow declarations | {sum(r["ci"]["state"] == "observed" for r in repos)} | {sum(r["ci"]["state"] == "unknown" for r in repos)} unknown; {sum(r["ci"]["pr_workflow_declarations"] is True for r in repos)} declare PR triggers |',
         f'| Public direct Renovate config | {sum(bool(r["renovate"]["configs"]) for r in repos)} present | {sum(r["renovate"]["state"] == "absent" for r in repos)} absent in searched paths; {sum(r["renovate"]["state"] == "unknown" for r in repos)} unknown; effective policy unknown for all |',
@@ -314,7 +324,8 @@ def render(data):
         tools = management['tools']
         lines.append(f'- Tool version survey: {tools["state"]}.')
         for item in tools['versions']:
-            lines.append(f'- Tool `{item["tool"]}`: `{item["version"]}`. [Evidence]({item["evidence"]}).')
+            flag = '' if pinned(item['version']) else ' (unpinned)'
+            lines.append(f'- Tool `{item["tool"]}`: `{item["version"]}`{flag}. [Evidence]({item["evidence"]}).')
         lines.append(f'- Required checks: {required_label(repo)}. ' + ' '.join(f'[API evidence {i + 1}]({url})' for i, url in enumerate(repo['required_checks']['evidence'])) + '.')
         lines.append('- Unknown/withheld categories: ' + ', '.join(f'`{code}`' for code in repo['unknowns']) + '.')
     lines.append('')

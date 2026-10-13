@@ -68,6 +68,19 @@ class InventoryTests(unittest.TestCase):
         self.assertIn('python-mise-fast-pr-gate.yml@main', rendered)
         self.assertIn('publication boundary', rendered.lower())
 
+    def test_flags_unpinned_private_tool_versions(self):
+        data = private_sample()
+        rendered = inventory.render(data)
+        self.assertIn('`3.13.16`. [Evidence]', rendered)
+        self.assertIn('| Private unpinned tool versions | 0 repositories |', rendered)
+        for version in ('latest', '3.13', '3.*', 'lts/iron'):
+            data = private_sample()
+            data['repositories'][0]['management']['tools']['versions'][0]['version'] = version
+            inventory.validate(data)
+            rendered = inventory.render(data)
+            self.assertIn(f'`{version}` (unpinned)', rendered)
+            self.assertIn('| Private unpinned tool versions | 1 repositories |', rendered)
+
     def test_rejects_private_source_bodies_and_unrelated_content(self):
         for key in ('purpose', 'stack', 'application_code', 'architecture', 'logs'):
             data = private_sample()
@@ -113,6 +126,13 @@ class InventoryTests(unittest.TestCase):
         del data['repositories'][0]['required_checks']['reason']
         with self.assertRaisesRegex(ValueError, 'publication boundary'):
             inventory.validate(data)
+
+    def test_private_required_checks_observed_at_must_be_timestamp(self):
+        for value in ('https://registry.internal/checks', '2026-10-09T20:00:00', None):
+            data = private_sample()
+            data['repositories'][0]['required_checks']['observed_at'] = value
+            with self.assertRaisesRegex(ValueError, 'publication boundary'):
+                inventory.validate(data)
 
     def test_private_tool_name_cannot_be_registry_address(self):
         data = private_sample()
