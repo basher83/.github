@@ -4,10 +4,16 @@
     "historical_card_count": 92,
     "public_count": 34,
     "excluded_count": 0,
-    "definition": "All 92 entries in the historical 2026-10-06 card: 34 public, 58 private. Visibility and private management facts refreshed on 2026-10-09. Private content follows the approved strict publication boundary.",
+    "definition": "All 92 entries in the historical 2026-10-06 card remain included (34 public, 58 private). Management facts refreshed on 2026-10-13 from the GitHub steward read-only inventory and live GitHub API checks where this token can access repositories. Private content follows the approved strict publication boundary.",
     "visibility_evidence": "https://api.github.com/user/repos?affiliation=owner&visibility=all",
     "private_count": 58,
-    "included_count": 92
+    "included_count": 92,
+    "renovate_preset_extenders": {
+      "count": 30,
+      "observed_date": "2026-10-12",
+      "source": "steward-inventory-2026-10-12",
+      "note": "Non-archived basher83 repositories extending local>basher83/renovate-config per steward inventory."
+    }
   },
   "sources": [
     {
@@ -66,6 +72,12 @@
       "id": "boundary-comment",
       "url": "https://github.com/basher83/.github/pull/101#issuecomment-6088920406",
       "observed_date": "2026-10-09"
+    },
+    {
+      "id": "steward-inventory-2026-10-12",
+      "url": "https://github.com/basher83/renovate-config/blob/cursor/mise-terraform-preset-fixes-47f1/sources/evaluate/2026-10-12-d017-consumer-inventory.json",
+      "observed_date": "2026-10-12",
+      "note": "Read-only consumer inventory of 86 non-archived basher83 repositories; authoritative refresh input for this update."
     }
   ],
   "historical_observations": [
@@ -82,6 +94,41 @@
       "observed_date": "2026-10-09",
       "fact": "Hosted canary #394 observed automerge after dashboard approval; #396 merged while a non-required check still ran.",
       "limits": "These observations do not establish the runtime or gating behavior of other repositories; exact merge path and app check-read permission remain unverified."
+    },
+    {
+      "repository": "basher83/claw-code",
+      "source": "steward-inventory-2026-10-12",
+      "observed_date": "2026-10-12",
+      "fact": "Repository no longer exists on GitHub (404 on owner API); last pinned observation retained.",
+      "limits": "Deletion date and visibility at deletion are not recorded in the steward inventory."
+    },
+    {
+      "repository": "basher83/arscontexta-1",
+      "source": "steward-inventory-2026-10-12",
+      "observed_date": "2026-10-12",
+      "fact": "Repository no longer exists on GitHub (404 on owner API); last pinned observation retained.",
+      "limits": "Deletion date and visibility at deletion are not recorded in the steward inventory."
+    },
+    {
+      "repository": "basher83/Hallowbranch-Restore",
+      "source": "steward-inventory-2026-10-12",
+      "observed_date": "2026-10-12",
+      "fact": "Repository archived on GitHub; absent from steward non-archived inventory.",
+      "limits": "Archived flag verified via public GitHub API on 2026-10-13."
+    },
+    {
+      "repository": "basher83/Sombrero-Edge-Control",
+      "source": "steward-inventory-2026-10-12",
+      "observed_date": "2026-10-12",
+      "fact": "Repository archived on GitHub; absent from steward non-archived inventory.",
+      "limits": "Archived flag verified via public GitHub API on 2026-10-13."
+    },
+    {
+      "repository": "basher83/Proxmox-OpenAPI",
+      "source": "steward-inventory-2026-10-12",
+      "observed_date": "2026-10-12",
+      "fact": "Repository remains archived; absent from steward non-archived inventory.",
+      "limits": "Already archived in inventory; steward confirms non-inclusion only."
     }
   ],
   "repositories": [
@@ -89,7 +136,7 @@
       "repository": "basher83/.github-private",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:02.994983+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/.github-private"
       },
       "observation": {
@@ -150,14 +197,14 @@
       "repository": "basher83/.github",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:02.842884+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/.github"
       },
       "observation": {
-        "revision": "961d24505b80e09f8af8a65c64a756729504a787",
-        "observed_at": "2026-10-09T20:15:02.842884+00:00",
+        "revision": "2fa56e7f284d3bae03087604d6dcdffd719efb0b",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "default_branch": "main",
-        "evidence": "https://github.com/basher83/.github/tree/961d24505b80e09f8af8a65c64a756729504a787"
+        "evidence": "https://github.com/basher83/.github/tree/2fa56e7f284d3bae03087604d6dcdffd719efb0b"
       },
       "purpose": {
         "text": "Shared GitHub workflows.",
@@ -184,7 +231,7 @@
               "local>basher83/renovate-config"
             ],
             "local_overrides": {},
-            "evidence": "https://github.com/basher83/.github/blob/961d24505b80e09f8af8a65c64a756729504a787/renovate.json"
+            "evidence": "https://github.com/basher83/.github/blob/2fa56e7f284d3bae03087604d6dcdffd719efb0b/renovate.json"
           }
         ],
         "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
@@ -214,7 +261,7 @@
                 "uses": "./.github/workflows/python-mise-fast-pr-gate.yml"
               }
             ],
-            "evidence": "https://github.com/basher83/.github/blob/961d24505b80e09f8af8a65c64a756729504a787/.github/workflows/fast-gate.yml"
+            "evidence": "https://github.com/basher83/.github/blob/2fa56e7f284d3bae03087604d6dcdffd719efb0b/.github/workflows/fast-gate.yml"
           },
           {
             "path": ".github/workflows/python-mise-fast-pr-gate.yml",
@@ -228,7 +275,7 @@
                 "runs-on": "ubuntu-latest"
               }
             ],
-            "evidence": "https://github.com/basher83/.github/blob/961d24505b80e09f8af8a65c64a756729504a787/.github/workflows/python-mise-fast-pr-gate.yml"
+            "evidence": "https://github.com/basher83/.github/blob/2fa56e7f284d3bae03087604d6dcdffd719efb0b/.github/workflows/python-mise-fast-pr-gate.yml"
           },
           {
             "path": ".github/workflows/sync-labels.yml",
@@ -250,7 +297,7 @@
                 "runs-on": "ubuntu-latest"
               }
             ],
-            "evidence": "https://github.com/basher83/.github/blob/961d24505b80e09f8af8a65c64a756729504a787/.github/workflows/sync-labels.yml"
+            "evidence": "https://github.com/basher83/.github/blob/2fa56e7f284d3bae03087604d6dcdffd719efb0b/.github/workflows/sync-labels.yml"
           },
           {
             "path": ".github/workflows/tailscale-connect-to-tailnet.yml",
@@ -264,7 +311,7 @@
                 "runs-on": "ubuntu-latest"
               }
             ],
-            "evidence": "https://github.com/basher83/.github/blob/961d24505b80e09f8af8a65c64a756729504a787/.github/workflows/tailscale-connect-to-tailnet.yml"
+            "evidence": "https://github.com/basher83/.github/blob/2fa56e7f284d3bae03087604d6dcdffd719efb0b/.github/workflows/tailscale-connect-to-tailnet.yml"
           },
           {
             "path": ".github/workflows/tailscale-policy.yml",
@@ -278,7 +325,7 @@
                 "runs-on": "ubuntu-latest"
               }
             ],
-            "evidence": "https://github.com/basher83/.github/blob/961d24505b80e09f8af8a65c64a756729504a787/.github/workflows/tailscale-policy.yml"
+            "evidence": "https://github.com/basher83/.github/blob/2fa56e7f284d3bae03087604d6dcdffd719efb0b/.github/workflows/tailscale-policy.yml"
           }
         ],
         "pr_workflow_declarations": true,
@@ -287,14 +334,14 @@
             "caller": ".github/workflows/fast-gate.yml",
             "job": "fast-gate",
             "reference": "./.github/workflows/python-mise-fast-pr-gate.yml",
-            "evidence": "https://github.com/basher83/.github/blob/961d24505b80e09f8af8a65c64a756729504a787/.github/workflows/fast-gate.yml",
+            "evidence": "https://github.com/basher83/.github/blob/2fa56e7f284d3bae03087604d6dcdffd719efb0b/.github/workflows/fast-gate.yml",
             "scope": "local"
           }
         ],
         "actionlint_references": [
           {
             "path": "mise.toml",
-            "evidence": "https://github.com/basher83/.github/blob/961d24505b80e09f8af8a65c64a756729504a787/mise.toml"
+            "evidence": "https://github.com/basher83/.github/blob/2fa56e7f284d3bae03087604d6dcdffd719efb0b/mise.toml"
           }
         ],
         "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
@@ -322,7 +369,7 @@
       "repository": "basher83/andromeda-orchestration",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:02.910078+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/andromeda-orchestration"
       },
       "observation": {
@@ -486,7 +533,7 @@
       },
       "lifecycle": {
         "archived": false,
-        "development_status": null
+        "development_status": "deleted_from_github"
       },
       "fork": true,
       "renovate": {
@@ -525,7 +572,7 @@
       "repository": "basher83/assets",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:03.010957+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/assets"
       },
       "observation": {
@@ -595,7 +642,7 @@
       "repository": "basher83/automation-scripts",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:02.985728+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/automation-scripts"
       },
       "observation": {
@@ -752,7 +799,7 @@
       "repository": "basher83/basher83",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:04.189488+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/basher83"
       },
       "observation": {
@@ -886,7 +933,7 @@
       },
       "lifecycle": {
         "archived": false,
-        "development_status": null
+        "development_status": "deleted_from_github"
       },
       "fork": true,
       "renovate": {
@@ -925,7 +972,7 @@
       "repository": "basher83/docs",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:04.931534+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/docs"
       },
       "observation": {
@@ -1143,7 +1190,7 @@
       "repository": "basher83/domain-chassis",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:05.477783+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/domain-chassis"
       },
       "observation": {
@@ -1204,7 +1251,7 @@
       "repository": "basher83/dotfiles",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:05.750141+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/dotfiles"
       },
       "observation": {
@@ -1274,7 +1321,7 @@
       "repository": "basher83/forgeflare-hooks",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:05.669861+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/forgeflare-hooks"
       },
       "observation": {
@@ -1425,7 +1472,7 @@
       "repository": "basher83/forgeflare",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:05.716119+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/forgeflare"
       },
       "observation": {
@@ -1588,7 +1635,7 @@
       "repository": "basher83/github-actions",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:06.178903+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/github-actions"
       },
       "observation": {
@@ -1649,7 +1696,7 @@
       "repository": "basher83/Hallowbranch-Restore",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:06.692506+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/Hallowbranch-Restore"
       },
       "observation": {
@@ -1670,7 +1717,7 @@
         "frameworks": null
       },
       "lifecycle": {
-        "archived": false,
+        "archived": true,
         "development_status": null
       },
       "fork": false,
@@ -1743,7 +1790,7 @@
       "repository": "basher83/hello-komodo",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:07.166930+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/hello-komodo"
       },
       "observation": {
@@ -1847,7 +1894,7 @@
       "repository": "basher83/Hercules-Power-Templates",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:07.349093+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/Hercules-Power-Templates"
       },
       "observation": {
@@ -1917,7 +1964,7 @@
       "repository": "basher83/lunar-claude",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:07.956856+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/lunar-claude"
       },
       "observation": {
@@ -2056,7 +2103,7 @@
       "repository": "basher83/lunar-research",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:07.882245+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/lunar-research"
       },
       "observation": {
@@ -2117,14 +2164,14 @@
       "repository": "basher83/mothership-gitops",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:07.951224+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/mothership-gitops"
       },
       "observation": {
-        "revision": "17055573c0a03cb799b52c7e10d429d92358ee4b",
-        "observed_at": "2026-10-09T20:15:07.951224+00:00",
+        "revision": "570542a84d3df96f36e2b284d862648bfdfc73c9",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "default_branch": "main",
-        "evidence": "https://github.com/basher83/mothership-gitops/tree/17055573c0a03cb799b52c7e10d429d92358ee4b"
+        "evidence": "https://github.com/basher83/mothership-gitops/tree/570542a84d3df96f36e2b284d862648bfdfc73c9"
       },
       "purpose": {
         "text": "GitOps manifests for the talos-prod-01 Kubernetes cluster.",
@@ -2224,7 +2271,7 @@
                 }
               ]
             },
-            "evidence": "https://github.com/basher83/mothership-gitops/blob/17055573c0a03cb799b52c7e10d429d92358ee4b/renovate.json"
+            "evidence": "https://github.com/basher83/mothership-gitops/blob/570542a84d3df96f36e2b284d862648bfdfc73c9/renovate.json"
           }
         ],
         "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
@@ -2250,7 +2297,7 @@
                 "runs-on": "ubuntu-latest"
               }
             ],
-            "evidence": "https://github.com/basher83/mothership-gitops/blob/17055573c0a03cb799b52c7e10d429d92358ee4b/.github/workflows/fast-gate.yml"
+            "evidence": "https://github.com/basher83/mothership-gitops/blob/570542a84d3df96f36e2b284d862648bfdfc73c9/.github/workflows/fast-gate.yml"
           }
         ],
         "pr_workflow_declarations": true,
@@ -2281,7 +2328,7 @@
       "repository": "basher83/omni-infra-provider-proxmox",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:08.996630+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/omni-infra-provider-proxmox"
       },
       "observation": {
@@ -2533,7 +2580,7 @@
       "repository": "basher83/Omni-Scale",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:09.198924+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/Omni-Scale"
       },
       "observation": {
@@ -2664,7 +2711,7 @@
       "repository": "basher83/Proxmox-OpenAPI",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:09.148533+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/Proxmox-OpenAPI"
       },
       "observation": {
@@ -2859,7 +2906,7 @@
       "repository": "basher83/ProxmoxMCP",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:09.533127+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/ProxmoxMCP"
       },
       "observation": {
@@ -2969,7 +3016,7 @@
           },
           {
             "path": ".github/workflows/markdown-lint.yml",
-            "name": "📝 Markdown Linting",
+            "name": "\ud83d\udcdd Markdown Linting",
             "triggers": {
               "push": {
                 "branches": [
@@ -3070,7 +3117,7 @@
       "repository": "basher83/ProxSyncBox",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:10.069179+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/ProxSyncBox"
       },
       "observation": {
@@ -3188,14 +3235,14 @@
       "repository": "basher83/radiant-filament",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:10.795660+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/radiant-filament"
       },
       "observation": {
-        "revision": "8f6adcef97ce291e8db10585f43552b5a1eda499",
-        "observed_at": "2026-10-09T20:15:10.795660+00:00",
+        "revision": "c004c57b13969a0ff53bb72ac6863fd29509751e",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "default_branch": "main",
-        "evidence": "https://github.com/basher83/radiant-filament/tree/8f6adcef97ce291e8db10585f43552b5a1eda499"
+        "evidence": "https://github.com/basher83/radiant-filament/tree/c004c57b13969a0ff53bb72ac6863fd29509751e"
       },
       "purpose": {
         "text": "CLI tool for Google Gemini Deep Research.",
@@ -3222,7 +3269,7 @@
               "local>basher83/renovate-config"
             ],
             "local_overrides": {},
-            "evidence": "https://github.com/basher83/radiant-filament/blob/8f6adcef97ce291e8db10585f43552b5a1eda499/renovate.json"
+            "evidence": "https://github.com/basher83/radiant-filament/blob/c004c57b13969a0ff53bb72ac6863fd29509751e/renovate.json"
           }
         ],
         "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
@@ -3252,7 +3299,7 @@
                 "runs-on": "ubuntu-latest"
               }
             ],
-            "evidence": "https://github.com/basher83/radiant-filament/blob/8f6adcef97ce291e8db10585f43552b5a1eda499/.github/workflows/copilot-setup-steps.yml"
+            "evidence": "https://github.com/basher83/radiant-filament/blob/c004c57b13969a0ff53bb72ac6863fd29509751e/.github/workflows/copilot-setup-steps.yml"
           },
           {
             "path": ".github/workflows/use-python-mise-fast-pr-gate.yml",
@@ -3276,7 +3323,7 @@
                 "uses": "basher83/.github/.github/workflows/python-mise-fast-pr-gate.yml@9f26f1a7c1de5470dac16daa0f38085dc8975fb2"
               }
             ],
-            "evidence": "https://github.com/basher83/radiant-filament/blob/8f6adcef97ce291e8db10585f43552b5a1eda499/.github/workflows/use-python-mise-fast-pr-gate.yml"
+            "evidence": "https://github.com/basher83/radiant-filament/blob/c004c57b13969a0ff53bb72ac6863fd29509751e/.github/workflows/use-python-mise-fast-pr-gate.yml"
           }
         ],
         "pr_workflow_declarations": true,
@@ -3285,7 +3332,7 @@
             "caller": ".github/workflows/use-python-mise-fast-pr-gate.yml",
             "job": "fast-pr-gate",
             "reference": "basher83/.github/.github/workflows/python-mise-fast-pr-gate.yml@9f26f1a7c1de5470dac16daa0f38085dc8975fb2",
-            "evidence": "https://github.com/basher83/radiant-filament/blob/8f6adcef97ce291e8db10585f43552b5a1eda499/.github/workflows/use-python-mise-fast-pr-gate.yml",
+            "evidence": "https://github.com/basher83/radiant-filament/blob/c004c57b13969a0ff53bb72ac6863fd29509751e/.github/workflows/use-python-mise-fast-pr-gate.yml",
             "scope": "central"
           }
         ],
@@ -3315,14 +3362,14 @@
       "repository": "basher83/renovate-config",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:11.447590+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/renovate-config"
       },
       "observation": {
-        "revision": "09d32da0cbd806816725c369e77b4a3d79b6eea4",
-        "observed_at": "2026-10-09T20:15:11.447590+00:00",
+        "revision": "bfc28e00db6e53bc7ca627d5ba662f9b68a2c570",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "default_branch": "main",
-        "evidence": "https://github.com/basher83/renovate-config/tree/09d32da0cbd806816725c369e77b4a3d79b6eea4"
+        "evidence": "https://github.com/basher83/renovate-config/tree/bfc28e00db6e53bc7ca627d5ba662f9b68a2c570"
       },
       "purpose": {
         "text": "Personal Renovate dependency-update presets.",
@@ -3349,7 +3396,7 @@
               "local>basher83/renovate-config"
             ],
             "local_overrides": {},
-            "evidence": "https://github.com/basher83/renovate-config/blob/09d32da0cbd806816725c369e77b4a3d79b6eea4/renovate.json"
+            "evidence": "https://github.com/basher83/renovate-config/blob/bfc28e00db6e53bc7ca627d5ba662f9b68a2c570/renovate.json"
           }
         ],
         "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
@@ -3374,7 +3421,7 @@
                 "runs-on": "ubuntu-latest"
               }
             ],
-            "evidence": "https://github.com/basher83/renovate-config/blob/09d32da0cbd806816725c369e77b4a3d79b6eea4/.github/workflows/ci.yml"
+            "evidence": "https://github.com/basher83/renovate-config/blob/bfc28e00db6e53bc7ca627d5ba662f9b68a2c570/.github/workflows/ci.yml"
           }
         ],
         "pr_workflow_declarations": true,
@@ -3405,7 +3452,7 @@
       "repository": "basher83/Sombrero-Edge-Control",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:11.549805+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/Sombrero-Edge-Control"
       },
       "observation": {
@@ -3426,7 +3473,7 @@
         "frameworks": null
       },
       "lifecycle": {
-        "archived": false,
+        "archived": true,
         "development_status": null
       },
       "fork": false,
@@ -3754,7 +3801,7 @@
       "repository": "basher83/Supernova-MicroK8s-Infra",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:11.648146+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/Supernova-MicroK8s-Infra"
       },
       "observation": {
@@ -3871,7 +3918,7 @@
       "repository": "basher83/tailnet-microservices",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:12.069585+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/tailnet-microservices"
       },
       "observation": {
@@ -4045,7 +4092,7 @@
       "repository": "basher83/the-agent-toolshed",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:12.261399+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/the-agent-toolshed"
       },
       "observation": {
@@ -4109,7 +4156,7 @@
       "repository": "basher83/Triangulum-Prime",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:13.075637+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/Triangulum-Prime"
       },
       "observation": {
@@ -4181,7 +4228,7 @@
       "repository": "basher83/Virgo-Core",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:13.939682+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/Virgo-Core"
       },
       "observation": {
@@ -4305,14 +4352,14 @@
       "repository": "basher83/Zammad-MCP",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-09T20:15:13.383096+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": "https://api.github.com/repos/basher83/Zammad-MCP"
       },
       "observation": {
-        "revision": "0553fb3e27e181e14091d65b8094601c66ee44d8",
-        "observed_at": "2026-10-09T20:15:13.383096+00:00",
+        "revision": "28cb731d40c3359581afb0ce37e7cd20a5431e6b",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "default_branch": "main",
-        "evidence": "https://github.com/basher83/Zammad-MCP/tree/0553fb3e27e181e14091d65b8094601c66ee44d8"
+        "evidence": "https://github.com/basher83/Zammad-MCP/tree/28cb731d40c3359581afb0ce37e7cd20a5431e6b"
       },
       "purpose": {
         "text": "MCP server letting AI assistants work with Zammad tickets, users, and orgs.",
@@ -4388,7 +4435,7 @@
                 }
               ]
             },
-            "evidence": "https://github.com/basher83/Zammad-MCP/blob/0553fb3e27e181e14091d65b8094601c66ee44d8/renovate.json"
+            "evidence": "https://github.com/basher83/Zammad-MCP/blob/28cb731d40c3359581afb0ce37e7cd20a5431e6b/renovate.json"
           }
         ],
         "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
@@ -4422,7 +4469,7 @@
                 "runs-on": "ubuntu-latest"
               }
             ],
-            "evidence": "https://github.com/basher83/Zammad-MCP/blob/0553fb3e27e181e14091d65b8094601c66ee44d8/.github/workflows/docker-publish.yml"
+            "evidence": "https://github.com/basher83/Zammad-MCP/blob/28cb731d40c3359581afb0ce37e7cd20a5431e6b/.github/workflows/docker-publish.yml"
           },
           {
             "path": ".github/workflows/security-scan.yml",
@@ -4452,7 +4499,7 @@
                 "runs-on": "ubuntu-latest"
               }
             ],
-            "evidence": "https://github.com/basher83/Zammad-MCP/blob/0553fb3e27e181e14091d65b8094601c66ee44d8/.github/workflows/security-scan.yml"
+            "evidence": "https://github.com/basher83/Zammad-MCP/blob/28cb731d40c3359581afb0ce37e7cd20a5431e6b/.github/workflows/security-scan.yml"
           },
           {
             "path": ".github/workflows/tests.yml",
@@ -4487,7 +4534,7 @@
                 "runs-on": "ubuntu-latest"
               }
             ],
-            "evidence": "https://github.com/basher83/Zammad-MCP/blob/0553fb3e27e181e14091d65b8094601c66ee44d8/.github/workflows/tests.yml"
+            "evidence": "https://github.com/basher83/Zammad-MCP/blob/28cb731d40c3359581afb0ce37e7cd20a5431e6b/.github/workflows/tests.yml"
           }
         ],
         "pr_workflow_declarations": true,
@@ -4673,9 +4720,9 @@
         "evidence": "https://api.github.com/repos/basher83/The-Mothership-Homelab"
       },
       "observation": {
-        "revision": "81f42c566710a6e25858272641feb6ec50e5a18a",
-        "observed_at": "2026-10-09T20:45:57.441009+00:00",
-        "evidence": "https://github.com/basher83/The-Mothership-Homelab/tree/81f42c566710a6e25858272641feb6ec50e5a18a"
+        "revision": "dca49dfee64ea31dcf603ac3fb595f6c82e8ec41",
+        "observed_at": "2026-10-13T15:30:00+00:00",
+        "evidence": "https://github.com/basher83/The-Mothership-Homelab/tree/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41"
       },
       "management": {
         "renovate": {
@@ -4683,27 +4730,27 @@
           "extends": [
             {
               "reference": "local>basher83/renovate-config",
-              "evidence": "https://github.com/basher83/The-Mothership-Homelab/blob/81f42c566710a6e25858272641feb6ec50e5a18a/renovate.json"
+              "evidence": "https://github.com/basher83/The-Mothership-Homelab/blob/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41/renovate.json"
             },
             {
               "reference": "local>basher83/renovate-config//presets/python.json",
-              "evidence": "https://github.com/basher83/The-Mothership-Homelab/blob/81f42c566710a6e25858272641feb6ec50e5a18a/renovate.json"
+              "evidence": "https://github.com/basher83/The-Mothership-Homelab/blob/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41/renovate.json"
             },
             {
               "reference": "local>basher83/renovate-config//presets/ansible.json",
-              "evidence": "https://github.com/basher83/The-Mothership-Homelab/blob/81f42c566710a6e25858272641feb6ec50e5a18a/renovate.json"
+              "evidence": "https://github.com/basher83/The-Mothership-Homelab/blob/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41/renovate.json"
             },
             {
               "reference": "local>basher83/renovate-config//presets/terraform-tofu.json",
-              "evidence": "https://github.com/basher83/The-Mothership-Homelab/blob/81f42c566710a6e25858272641feb6ec50e5a18a/renovate.json"
+              "evidence": "https://github.com/basher83/The-Mothership-Homelab/blob/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41/renovate.json"
             },
             {
               "reference": "local>basher83/renovate-config//presets/docker.json",
-              "evidence": "https://github.com/basher83/The-Mothership-Homelab/blob/81f42c566710a6e25858272641feb6ec50e5a18a/renovate.json"
+              "evidence": "https://github.com/basher83/The-Mothership-Homelab/blob/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41/renovate.json"
             },
             {
               "reference": "local>basher83/renovate-config//presets/github-actions-security.json",
-              "evidence": "https://github.com/basher83/The-Mothership-Homelab/blob/81f42c566710a6e25858272641feb6ec50e5a18a/renovate.json"
+              "evidence": "https://github.com/basher83/The-Mothership-Homelab/blob/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41/renovate.json"
             }
           ],
           "has_local_overrides": false
@@ -4714,7 +4761,7 @@
           "shared_workflow_references": [
             {
               "reference": "basher83/.github/.github/workflows/sync-labels.yml@9f26f1a7c1de5470dac16daa0f38085dc8975fb2",
-              "evidence": "https://github.com/basher83/The-Mothership-Homelab/blob/81f42c566710a6e25858272641feb6ec50e5a18a/.github/workflows/use-sync-labels.yml"
+              "evidence": "https://github.com/basher83/The-Mothership-Homelab/blob/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41/.github/workflows/use-sync-labels.yml"
             }
           ],
           "declared_check_names": [
@@ -4738,7 +4785,7 @@
       "required_checks": {
         "state": "observed",
         "checks": [],
-        "observed_at": "2026-10-09T20:45:57.441009+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": [
           "https://api.github.com/repos/basher83/The-Mothership-Homelab/rules/branches/main",
           "https://api.github.com/repos/basher83/The-Mothership-Homelab/branches/main/protection"
@@ -6417,20 +6464,24 @@
         "evidence": "https://api.github.com/repos/basher83/personal-computing"
       },
       "observation": {
-        "revision": "ada30901e7d298edb8e6dde761907ed20e32719f",
-        "observed_at": "2026-10-09T20:45:51.457023+00:00",
-        "evidence": "https://github.com/basher83/personal-computing/tree/ada30901e7d298edb8e6dde761907ed20e32719f"
+        "revision": "e5d60f9a5df9748f32c4f7c5df8dad7407bc0393",
+        "observed_at": "2026-10-13T15:30:00+00:00",
+        "evidence": "https://github.com/basher83/personal-computing/tree/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393"
       },
       "management": {
         "renovate": {
           "state": "observed",
           "extends": [
             {
-              "reference": "local>basher83/renovate-config",
-              "evidence": "https://github.com/basher83/personal-computing/blob/ada30901e7d298edb8e6dde761907ed20e32719f/renovate.json"
+              "reference": "config:best-practices",
+              "evidence": "https://github.com/basher83/personal-computing/blob/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393/renovate.json"
+            },
+            {
+              "reference": "workarounds:all",
+              "evidence": "https://github.com/basher83/personal-computing/blob/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393/renovate.json"
             }
           ],
-          "has_local_overrides": false
+          "has_local_overrides": true
         },
         "workflows": {
           "state": "observed",
@@ -6446,32 +6497,32 @@
             {
               "tool": "git-cliff",
               "version": "2.14.2",
-              "evidence": "https://github.com/basher83/personal-computing/blob/ada30901e7d298edb8e6dde761907ed20e32719f/mise.toml"
+              "evidence": "https://github.com/basher83/personal-computing/blob/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393/mise.toml"
             },
             {
               "tool": "hk",
               "version": "2.5.0",
-              "evidence": "https://github.com/basher83/personal-computing/blob/ada30901e7d298edb8e6dde761907ed20e32719f/mise.toml"
+              "evidence": "https://github.com/basher83/personal-computing/blob/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393/mise.toml"
             },
             {
               "tool": "node",
-              "version": "26.10.0",
-              "evidence": "https://github.com/basher83/personal-computing/blob/ada30901e7d298edb8e6dde761907ed20e32719f/mise.toml"
+              "version": "26.11.1",
+              "evidence": "https://github.com/basher83/personal-computing/blob/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393/mise.toml"
             },
             {
               "tool": "pkl",
               "version": "0.32.1",
-              "evidence": "https://github.com/basher83/personal-computing/blob/ada30901e7d298edb8e6dde761907ed20e32719f/mise.toml"
+              "evidence": "https://github.com/basher83/personal-computing/blob/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393/mise.toml"
             },
             {
               "tool": "python",
-              "version": "3.14.8",
-              "evidence": "https://github.com/basher83/personal-computing/blob/ada30901e7d298edb8e6dde761907ed20e32719f/mise.toml"
+              "version": "3.15.0",
+              "evidence": "https://github.com/basher83/personal-computing/blob/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393/mise.toml"
             },
             {
               "tool": "uv",
-              "version": "0.12.23",
-              "evidence": "https://github.com/basher83/personal-computing/blob/ada30901e7d298edb8e6dde761907ed20e32719f/mise.toml"
+              "version": "0.13.0",
+              "evidence": "https://github.com/basher83/personal-computing/blob/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393/mise.toml"
             }
           ]
         }
@@ -6479,7 +6530,7 @@
       "required_checks": {
         "state": "observed",
         "checks": [],
-        "observed_at": "2026-10-09T20:45:51.457023+00:00",
+        "observed_at": "2026-10-13T15:30:00+00:00",
         "evidence": [
           "https://api.github.com/repos/basher83/personal-computing/rules/branches/main",
           "https://api.github.com/repos/basher83/personal-computing/branches/main/protection"
@@ -7876,6 +7927,23 @@
       "excluded_count": 58,
       "standing": "superseded_public_only_scope",
       "evidence": "https://github.com/basher83/.github/blob/6fd46f5428a18be608f5d091b302f7de879e9c3a/portfolio/repositories.yaml"
+    },
+    {
+      "observed_date": "2026-10-13",
+      "standing": "canonical_repository_inventory",
+      "public_count": 34,
+      "private_count": 58,
+      "included_count": 92,
+      "excluded_count": 0,
+      "evidence": "https://github.com/basher83/.github/pull/101",
+      "note": "Operator decision: portfolio/repositories.yaml is the canonical repository inventory; GitHub steward maintains it via future PRs."
     }
-  ]
+  ],
+  "inventory_authority": {
+    "canonical_since": "2026-10-13",
+    "owner": "GitHub steward (automation agent)",
+    "owner_refresh": "GitHub steward opens PRs against portfolio/repositories.yaml using read-only inventory captures",
+    "freshness_expectation": "Weekly check against live GitHub state",
+    "evidence": "https://github.com/basher83/.github/pull/101"
+  }
 }
