@@ -52,6 +52,17 @@ def sample():
 
 
 class InventoryTests(unittest.TestCase):
+    def test_added_since_card_count_reconciles_scope(self):
+        data = sample()
+        data['scope'].update(added_since_card_count=1, included_count=2, public_count=2)
+        second = copy.deepcopy(data['repositories'][0])
+        second['repository'] = 'basher83/example-two'
+        data['repositories'].append(second)
+        inventory.validate(data)
+        data['scope']['added_since_card_count'] = 0
+        with self.assertRaises(ValueError):
+            inventory.validate(data)
+
     def test_rejects_unverified_visibility(self):
         for value in (None, 'unknown'):
             data = sample()
