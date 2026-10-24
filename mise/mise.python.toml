@@ -12,7 +12,7 @@ show_env = false
 truncate = true
 
 [tools]
-python = "3.15.0"
+python = "3.15.1"
 uv = "0.13.0"
 ruff = "0.17.0"
 prek = "0.5.5"
