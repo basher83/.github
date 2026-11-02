@@ -7,7 +7,7 @@ Canonical data: [repositories.yaml](repositories.yaml). This YAML file uses JSON
 
 `portfolio/repositories.yaml` is the canonical repository inventory (since 2026-10-13). **Owner:** GitHub steward (automation agent). **Refresh:** GitHub steward opens PRs against portfolio/repositories.yaml using read-only inventory captures. **Freshness:** Weekly check against live GitHub state. [Decision evidence](https://github.com/basher83/.github/pull/101).
 
-The 2026-10-06 card contained 92 entries. Visibility was checked on 2026-10-09 to 2026-10-13; 92 entries are included (34 public, 58 private), with 0 excluded. Central Renovate preset extenders (non-archived basher83): 30 as of 2026-10-12 ([steward-inventory-2026-10-12](https://github.com/basher83/renovate-config/blob/13e6a1a64d869a872d489a8fa19d8b59d362ee37/sources/evaluate/2026-10-12-d017-consumer-inventory.json)). The initial public-only restriction was superseded by the operator-approved publication boundary below.
+The 2026-10-06 card contained 92 entries; 3 repositories created after the card were added by later refreshes. Visibility was checked on 2026-10-09 to 2026-10-14; 95 entries are included (34 public, 61 private), with 0 excluded. Central Renovate preset extenders (non-archived basher83): 30 as of 2026-10-12 ([steward-inventory-2026-10-12](https://github.com/basher83/renovate-config/blob/13e6a1a64d869a872d489a8fa19d8b59d362ee37/sources/evaluate/2026-10-12-d017-consumer-inventory.json)). The initial public-only restriction was superseded by the operator-approved publication boundary below.
 
 ## Publication boundary
 
@@ -28,22 +28,22 @@ Renovate fields record direct presets and local configuration only. Inherited pr
 | Field | Populated | Unknown / limit |
 | --- | ---: | --- |
 | Public purpose, archive/fork flags, revision/date | 34 | Frameworks and development stage unknown for all |
-| Repository identity / visibility | 92 | 58 private entries publish bounded management facts only |
-| Private workflow/config survey | 54 | 4 unknown |
-| Private direct Renovate config | 20 present | 34 absent; 4 unknown |
-| Private tool versions | 14 repositories | Values outside safe version syntax are withheld; alternate tool manifests not surveyed |
+| Repository identity / visibility | 95 | 61 private entries publish bounded management facts only |
+| Private workflow/config survey | 57 | 4 unknown |
+| Private direct Renovate config | 22 present | 35 absent; 4 unknown |
+| Private tool versions | 16 repositories | Values outside safe version syntax are withheld; alternate tool manifests not surveyed |
 | Private unpinned tool versions | 8 repositories | 35 tool entries use latest/stable/lts, partial or wildcard versions; recorded as observed, not approved |
-| Public primary language | 28 | 6 unknown |
+| Public primary language | 29 | 5 unknown |
 | Public workflow declarations | 33 | 1 unknown; 20 declare PR triggers |
 | Public direct Renovate config | 25 present | 8 absent in searched paths; 1 unknown; effective policy unknown for all |
-| Required status checks | 90 | 2 unknown; 1 have required checks |
-| Runtime results / approved adoption exceptions | 0 | 92 unknown |
+| Required status checks | 93 | 2 unknown; 1 have required checks |
+| Runtime results / approved adoption exceptions | 0 | 95 unknown |
 
 ## Public repositories
 
 | Repository | Lifecycle / fork | Primary language | Purpose (2026-10-06) | PR workflow declared | Required checks |
 | --- | --- | --- | --- | --- | --- |
-| [.github](https://github.com/basher83/.github) | unarchived | unknown | Shared GitHub workflows. | yes (declaration) | none |
+| [.github](https://github.com/basher83/.github) | unarchived | Python | Shared GitHub workflows. | yes (declaration) | none |
 | [.github-private](https://github.com/basher83/.github-private) | unarchived | unknown | Write-up of a Copilot prompt-engineering experiment ("The Emotional Journey of Copilot"). (inferred) | no | none |
 | [andromeda-orchestration](https://github.com/basher83/andromeda-orchestration) | archived | Jinja | Ansible homelab automation on Consul, Nomad, and Vault over Proxmox. (inferred) | yes (declaration) | none |
 | [arscontexta-1](https://github.com/basher83/arscontexta-1) | unarchived, deleted_from_github, fork | Shell | Claude Code plugin that builds a personal markdown "second brain" from conversation. | no | none |
@@ -84,16 +84,16 @@ Dates and revisions below apply to file observations. Check requirements are mut
 
 ### basher83/.github
 
-Observed 2026-10-13T03:50:37+00:00; [revision 2fa56e7f284d](https://github.com/basher83/.github/tree/2fa56e7f284d3bae03087604d6dcdffd719efb0b). [Visibility API](https://api.github.com/repos/basher83/.github).
+Observed 2026-10-14T06:46:30+00:00; [revision a758e803289e](https://github.com/basher83/.github/tree/a758e803289e0a5bc38a914a9bdcbec5db7d2ab2). [Visibility API](https://api.github.com/repos/basher83/.github).
 
-- Renovate [renovate.json](https://github.com/basher83/.github/blob/2fa56e7f284d3bae03087604d6dcdffd719efb0b/renovate.json): direct presets `local>basher83/renovate-config`; local override fields none. Full values are in canonical data.
-- Workflow [.github/workflows/fast-gate.yml](https://github.com/basher83/.github/blob/2fa56e7f284d3bae03087604d6dcdffd719efb0b/.github/workflows/fast-gate.yml): `pull_request`, `push`, `workflow_dispatch`. Filters and job conditions are in canonical data.
-- Workflow [.github/workflows/python-mise-fast-pr-gate.yml](https://github.com/basher83/.github/blob/2fa56e7f284d3bae03087604d6dcdffd719efb0b/.github/workflows/python-mise-fast-pr-gate.yml): `workflow_call`. Filters and job conditions are in canonical data.
-- Workflow [.github/workflows/sync-labels.yml](https://github.com/basher83/.github/blob/2fa56e7f284d3bae03087604d6dcdffd719efb0b/.github/workflows/sync-labels.yml): `workflow_call`. Filters and job conditions are in canonical data.
-- Workflow [.github/workflows/tailscale-connect-to-tailnet.yml](https://github.com/basher83/.github/blob/2fa56e7f284d3bae03087604d6dcdffd719efb0b/.github/workflows/tailscale-connect-to-tailnet.yml): `workflow_call`. Filters and job conditions are in canonical data.
-- Workflow [.github/workflows/tailscale-policy.yml](https://github.com/basher83/.github/blob/2fa56e7f284d3bae03087604d6dcdffd719efb0b/.github/workflows/tailscale-policy.yml): `workflow_call`. Filters and job conditions are in canonical data.
-- Shared call (local): `./.github/workflows/python-mise-fast-pr-gate.yml` from [.github/workflows/fast-gate.yml, job fast-gate](https://github.com/basher83/.github/blob/2fa56e7f284d3bae03087604d6dcdffd719efb0b/.github/workflows/fast-gate.yml).
-- actionlint references (scoped scan): [mise.toml](https://github.com/basher83/.github/blob/2fa56e7f284d3bae03087604d6dcdffd719efb0b/mise.toml).
+- Renovate [renovate.json](https://github.com/basher83/.github/blob/a758e803289e0a5bc38a914a9bdcbec5db7d2ab2/renovate.json): direct presets `local>basher83/renovate-config`; local override fields none. Full values are in canonical data.
+- Workflow [.github/workflows/fast-gate.yml](https://github.com/basher83/.github/blob/a758e803289e0a5bc38a914a9bdcbec5db7d2ab2/.github/workflows/fast-gate.yml): `pull_request`, `push`, `workflow_dispatch`. Filters and job conditions are in canonical data.
+- Workflow [.github/workflows/python-mise-fast-pr-gate.yml](https://github.com/basher83/.github/blob/a758e803289e0a5bc38a914a9bdcbec5db7d2ab2/.github/workflows/python-mise-fast-pr-gate.yml): `workflow_call`. Filters and job conditions are in canonical data.
+- Workflow [.github/workflows/sync-labels.yml](https://github.com/basher83/.github/blob/a758e803289e0a5bc38a914a9bdcbec5db7d2ab2/.github/workflows/sync-labels.yml): `workflow_call`. Filters and job conditions are in canonical data.
+- Workflow [.github/workflows/tailscale-connect-to-tailnet.yml](https://github.com/basher83/.github/blob/a758e803289e0a5bc38a914a9bdcbec5db7d2ab2/.github/workflows/tailscale-connect-to-tailnet.yml): `workflow_call`. Filters and job conditions are in canonical data.
+- Workflow [.github/workflows/tailscale-policy.yml](https://github.com/basher83/.github/blob/a758e803289e0a5bc38a914a9bdcbec5db7d2ab2/.github/workflows/tailscale-policy.yml): `workflow_call`. Filters and job conditions are in canonical data.
+- Shared call (local): `./.github/workflows/python-mise-fast-pr-gate.yml` from [.github/workflows/fast-gate.yml, job fast-gate](https://github.com/basher83/.github/blob/a758e803289e0a5bc38a914a9bdcbec5db7d2ab2/.github/workflows/fast-gate.yml).
+- actionlint references (scoped scan): [mise.toml](https://github.com/basher83/.github/blob/a758e803289e0a5bc38a914a9bdcbec5db7d2ab2/mise.toml).
 - Required checks: none. [API evidence 1](https://api.github.com/repos/basher83/.github/rules/branches/main) [API evidence 2](https://api.github.com/repos/basher83/.github/branches/main/protection).
 
 ### basher83/.github-private
@@ -268,12 +268,11 @@ Observed 2026-10-09T20:15:07.349093+00:00; [revision fa7169a82fb4](https://githu
 
 ### basher83/lunar-claude
 
-Observed 2026-10-09T20:15:07.956856+00:00; [revision e81cabf81e7c](https://github.com/basher83/lunar-claude/tree/e81cabf81e7c58eb90b2dc656c8bc15d4a23227b). [Visibility API](https://api.github.com/repos/basher83/lunar-claude).
+Observed 2026-10-14T06:46:13+00:00; [revision 24e5f9a73dd7](https://github.com/basher83/lunar-claude/tree/24e5f9a73dd7b5415e5fa4fad0dfc1d97f35720c). [Visibility API](https://api.github.com/repos/basher83/lunar-claude).
 
-- Renovate [renovate.json](https://github.com/basher83/lunar-claude/blob/e81cabf81e7c58eb90b2dc656c8bc15d4a23227b/renovate.json): direct presets `local>basher83/renovate-config`; local override fields none. Full values are in canonical data.
-- Workflow [.github/workflows/ci.yml](https://github.com/basher83/lunar-claude/blob/e81cabf81e7c58eb90b2dc656c8bc15d4a23227b/.github/workflows/ci.yml): `pull_request`, `push`, `workflow_dispatch`. Filters and job conditions are in canonical data.
-- Workflow [.github/workflows/pr-check.yml](https://github.com/basher83/lunar-claude/blob/e81cabf81e7c58eb90b2dc656c8bc15d4a23227b/.github/workflows/pr-check.yml): `pull_request`, `push`. Filters and job conditions are in canonical data.
-- Workflow [.github/workflows/release.yml](https://github.com/basher83/lunar-claude/blob/e81cabf81e7c58eb90b2dc656c8bc15d4a23227b/.github/workflows/release.yml): `push`. Filters and job conditions are in canonical data.
+- Renovate [renovate.json](https://github.com/basher83/lunar-claude/blob/24e5f9a73dd7b5415e5fa4fad0dfc1d97f35720c/renovate.json): direct presets `local>basher83/renovate-config`; local override fields none. Full values are in canonical data.
+- Workflow [.github/workflows/ci.yml](https://github.com/basher83/lunar-claude/blob/24e5f9a73dd7b5415e5fa4fad0dfc1d97f35720c/.github/workflows/ci.yml): `pull_request`, `push`, `workflow_dispatch`. Filters and job conditions are in canonical data.
+- Workflow [.github/workflows/release.yml](https://github.com/basher83/lunar-claude/blob/24e5f9a73dd7b5415e5fa4fad0dfc1d97f35720c/.github/workflows/release.yml): `push`. Filters and job conditions are in canonical data.
 - Central/local shared workflow calls: none observed in workflow jobs.
 - actionlint references (scoped scan): none observed.
 - Required checks: none. [API evidence 1](https://api.github.com/repos/basher83/lunar-claude/rules/branches/main) [API evidence 2](https://api.github.com/repos/basher83/lunar-claude/branches/main/protection).
@@ -487,7 +486,9 @@ Purpose, language/stack, internal paths, filters and override contents are withh
 | [forge-doctrine](https://github.com/basher83/forge-doctrine) | absent | no | none observed | none |
 | [forge-pi](https://github.com/basher83/forge-pi) | absent | no | none observed | none |
 | [forgelens](https://github.com/basher83/forgelens) | absent | no | none observed | none |
+| [graphite](https://github.com/basher83/graphite) | observed / central | yes (declaration) | none observed | none |
 | [Hashtopolis-agent](https://github.com/basher83/Hashtopolis-agent) | observed | no | none observed | none |
+| [homelab-factory](https://github.com/basher83/homelab-factory) | absent | no | none observed | none |
 | [human-thinking](https://github.com/basher83/human-thinking) | observed / central | no | none observed | none |
 | [IaC_homelab](https://github.com/basher83/IaC_homelab) | observed | no | none observed | none |
 | [lab-operations](https://github.com/basher83/lab-operations) | absent | yes (declaration) | yes (configured) | none |
@@ -510,6 +511,7 @@ Purpose, language/stack, internal paths, filters and override contents are withh
 | [research-ralph](https://github.com/basher83/research-ralph) | absent | no | none observed | none |
 | [research-ralph-apparatus](https://github.com/basher83/research-ralph-apparatus) | absent | no | none observed | none |
 | [research-ralph-template](https://github.com/basher83/research-ralph-template) | absent | no | none observed | none |
+| [research-shelves](https://github.com/basher83/research-shelves) | observed / central | yes (declaration) | none observed | none |
 | [reverse-ralph-apparatus](https://github.com/basher83/reverse-ralph-apparatus) | absent | no | none observed | none |
 | [reverse-ralph-runner](https://github.com/basher83/reverse-ralph-runner) | absent | no | none observed | none |
 | [reverse_engineer_ralph](https://github.com/basher83/reverse_engineer_ralph) | absent | no | none observed | none |
@@ -755,6 +757,21 @@ Observed 2026-10-09T20:45:48.109701+00:00; [revision d56a5cbaccff](https://githu
 - Required checks: none. [API evidence 1](https://api.github.com/repos/basher83/forgelens/rules/branches/main) [API evidence 2](https://api.github.com/repos/basher83/forgelens/branches/main/protection).
 - Unknown/withheld categories: `alternate_config_paths_not_surveyed`, `effective_policy_unknown`, `private_override_values_withheld`, `private_purpose_and_stack_withheld`, `runtime_unknown`.
 
+### basher83/graphite (private)
+
+Observed 2026-10-14T06:46:20+00:00; [revision 364ddc48bed1](https://github.com/basher83/graphite/tree/364ddc48bed1a426e3a34bd1c6309c2ccc6a8f46). [Visibility API](https://api.github.com/repos/basher83/graphite).
+
+- Renovate: observed; local overrides present: False. Override contents withheld.
+- Direct preset: `local>basher83/renovate-config`. [Evidence](https://github.com/basher83/graphite/blob/364ddc48bed1a426e3a34bd1c6309c2ccc6a8f46/renovate.json).
+- Workflow survey: observed; PR declaration: True.
+- Declared check names: `ci`. Job IDs/names only; matrix-expanded/reusable check names are not resolved.
+- Tool version survey: observed.
+- Tool `git-cliff`: `2.14.2`. [Evidence](https://github.com/basher83/graphite/blob/364ddc48bed1a426e3a34bd1c6309c2ccc6a8f46/mise.toml).
+- Tool `hk`: `2.5.0`. [Evidence](https://github.com/basher83/graphite/blob/364ddc48bed1a426e3a34bd1c6309c2ccc6a8f46/mise.toml).
+- Tool `pkl`: `0.32.1`. [Evidence](https://github.com/basher83/graphite/blob/364ddc48bed1a426e3a34bd1c6309c2ccc6a8f46/mise.toml).
+- Required checks: none. [API evidence 1](https://api.github.com/repos/basher83/graphite/rules/branches/main) [API evidence 2](https://api.github.com/repos/basher83/graphite/branches/main/protection).
+- Unknown/withheld categories: `alternate_config_paths_not_surveyed`, `effective_policy_unknown`, `private_override_values_withheld`, `private_purpose_and_stack_withheld`, `runtime_unknown`.
+
 ### basher83/Hashtopolis-agent (private)
 
 Observed 2026-10-09T20:45:48.319043+00:00; [revision 1ce3d802ff90](https://github.com/basher83/Hashtopolis-agent/tree/1ce3d802ff9045147c03ee5fe340aefad89bfd1d). [Visibility API](https://api.github.com/repos/basher83/Hashtopolis-agent).
@@ -765,6 +782,17 @@ Observed 2026-10-09T20:45:48.319043+00:00; [revision 1ce3d802ff90](https://githu
 - Declared check names: none observed. Job IDs/names only; matrix-expanded/reusable check names are not resolved.
 - Tool version survey: absent.
 - Required checks: none. [API evidence 1](https://api.github.com/repos/basher83/Hashtopolis-agent/rules/branches/main) [API evidence 2](https://api.github.com/repos/basher83/Hashtopolis-agent/branches/main/protection).
+- Unknown/withheld categories: `alternate_config_paths_not_surveyed`, `effective_policy_unknown`, `private_override_values_withheld`, `private_purpose_and_stack_withheld`, `runtime_unknown`.
+
+### basher83/homelab-factory (private)
+
+Observed 2026-10-14T06:46:37+00:00; [revision cb17163a5e86](https://github.com/basher83/homelab-factory/tree/cb17163a5e86f0c11ff8672cd1601ee48e689acc). [Visibility API](https://api.github.com/repos/basher83/homelab-factory).
+
+- Renovate: absent; local overrides present: False. Override contents withheld.
+- Workflow survey: observed; PR declaration: False.
+- Declared check names: none observed. Job IDs/names only; matrix-expanded/reusable check names are not resolved.
+- Tool version survey: absent.
+- Required checks: none. [API evidence 1](https://api.github.com/repos/basher83/homelab-factory/rules/branches/main) [API evidence 2](https://api.github.com/repos/basher83/homelab-factory/branches/main/protection).
 - Unknown/withheld categories: `alternate_config_paths_not_surveyed`, `effective_policy_unknown`, `private_override_values_withheld`, `private_purpose_and_stack_withheld`, `runtime_unknown`.
 
 ### basher83/human-thinking (private)
@@ -929,20 +957,20 @@ Observed 2026-10-09T20:45:51.338769+00:00; [revision 6e5093d627bd](https://githu
 
 ### basher83/personal-computing (private)
 
-Observed 2026-10-13T03:50:37+00:00; [revision e5d60f9a5df9](https://github.com/basher83/personal-computing/tree/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393). [Visibility API](https://api.github.com/repos/basher83/personal-computing).
+Observed 2026-10-14T06:46:27+00:00; [revision 5a46012b1054](https://github.com/basher83/personal-computing/tree/5a46012b10548dfbea91be3b32b1f95c24d16216). [Visibility API](https://api.github.com/repos/basher83/personal-computing).
 
 - Renovate: observed; local overrides present: True. Override contents withheld.
-- Direct preset: `config:best-practices`. [Evidence](https://github.com/basher83/personal-computing/blob/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393/renovate.json).
-- Direct preset: `workarounds:all`. [Evidence](https://github.com/basher83/personal-computing/blob/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393/renovate.json).
+- Direct preset: `config:best-practices`. [Evidence](https://github.com/basher83/personal-computing/blob/5a46012b10548dfbea91be3b32b1f95c24d16216/renovate.json).
+- Direct preset: `workarounds:all`. [Evidence](https://github.com/basher83/personal-computing/blob/5a46012b10548dfbea91be3b32b1f95c24d16216/renovate.json).
 - Workflow survey: observed; PR declaration: True.
 - Declared check names: `ci`. Job IDs/names only; matrix-expanded/reusable check names are not resolved.
 - Tool version survey: observed.
-- Tool `git-cliff`: `2.14.2`. [Evidence](https://github.com/basher83/personal-computing/blob/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393/mise.toml).
-- Tool `hk`: `2.5.0`. [Evidence](https://github.com/basher83/personal-computing/blob/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393/mise.toml).
-- Tool `node`: `26.11.1`. [Evidence](https://github.com/basher83/personal-computing/blob/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393/mise.toml).
-- Tool `pkl`: `0.32.1`. [Evidence](https://github.com/basher83/personal-computing/blob/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393/mise.toml).
-- Tool `python`: `3.15.0`. [Evidence](https://github.com/basher83/personal-computing/blob/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393/mise.toml).
-- Tool `uv`: `0.13.0`. [Evidence](https://github.com/basher83/personal-computing/blob/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393/mise.toml).
+- Tool `git-cliff`: `2.14.2`. [Evidence](https://github.com/basher83/personal-computing/blob/5a46012b10548dfbea91be3b32b1f95c24d16216/mise.toml).
+- Tool `hk`: `2.6.0`. [Evidence](https://github.com/basher83/personal-computing/blob/5a46012b10548dfbea91be3b32b1f95c24d16216/mise.toml).
+- Tool `node`: `26.11.1`. [Evidence](https://github.com/basher83/personal-computing/blob/5a46012b10548dfbea91be3b32b1f95c24d16216/mise.toml).
+- Tool `pkl`: `0.32.1`. [Evidence](https://github.com/basher83/personal-computing/blob/5a46012b10548dfbea91be3b32b1f95c24d16216/mise.toml).
+- Tool `python`: `3.15.0`. [Evidence](https://github.com/basher83/personal-computing/blob/5a46012b10548dfbea91be3b32b1f95c24d16216/mise.toml).
+- Tool `uv`: `0.13.0`. [Evidence](https://github.com/basher83/personal-computing/blob/5a46012b10548dfbea91be3b32b1f95c24d16216/mise.toml).
 - Required checks: none. [API evidence 1](https://api.github.com/repos/basher83/personal-computing/rules/branches/main) [API evidence 2](https://api.github.com/repos/basher83/personal-computing/branches/main/protection).
 - Unknown/withheld categories: `alternate_config_paths_not_surveyed`, `effective_policy_unknown`, `private_override_values_withheld`, `private_purpose_and_stack_withheld`, `runtime_unknown`, `tool_value_withheld`.
 
@@ -1060,6 +1088,22 @@ Observed 2026-10-09T20:45:54.284823+00:00; [revision 9780b15d900c](https://githu
 - Declared check names: none observed. Job IDs/names only; matrix-expanded/reusable check names are not resolved.
 - Tool version survey: absent.
 - Required checks: none. [API evidence 1](https://api.github.com/repos/basher83/research-ralph-template/rules/branches/main) [API evidence 2](https://api.github.com/repos/basher83/research-ralph-template/branches/main/protection).
+- Unknown/withheld categories: `alternate_config_paths_not_surveyed`, `effective_policy_unknown`, `private_override_values_withheld`, `private_purpose_and_stack_withheld`, `runtime_unknown`.
+
+### basher83/research-shelves (private)
+
+Observed 2026-10-14T06:46:22+00:00; [revision ee27412e5970](https://github.com/basher83/research-shelves/tree/ee27412e59703759079304c2bc72bb10f09908ad). [Visibility API](https://api.github.com/repos/basher83/research-shelves).
+
+- Renovate: observed; local overrides present: False. Override contents withheld.
+- Direct preset: `local>basher83/renovate-config`. [Evidence](https://github.com/basher83/research-shelves/blob/ee27412e59703759079304c2bc72bb10f09908ad/renovate.json).
+- Workflow survey: observed; PR declaration: True.
+- Declared check names: `ci`. Job IDs/names only; matrix-expanded/reusable check names are not resolved.
+- Tool version survey: observed.
+- Tool `git-cliff`: `2.14.2`. [Evidence](https://github.com/basher83/research-shelves/blob/ee27412e59703759079304c2bc72bb10f09908ad/mise.toml).
+- Tool `hk`: `2.5.0`. [Evidence](https://github.com/basher83/research-shelves/blob/ee27412e59703759079304c2bc72bb10f09908ad/mise.toml).
+- Tool `pkl`: `0.32.1`. [Evidence](https://github.com/basher83/research-shelves/blob/ee27412e59703759079304c2bc72bb10f09908ad/mise.toml).
+- Tool `uv`: `0.13.0`. [Evidence](https://github.com/basher83/research-shelves/blob/ee27412e59703759079304c2bc72bb10f09908ad/mise.toml).
+- Required checks: none. [API evidence 1](https://api.github.com/repos/basher83/research-shelves/rules/branches/main) [API evidence 2](https://api.github.com/repos/basher83/research-shelves/branches/main/protection).
 - Unknown/withheld categories: `alternate_config_paths_not_surveyed`, `effective_policy_unknown`, `private_override_values_withheld`, `private_purpose_and_stack_withheld`, `runtime_unknown`.
 
 ### basher83/reverse-ralph-apparatus (private)
@@ -1184,17 +1228,17 @@ Observed 2026-10-09T20:45:57.276961+00:00; [revision 60804c4183ea](https://githu
 
 ### basher83/The-Mothership-Homelab (private)
 
-Observed 2026-10-13T03:50:37+00:00; [revision dca49dfee64e](https://github.com/basher83/The-Mothership-Homelab/tree/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41). [Visibility API](https://api.github.com/repos/basher83/The-Mothership-Homelab).
+Observed 2026-10-14T06:46:13+00:00; [revision 91f238e13392](https://github.com/basher83/The-Mothership-Homelab/tree/91f238e13392c8bda984e8a6e6bc621329351443). [Visibility API](https://api.github.com/repos/basher83/The-Mothership-Homelab).
 
 - Renovate: observed; local overrides present: False. Override contents withheld.
-- Direct preset: `local>basher83/renovate-config`. [Evidence](https://github.com/basher83/The-Mothership-Homelab/blob/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41/renovate.json).
-- Direct preset: `local>basher83/renovate-config//presets/python.json`. [Evidence](https://github.com/basher83/The-Mothership-Homelab/blob/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41/renovate.json).
-- Direct preset: `local>basher83/renovate-config//presets/ansible.json`. [Evidence](https://github.com/basher83/The-Mothership-Homelab/blob/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41/renovate.json).
-- Direct preset: `local>basher83/renovate-config//presets/terraform-tofu.json`. [Evidence](https://github.com/basher83/The-Mothership-Homelab/blob/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41/renovate.json).
-- Direct preset: `local>basher83/renovate-config//presets/docker.json`. [Evidence](https://github.com/basher83/The-Mothership-Homelab/blob/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41/renovate.json).
-- Direct preset: `local>basher83/renovate-config//presets/github-actions-security.json`. [Evidence](https://github.com/basher83/The-Mothership-Homelab/blob/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41/renovate.json).
+- Direct preset: `local>basher83/renovate-config`. [Evidence](https://github.com/basher83/The-Mothership-Homelab/blob/91f238e13392c8bda984e8a6e6bc621329351443/renovate.json).
+- Direct preset: `local>basher83/renovate-config//presets/python.json`. [Evidence](https://github.com/basher83/The-Mothership-Homelab/blob/91f238e13392c8bda984e8a6e6bc621329351443/renovate.json).
+- Direct preset: `local>basher83/renovate-config//presets/ansible.json`. [Evidence](https://github.com/basher83/The-Mothership-Homelab/blob/91f238e13392c8bda984e8a6e6bc621329351443/renovate.json).
+- Direct preset: `local>basher83/renovate-config//presets/terraform-tofu.json`. [Evidence](https://github.com/basher83/The-Mothership-Homelab/blob/91f238e13392c8bda984e8a6e6bc621329351443/renovate.json).
+- Direct preset: `local>basher83/renovate-config//presets/docker.json`. [Evidence](https://github.com/basher83/The-Mothership-Homelab/blob/91f238e13392c8bda984e8a6e6bc621329351443/renovate.json).
+- Direct preset: `local>basher83/renovate-config//presets/github-actions-security.json`. [Evidence](https://github.com/basher83/The-Mothership-Homelab/blob/91f238e13392c8bda984e8a6e6bc621329351443/renovate.json).
 - Workflow survey: observed; PR declaration: True.
-- Shared workflow configured: `basher83/.github/.github/workflows/sync-labels.yml@2fa56e7f284d3bae03087604d6dcdffd719efb0b`. [Evidence](https://github.com/basher83/The-Mothership-Homelab/blob/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41/.github/workflows/use-sync-labels.yml).
+- Shared workflow configured: `basher83/.github/.github/workflows/sync-labels.yml@a758e803289e0a5bc38a914a9bdcbec5db7d2ab2`. [Evidence](https://github.com/basher83/The-Mothership-Homelab/blob/91f238e13392c8bda984e8a6e6bc621329351443/.github/workflows/use-sync-labels.yml).
 - Declared check names: `ansible-lint`, `dependency-review`, `docker-lint`, `docs-check`, `label`, `lint-scripts`, `stale`, `sync-labels`, `terraform-lint`, `trufflehog`. Job IDs/names only; matrix-expanded/reusable check names are not resolved.
 - Tool version survey: absent.
 - Required checks: none. [API evidence 1](https://api.github.com/repos/basher83/The-Mothership-Homelab/rules/branches/main) [API evidence 2](https://api.github.com/repos/basher83/The-Mothership-Homelab/branches/main/protection).

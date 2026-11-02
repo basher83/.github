@@ -4,16 +4,17 @@
     "historical_card_count": 92,
     "public_count": 34,
     "excluded_count": 0,
-    "definition": "All 92 entries in the historical 2026-10-06 card remain included (34 public, 58 private). Management facts refreshed on 2026-10-13 from the GitHub steward read-only inventory and live GitHub API checks where this token can access repositories. Private content follows the approved strict publication boundary.",
+    "definition": "All 92 entries in the historical 2026-10-06 card remain included, plus 3 repositories created after the card (95 total: 34 public, 61 private). Management facts refreshed on 2026-10-13 from the GitHub steward read-only inventory and live GitHub API checks; 2026-10-14 weekly refresh re-verified all accessible repositories live and updated drifted records. Private content follows the approved strict publication boundary.",
     "visibility_evidence": "https://api.github.com/user/repos?affiliation=owner&visibility=all",
-    "private_count": 58,
-    "included_count": 92,
+    "private_count": 61,
+    "included_count": 95,
     "renovate_preset_extenders": {
       "count": 30,
       "observed_date": "2026-10-12",
       "source": "steward-inventory-2026-10-12",
       "note": "Non-archived basher83 repositories extending local>basher83/renovate-config per steward inventory."
-    }
+    },
+    "added_since_card_count": 3
   },
   "sources": [
     {
@@ -197,14 +198,14 @@
       "repository": "basher83/.github",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-13T15:12:31+00:00",
+        "observed_at": "2026-10-14T06:46:30+00:00",
         "evidence": "https://api.github.com/repos/basher83/.github"
       },
       "observation": {
-        "revision": "2fa56e7f284d3bae03087604d6dcdffd719efb0b",
-        "observed_at": "2026-10-13T03:50:37+00:00",
+        "revision": "a758e803289e0a5bc38a914a9bdcbec5db7d2ab2",
+        "observed_at": "2026-10-14T06:46:30+00:00",
         "default_branch": "main",
-        "evidence": "https://github.com/basher83/.github/tree/2fa56e7f284d3bae03087604d6dcdffd719efb0b"
+        "evidence": "https://github.com/basher83/.github/tree/a758e803289e0a5bc38a914a9bdcbec5db7d2ab2"
       },
       "purpose": {
         "text": "Shared GitHub workflows.",
@@ -213,7 +214,7 @@
         "source": "card"
       },
       "stack": {
-        "primary_language": null,
+        "primary_language": "Python",
         "historical_card_language": null,
         "frameworks": null
       },
@@ -231,7 +232,7 @@
               "local>basher83/renovate-config"
             ],
             "local_overrides": {},
-            "evidence": "https://github.com/basher83/.github/blob/2fa56e7f284d3bae03087604d6dcdffd719efb0b/renovate.json"
+            "evidence": "https://github.com/basher83/.github/blob/a758e803289e0a5bc38a914a9bdcbec5db7d2ab2/renovate.json"
           }
         ],
         "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
@@ -261,7 +262,7 @@
                 "uses": "./.github/workflows/python-mise-fast-pr-gate.yml"
               }
             ],
-            "evidence": "https://github.com/basher83/.github/blob/2fa56e7f284d3bae03087604d6dcdffd719efb0b/.github/workflows/fast-gate.yml"
+            "evidence": "https://github.com/basher83/.github/blob/a758e803289e0a5bc38a914a9bdcbec5db7d2ab2/.github/workflows/fast-gate.yml"
           },
           {
             "path": ".github/workflows/python-mise-fast-pr-gate.yml",
@@ -275,7 +276,7 @@
                 "runs-on": "ubuntu-latest"
               }
             ],
-            "evidence": "https://github.com/basher83/.github/blob/2fa56e7f284d3bae03087604d6dcdffd719efb0b/.github/workflows/python-mise-fast-pr-gate.yml"
+            "evidence": "https://github.com/basher83/.github/blob/a758e803289e0a5bc38a914a9bdcbec5db7d2ab2/.github/workflows/python-mise-fast-pr-gate.yml"
           },
           {
             "path": ".github/workflows/sync-labels.yml",
@@ -297,7 +298,7 @@
                 "runs-on": "ubuntu-latest"
               }
             ],
-            "evidence": "https://github.com/basher83/.github/blob/2fa56e7f284d3bae03087604d6dcdffd719efb0b/.github/workflows/sync-labels.yml"
+            "evidence": "https://github.com/basher83/.github/blob/a758e803289e0a5bc38a914a9bdcbec5db7d2ab2/.github/workflows/sync-labels.yml"
           },
           {
             "path": ".github/workflows/tailscale-connect-to-tailnet.yml",
@@ -311,7 +312,7 @@
                 "runs-on": "ubuntu-latest"
               }
             ],
-            "evidence": "https://github.com/basher83/.github/blob/2fa56e7f284d3bae03087604d6dcdffd719efb0b/.github/workflows/tailscale-connect-to-tailnet.yml"
+            "evidence": "https://github.com/basher83/.github/blob/a758e803289e0a5bc38a914a9bdcbec5db7d2ab2/.github/workflows/tailscale-connect-to-tailnet.yml"
           },
           {
             "path": ".github/workflows/tailscale-policy.yml",
@@ -325,7 +326,7 @@
                 "runs-on": "ubuntu-latest"
               }
             ],
-            "evidence": "https://github.com/basher83/.github/blob/2fa56e7f284d3bae03087604d6dcdffd719efb0b/.github/workflows/tailscale-policy.yml"
+            "evidence": "https://github.com/basher83/.github/blob/a758e803289e0a5bc38a914a9bdcbec5db7d2ab2/.github/workflows/tailscale-policy.yml"
           }
         ],
         "pr_workflow_declarations": true,
@@ -334,14 +335,14 @@
             "caller": ".github/workflows/fast-gate.yml",
             "job": "fast-gate",
             "reference": "./.github/workflows/python-mise-fast-pr-gate.yml",
-            "evidence": "https://github.com/basher83/.github/blob/2fa56e7f284d3bae03087604d6dcdffd719efb0b/.github/workflows/fast-gate.yml",
+            "evidence": "https://github.com/basher83/.github/blob/a758e803289e0a5bc38a914a9bdcbec5db7d2ab2/.github/workflows/fast-gate.yml",
             "scope": "local"
           }
         ],
         "actionlint_references": [
           {
             "path": "mise.toml",
-            "evidence": "https://github.com/basher83/.github/blob/2fa56e7f284d3bae03087604d6dcdffd719efb0b/mise.toml"
+            "evidence": "https://github.com/basher83/.github/blob/a758e803289e0a5bc38a914a9bdcbec5db7d2ab2/mise.toml"
           }
         ],
         "actionlint_scope": "Text references in workflows, root mise.toml/.mise.toml, .pre-commit-config.yaml and hk.pkl only; absence is not a repository-wide absence claim.",
@@ -350,7 +351,7 @@
       "required_checks": {
         "state": "observed",
         "checks": [],
-        "observed_at": "2026-10-09T20:15:02.842884+00:00",
+        "observed_at": "2026-10-14T06:46:30+00:00",
         "evidence": [
           "https://api.github.com/repos/basher83/.github/rules/branches/main",
           "https://api.github.com/repos/basher83/.github/branches/main/protection"
@@ -1964,14 +1965,14 @@
       "repository": "basher83/lunar-claude",
       "visibility": {
         "value": "public",
-        "observed_at": "2026-10-13T15:12:31+00:00",
+        "observed_at": "2026-10-14T06:46:13+00:00",
         "evidence": "https://api.github.com/repos/basher83/lunar-claude"
       },
       "observation": {
-        "revision": "e81cabf81e7c58eb90b2dc656c8bc15d4a23227b",
-        "observed_at": "2026-10-09T20:15:07.956856+00:00",
+        "revision": "24e5f9a73dd7b5415e5fa4fad0dfc1d97f35720c",
+        "observed_at": "2026-10-14T06:46:13+00:00",
         "default_branch": "main",
-        "evidence": "https://github.com/basher83/lunar-claude/tree/e81cabf81e7c58eb90b2dc656c8bc15d4a23227b"
+        "evidence": "https://github.com/basher83/lunar-claude/tree/24e5f9a73dd7b5415e5fa4fad0dfc1d97f35720c"
       },
       "purpose": {
         "text": "Personal Claude Code configuration.",
@@ -1998,7 +1999,7 @@
               "local>basher83/renovate-config"
             ],
             "local_overrides": {},
-            "evidence": "https://github.com/basher83/lunar-claude/blob/e81cabf81e7c58eb90b2dc656c8bc15d4a23227b/renovate.json"
+            "evidence": "https://github.com/basher83/lunar-claude/blob/24e5f9a73dd7b5415e5fa4fad0dfc1d97f35720c/renovate.json"
           }
         ],
         "scope": "Direct extends and local fields only, not resolved policy. Searched root and .github renovate.json/json5; alternate config files and organization defaults not evaluated."
@@ -2027,30 +2028,7 @@
                 "runs-on": "ubuntu-latest"
               }
             ],
-            "evidence": "https://github.com/basher83/lunar-claude/blob/e81cabf81e7c58eb90b2dc656c8bc15d4a23227b/.github/workflows/ci.yml"
-          },
-          {
-            "path": ".github/workflows/pr-check.yml",
-            "name": "PR Check",
-            "triggers": {
-              "pull_request": {
-                "branches": [
-                  "main"
-                ]
-              },
-              "push": {
-                "branches": [
-                  "main"
-                ]
-              }
-            },
-            "jobs": [
-              {
-                "id": "ci",
-                "runs-on": "ubuntu-latest"
-              }
-            ],
-            "evidence": "https://github.com/basher83/lunar-claude/blob/e81cabf81e7c58eb90b2dc656c8bc15d4a23227b/.github/workflows/pr-check.yml"
+            "evidence": "https://github.com/basher83/lunar-claude/blob/24e5f9a73dd7b5415e5fa4fad0dfc1d97f35720c/.github/workflows/ci.yml"
           },
           {
             "path": ".github/workflows/release.yml",
@@ -2072,7 +2050,7 @@
                 "runs-on": "ubuntu-latest"
               }
             ],
-            "evidence": "https://github.com/basher83/lunar-claude/blob/e81cabf81e7c58eb90b2dc656c8bc15d4a23227b/.github/workflows/release.yml"
+            "evidence": "https://github.com/basher83/lunar-claude/blob/24e5f9a73dd7b5415e5fa4fad0dfc1d97f35720c/.github/workflows/release.yml"
           }
         ],
         "pr_workflow_declarations": true,
@@ -2084,7 +2062,7 @@
       "required_checks": {
         "state": "observed",
         "checks": [],
-        "observed_at": "2026-10-09T20:15:07.956856+00:00",
+        "observed_at": "2026-10-14T06:46:13+00:00",
         "evidence": [
           "https://api.github.com/repos/basher83/lunar-claude/rules/branches/main",
           "https://api.github.com/repos/basher83/lunar-claude/branches/main/protection"
@@ -4716,13 +4694,13 @@
       "repository": "basher83/The-Mothership-Homelab",
       "visibility": {
         "value": "private",
-        "observed_at": "2026-10-09T20:45:57.441009+00:00",
+        "observed_at": "2026-10-14T06:46:13+00:00",
         "evidence": "https://api.github.com/repos/basher83/The-Mothership-Homelab"
       },
       "observation": {
-        "revision": "dca49dfee64ea31dcf603ac3fb595f6c82e8ec41",
-        "observed_at": "2026-10-13T03:50:37+00:00",
-        "evidence": "https://github.com/basher83/The-Mothership-Homelab/tree/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41"
+        "revision": "91f238e13392c8bda984e8a6e6bc621329351443",
+        "observed_at": "2026-10-14T06:46:13+00:00",
+        "evidence": "https://github.com/basher83/The-Mothership-Homelab/tree/91f238e13392c8bda984e8a6e6bc621329351443"
       },
       "management": {
         "renovate": {
@@ -4730,27 +4708,27 @@
           "extends": [
             {
               "reference": "local>basher83/renovate-config",
-              "evidence": "https://github.com/basher83/The-Mothership-Homelab/blob/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41/renovate.json"
+              "evidence": "https://github.com/basher83/The-Mothership-Homelab/blob/91f238e13392c8bda984e8a6e6bc621329351443/renovate.json"
             },
             {
               "reference": "local>basher83/renovate-config//presets/python.json",
-              "evidence": "https://github.com/basher83/The-Mothership-Homelab/blob/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41/renovate.json"
+              "evidence": "https://github.com/basher83/The-Mothership-Homelab/blob/91f238e13392c8bda984e8a6e6bc621329351443/renovate.json"
             },
             {
               "reference": "local>basher83/renovate-config//presets/ansible.json",
-              "evidence": "https://github.com/basher83/The-Mothership-Homelab/blob/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41/renovate.json"
+              "evidence": "https://github.com/basher83/The-Mothership-Homelab/blob/91f238e13392c8bda984e8a6e6bc621329351443/renovate.json"
             },
             {
               "reference": "local>basher83/renovate-config//presets/terraform-tofu.json",
-              "evidence": "https://github.com/basher83/The-Mothership-Homelab/blob/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41/renovate.json"
+              "evidence": "https://github.com/basher83/The-Mothership-Homelab/blob/91f238e13392c8bda984e8a6e6bc621329351443/renovate.json"
             },
             {
               "reference": "local>basher83/renovate-config//presets/docker.json",
-              "evidence": "https://github.com/basher83/The-Mothership-Homelab/blob/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41/renovate.json"
+              "evidence": "https://github.com/basher83/The-Mothership-Homelab/blob/91f238e13392c8bda984e8a6e6bc621329351443/renovate.json"
             },
             {
               "reference": "local>basher83/renovate-config//presets/github-actions-security.json",
-              "evidence": "https://github.com/basher83/The-Mothership-Homelab/blob/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41/renovate.json"
+              "evidence": "https://github.com/basher83/The-Mothership-Homelab/blob/91f238e13392c8bda984e8a6e6bc621329351443/renovate.json"
             }
           ],
           "has_local_overrides": false
@@ -4760,8 +4738,8 @@
           "pr_workflow_declarations": true,
           "shared_workflow_references": [
             {
-              "reference": "basher83/.github/.github/workflows/sync-labels.yml@2fa56e7f284d3bae03087604d6dcdffd719efb0b",
-              "evidence": "https://github.com/basher83/The-Mothership-Homelab/blob/dca49dfee64ea31dcf603ac3fb595f6c82e8ec41/.github/workflows/use-sync-labels.yml"
+              "reference": "basher83/.github/.github/workflows/sync-labels.yml@a758e803289e0a5bc38a914a9bdcbec5db7d2ab2",
+              "evidence": "https://github.com/basher83/The-Mothership-Homelab/blob/91f238e13392c8bda984e8a6e6bc621329351443/.github/workflows/use-sync-labels.yml"
             }
           ],
           "declared_check_names": [
@@ -4785,7 +4763,7 @@
       "required_checks": {
         "state": "observed",
         "checks": [],
-        "observed_at": "2026-10-09T20:45:57.441009+00:00",
+        "observed_at": "2026-10-14T06:46:13+00:00",
         "evidence": [
           "https://api.github.com/repos/basher83/The-Mothership-Homelab/rules/branches/main",
           "https://api.github.com/repos/basher83/The-Mothership-Homelab/branches/main/protection"
@@ -6460,13 +6438,13 @@
       "repository": "basher83/personal-computing",
       "visibility": {
         "value": "private",
-        "observed_at": "2026-10-09T20:45:51.457023+00:00",
+        "observed_at": "2026-10-14T06:46:27+00:00",
         "evidence": "https://api.github.com/repos/basher83/personal-computing"
       },
       "observation": {
-        "revision": "e5d60f9a5df9748f32c4f7c5df8dad7407bc0393",
-        "observed_at": "2026-10-13T03:50:37+00:00",
-        "evidence": "https://github.com/basher83/personal-computing/tree/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393"
+        "revision": "5a46012b10548dfbea91be3b32b1f95c24d16216",
+        "observed_at": "2026-10-14T06:46:27+00:00",
+        "evidence": "https://github.com/basher83/personal-computing/tree/5a46012b10548dfbea91be3b32b1f95c24d16216"
       },
       "management": {
         "renovate": {
@@ -6474,11 +6452,11 @@
           "extends": [
             {
               "reference": "config:best-practices",
-              "evidence": "https://github.com/basher83/personal-computing/blob/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393/renovate.json"
+              "evidence": "https://github.com/basher83/personal-computing/blob/5a46012b10548dfbea91be3b32b1f95c24d16216/renovate.json"
             },
             {
               "reference": "workarounds:all",
-              "evidence": "https://github.com/basher83/personal-computing/blob/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393/renovate.json"
+              "evidence": "https://github.com/basher83/personal-computing/blob/5a46012b10548dfbea91be3b32b1f95c24d16216/renovate.json"
             }
           ],
           "has_local_overrides": true
@@ -6497,32 +6475,32 @@
             {
               "tool": "git-cliff",
               "version": "2.14.2",
-              "evidence": "https://github.com/basher83/personal-computing/blob/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393/mise.toml"
+              "evidence": "https://github.com/basher83/personal-computing/blob/5a46012b10548dfbea91be3b32b1f95c24d16216/mise.toml"
             },
             {
               "tool": "hk",
-              "version": "2.5.0",
-              "evidence": "https://github.com/basher83/personal-computing/blob/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393/mise.toml"
+              "version": "2.6.0",
+              "evidence": "https://github.com/basher83/personal-computing/blob/5a46012b10548dfbea91be3b32b1f95c24d16216/mise.toml"
             },
             {
               "tool": "node",
               "version": "26.11.1",
-              "evidence": "https://github.com/basher83/personal-computing/blob/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393/mise.toml"
+              "evidence": "https://github.com/basher83/personal-computing/blob/5a46012b10548dfbea91be3b32b1f95c24d16216/mise.toml"
             },
             {
               "tool": "pkl",
               "version": "0.32.1",
-              "evidence": "https://github.com/basher83/personal-computing/blob/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393/mise.toml"
+              "evidence": "https://github.com/basher83/personal-computing/blob/5a46012b10548dfbea91be3b32b1f95c24d16216/mise.toml"
             },
             {
               "tool": "python",
               "version": "3.15.0",
-              "evidence": "https://github.com/basher83/personal-computing/blob/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393/mise.toml"
+              "evidence": "https://github.com/basher83/personal-computing/blob/5a46012b10548dfbea91be3b32b1f95c24d16216/mise.toml"
             },
             {
               "tool": "uv",
               "version": "0.13.0",
-              "evidence": "https://github.com/basher83/personal-computing/blob/e5d60f9a5df9748f32c4f7c5df8dad7407bc0393/mise.toml"
+              "evidence": "https://github.com/basher83/personal-computing/blob/5a46012b10548dfbea91be3b32b1f95c24d16216/mise.toml"
             }
           ]
         }
@@ -6530,7 +6508,7 @@
       "required_checks": {
         "state": "observed",
         "checks": [],
-        "observed_at": "2026-10-09T20:45:51.457023+00:00",
+        "observed_at": "2026-10-14T06:46:27+00:00",
         "evidence": [
           "https://api.github.com/repos/basher83/personal-computing/rules/branches/main",
           "https://api.github.com/repos/basher83/personal-computing/branches/main/protection"
@@ -7768,6 +7746,195 @@
         "private_purpose_and_stack_withheld",
         "runtime_unknown"
       ]
+    },
+    {
+      "repository": "basher83/graphite",
+      "visibility": {
+        "value": "private",
+        "observed_at": "2026-10-14T06:46:20+00:00",
+        "evidence": "https://api.github.com/repos/basher83/graphite"
+      },
+      "observation": {
+        "revision": "364ddc48bed1a426e3a34bd1c6309c2ccc6a8f46",
+        "observed_at": "2026-10-14T06:46:20+00:00",
+        "evidence": "https://github.com/basher83/graphite/tree/364ddc48bed1a426e3a34bd1c6309c2ccc6a8f46"
+      },
+      "management": {
+        "renovate": {
+          "state": "observed",
+          "extends": [
+            {
+              "reference": "local>basher83/renovate-config",
+              "evidence": "https://github.com/basher83/graphite/blob/364ddc48bed1a426e3a34bd1c6309c2ccc6a8f46/renovate.json"
+            }
+          ],
+          "has_local_overrides": false
+        },
+        "workflows": {
+          "state": "observed",
+          "pr_workflow_declarations": true,
+          "shared_workflow_references": [],
+          "declared_check_names": [
+            "ci"
+          ]
+        },
+        "tools": {
+          "state": "observed",
+          "versions": [
+            {
+              "tool": "git-cliff",
+              "version": "2.14.2",
+              "evidence": "https://github.com/basher83/graphite/blob/364ddc48bed1a426e3a34bd1c6309c2ccc6a8f46/mise.toml"
+            },
+            {
+              "tool": "hk",
+              "version": "2.5.0",
+              "evidence": "https://github.com/basher83/graphite/blob/364ddc48bed1a426e3a34bd1c6309c2ccc6a8f46/mise.toml"
+            },
+            {
+              "tool": "pkl",
+              "version": "0.32.1",
+              "evidence": "https://github.com/basher83/graphite/blob/364ddc48bed1a426e3a34bd1c6309c2ccc6a8f46/mise.toml"
+            }
+          ]
+        }
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-14T06:46:20+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/graphite/rules/branches/main",
+          "https://api.github.com/repos/basher83/graphite/branches/main/protection"
+        ]
+      },
+      "unknowns": [
+        "alternate_config_paths_not_surveyed",
+        "effective_policy_unknown",
+        "private_override_values_withheld",
+        "private_purpose_and_stack_withheld",
+        "runtime_unknown"
+      ]
+    },
+    {
+      "repository": "basher83/homelab-factory",
+      "visibility": {
+        "value": "private",
+        "observed_at": "2026-10-14T06:46:37+00:00",
+        "evidence": "https://api.github.com/repos/basher83/homelab-factory"
+      },
+      "observation": {
+        "revision": "cb17163a5e86f0c11ff8672cd1601ee48e689acc",
+        "observed_at": "2026-10-14T06:46:37+00:00",
+        "evidence": "https://github.com/basher83/homelab-factory/tree/cb17163a5e86f0c11ff8672cd1601ee48e689acc"
+      },
+      "management": {
+        "renovate": {
+          "state": "absent",
+          "extends": [],
+          "has_local_overrides": false
+        },
+        "workflows": {
+          "state": "observed",
+          "pr_workflow_declarations": false,
+          "shared_workflow_references": [],
+          "declared_check_names": []
+        },
+        "tools": {
+          "state": "absent",
+          "versions": []
+        }
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-14T06:46:37+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/homelab-factory/rules/branches/main",
+          "https://api.github.com/repos/basher83/homelab-factory/branches/main/protection"
+        ]
+      },
+      "unknowns": [
+        "alternate_config_paths_not_surveyed",
+        "effective_policy_unknown",
+        "private_override_values_withheld",
+        "private_purpose_and_stack_withheld",
+        "runtime_unknown"
+      ]
+    },
+    {
+      "repository": "basher83/research-shelves",
+      "visibility": {
+        "value": "private",
+        "observed_at": "2026-10-14T06:46:22+00:00",
+        "evidence": "https://api.github.com/repos/basher83/research-shelves"
+      },
+      "observation": {
+        "revision": "ee27412e59703759079304c2bc72bb10f09908ad",
+        "observed_at": "2026-10-14T06:46:22+00:00",
+        "evidence": "https://github.com/basher83/research-shelves/tree/ee27412e59703759079304c2bc72bb10f09908ad"
+      },
+      "management": {
+        "renovate": {
+          "state": "observed",
+          "extends": [
+            {
+              "reference": "local>basher83/renovate-config",
+              "evidence": "https://github.com/basher83/research-shelves/blob/ee27412e59703759079304c2bc72bb10f09908ad/renovate.json"
+            }
+          ],
+          "has_local_overrides": false
+        },
+        "workflows": {
+          "state": "observed",
+          "pr_workflow_declarations": true,
+          "shared_workflow_references": [],
+          "declared_check_names": [
+            "ci"
+          ]
+        },
+        "tools": {
+          "state": "observed",
+          "versions": [
+            {
+              "tool": "git-cliff",
+              "version": "2.14.2",
+              "evidence": "https://github.com/basher83/research-shelves/blob/ee27412e59703759079304c2bc72bb10f09908ad/mise.toml"
+            },
+            {
+              "tool": "hk",
+              "version": "2.5.0",
+              "evidence": "https://github.com/basher83/research-shelves/blob/ee27412e59703759079304c2bc72bb10f09908ad/mise.toml"
+            },
+            {
+              "tool": "pkl",
+              "version": "0.32.1",
+              "evidence": "https://github.com/basher83/research-shelves/blob/ee27412e59703759079304c2bc72bb10f09908ad/mise.toml"
+            },
+            {
+              "tool": "uv",
+              "version": "0.13.0",
+              "evidence": "https://github.com/basher83/research-shelves/blob/ee27412e59703759079304c2bc72bb10f09908ad/mise.toml"
+            }
+          ]
+        }
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-10-14T06:46:22+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/research-shelves/rules/branches/main",
+          "https://api.github.com/repos/basher83/research-shelves/branches/main/protection"
+        ]
+      },
+      "unknowns": [
+        "alternate_config_paths_not_surveyed",
+        "effective_policy_unknown",
+        "private_override_values_withheld",
+        "private_purpose_and_stack_withheld",
+        "runtime_unknown"
+      ]
     }
   ],
   "proposals": [
@@ -7937,6 +8104,17 @@
       "excluded_count": 0,
       "evidence": "https://github.com/basher83/.github/pull/101",
       "note": "Operator decision: portfolio/repositories.yaml is the canonical repository inventory; GitHub steward maintains it via future PRs."
+    },
+    {
+      "observed_date": "2026-10-14",
+      "standing": "canonical_repository_inventory",
+      "public_count": 34,
+      "private_count": 61,
+      "included_count": 95,
+      "excluded_count": 0,
+      "added_since_card_count": 3,
+      "evidence": "https://api.github.com/user/repos?affiliation=owner&visibility=all",
+      "note": "Weekly refresh: added 3 new private repositories under the strict private boundary; deleted card entries remain recorded via lifecycle."
     }
   ],
   "inventory_authority": {
