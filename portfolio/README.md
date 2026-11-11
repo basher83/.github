@@ -7,7 +7,7 @@ Canonical data: [repositories.yaml](repositories.yaml). This YAML file uses JSON
 
 `portfolio/repositories.yaml` is the canonical repository inventory (since 2026-10-13). **Owner:** GitHub steward (automation agent). **Refresh:** GitHub steward opens PRs against portfolio/repositories.yaml using read-only inventory captures. **Freshness:** Weekly check against live GitHub state. [Decision evidence](https://github.com/basher83/.github/pull/101).
 
-The 2026-10-06 card contained 92 entries; 3 repositories created after the card were added by later refreshes. Visibility was checked on 2026-10-09 to 2026-10-14; 95 entries are included (34 public, 61 private), with 0 excluded. Central Renovate preset extenders (non-archived basher83): 30 as of 2026-10-12 ([steward-inventory-2026-10-12](https://github.com/basher83/renovate-config/blob/13e6a1a64d869a872d489a8fa19d8b59d362ee37/sources/evaluate/2026-10-12-d017-consumer-inventory.json)). The initial public-only restriction was superseded by the operator-approved publication boundary below.
+The 2026-10-06 card contained 92 entries; 4 repositories created after the card were added by later refreshes. Visibility was checked on 2026-10-09 to 2026-11-11; 96 entries are included (34 public, 62 private), with 0 excluded. Central Renovate preset extenders (non-archived basher83): 30 as of 2026-10-12 ([steward-inventory-2026-10-12](https://github.com/basher83/renovate-config/blob/13e6a1a64d869a872d489a8fa19d8b59d362ee37/sources/evaluate/2026-10-12-d017-consumer-inventory.json)). The initial public-only restriction was superseded by the operator-approved publication boundary below.
 
 ## Publication boundary
 
@@ -28,16 +28,16 @@ Renovate fields record direct presets and local configuration only. Inherited pr
 | Field | Populated | Unknown / limit |
 | --- | ---: | --- |
 | Public purpose, archive/fork flags, revision/date | 34 | Frameworks and development stage unknown for all |
-| Repository identity / visibility | 95 | 61 private entries publish bounded management facts only |
-| Private workflow/config survey | 57 | 4 unknown |
-| Private direct Renovate config | 22 present | 35 absent; 4 unknown |
+| Repository identity / visibility | 96 | 62 private entries publish bounded management facts only |
+| Private workflow/config survey | 58 | 4 unknown |
+| Private direct Renovate config | 22 present | 36 absent; 4 unknown |
 | Private tool versions | 16 repositories | Values outside safe version syntax are withheld; alternate tool manifests not surveyed |
 | Private unpinned tool versions | 8 repositories | 35 tool entries use latest/stable/lts, partial or wildcard versions; recorded as observed, not approved |
 | Public primary language | 29 | 5 unknown |
 | Public workflow declarations | 33 | 1 unknown; 20 declare PR triggers |
 | Public direct Renovate config | 25 present | 8 absent in searched paths; 1 unknown; effective policy unknown for all |
-| Required status checks | 93 | 2 unknown; 1 have required checks |
-| Runtime results / approved adoption exceptions | 0 | 95 unknown |
+| Required status checks | 94 | 2 unknown; 1 have required checks |
+| Runtime results / approved adoption exceptions | 0 | 96 unknown |
 
 ## Public repositories
 
@@ -506,6 +506,7 @@ Purpose, language/stack, internal paths, filters and override contents are withh
 | [pi-dev-config](https://github.com/basher83/pi-dev-config) | observed / central | yes (declaration) | none observed | none |
 | [pi-paneworks](https://github.com/basher83/pi-paneworks) | unknown | unknown | unknown | none |
 | [pi-upstream-crew](https://github.com/basher83/pi-upstream-crew) | absent | no | none observed | none |
+| [pplx-tool-research-workbench](https://github.com/basher83/pplx-tool-research-workbench) | absent | no | none observed | none |
 | [prompting-eval-workbench](https://github.com/basher83/prompting-eval-workbench) | observed / central | yes (declaration) | none observed | none |
 | [research-polish](https://github.com/basher83/research-polish) | absent | no | none observed | none |
 | [research-ralph](https://github.com/basher83/research-ralph) | absent | no | none observed | none |
@@ -1021,6 +1022,17 @@ Observed 2026-10-09T20:45:52.914307+00:00; [revision 5ed1a1086ecc](https://githu
 - Declared check names: none observed. Job IDs/names only; matrix-expanded/reusable check names are not resolved.
 - Tool version survey: absent.
 - Required checks: none. [API evidence 1](https://api.github.com/repos/basher83/pi-upstream-crew/rules/branches/main) [API evidence 2](https://api.github.com/repos/basher83/pi-upstream-crew/branches/main/protection).
+- Unknown/withheld categories: `alternate_config_paths_not_surveyed`, `effective_policy_unknown`, `private_override_values_withheld`, `private_purpose_and_stack_withheld`, `runtime_unknown`.
+
+### basher83/pplx-tool-research-workbench (private)
+
+Observed 2026-11-11T22:12:03+00:00; [revision fae78124d87f](https://github.com/basher83/pplx-tool-research-workbench/tree/fae78124d87f0197504caba60387200cf370faeb). [Visibility API](https://api.github.com/repos/basher83/pplx-tool-research-workbench).
+
+- Renovate: absent; local overrides present: False. Override contents withheld.
+- Workflow survey: observed; PR declaration: False.
+- Declared check names: none observed. Job IDs/names only; matrix-expanded/reusable check names are not resolved.
+- Tool version survey: absent.
+- Required checks: none. [API evidence 1](https://api.github.com/repos/basher83/pplx-tool-research-workbench/rules/branches/main) [API evidence 2](https://api.github.com/repos/basher83/pplx-tool-research-workbench/branches/main/protection).
 - Unknown/withheld categories: `alternate_config_paths_not_surveyed`, `effective_policy_unknown`, `private_override_values_withheld`, `private_purpose_and_stack_withheld`, `runtime_unknown`.
 
 ### basher83/prompting-eval-workbench (private)

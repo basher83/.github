@@ -4,17 +4,17 @@
     "historical_card_count": 92,
     "public_count": 34,
     "excluded_count": 0,
-    "definition": "All 92 entries in the historical 2026-10-06 card remain included, plus 3 repositories created after the card (95 total: 34 public, 61 private). Management facts refreshed on 2026-10-13 from the GitHub steward read-only inventory and live GitHub API checks; 2026-10-14 weekly refresh re-verified all accessible repositories live and updated drifted records. Private content follows the approved strict publication boundary.",
+    "definition": "All 92 entries in the historical 2026-10-06 card remain included, plus 4 repositories created after the card (96 total: 34 public, 62 private). Management facts refreshed on 2026-10-13 from the GitHub steward read-only inventory and live GitHub API checks; 2026-10-14 weekly refresh re-verified all accessible repositories live and updated drifted records. 2026-11-11 added pplx-tool-research-workbench. Private content follows the approved strict publication boundary.",
     "visibility_evidence": "https://api.github.com/user/repos?affiliation=owner&visibility=all",
-    "private_count": 61,
-    "included_count": 95,
+    "private_count": 62,
+    "included_count": 96,
     "renovate_preset_extenders": {
       "count": 30,
       "observed_date": "2026-10-12",
       "source": "steward-inventory-2026-10-12",
       "note": "Non-archived basher83 repositories extending local>basher83/renovate-config per steward inventory."
     },
-    "added_since_card_count": 3
+    "added_since_card_count": 4
   },
   "sources": [
     {
@@ -7852,6 +7852,52 @@
         "evidence": [
           "https://api.github.com/repos/basher83/homelab-factory/rules/branches/main",
           "https://api.github.com/repos/basher83/homelab-factory/branches/main/protection"
+        ]
+      },
+      "unknowns": [
+        "alternate_config_paths_not_surveyed",
+        "effective_policy_unknown",
+        "private_override_values_withheld",
+        "private_purpose_and_stack_withheld",
+        "runtime_unknown"
+      ]
+    },
+    {
+      "repository": "basher83/pplx-tool-research-workbench",
+      "visibility": {
+        "value": "private",
+        "observed_at": "2026-11-11T22:12:03+00:00",
+        "evidence": "https://api.github.com/repos/basher83/pplx-tool-research-workbench"
+      },
+      "observation": {
+        "revision": "fae78124d87f0197504caba60387200cf370faeb",
+        "observed_at": "2026-11-11T22:12:03+00:00",
+        "evidence": "https://github.com/basher83/pplx-tool-research-workbench/tree/fae78124d87f0197504caba60387200cf370faeb"
+      },
+      "management": {
+        "renovate": {
+          "state": "absent",
+          "extends": [],
+          "has_local_overrides": false
+        },
+        "workflows": {
+          "state": "observed",
+          "pr_workflow_declarations": false,
+          "shared_workflow_references": [],
+          "declared_check_names": []
+        },
+        "tools": {
+          "state": "absent",
+          "versions": []
+        }
+      },
+      "required_checks": {
+        "state": "observed",
+        "checks": [],
+        "observed_at": "2026-11-11T22:12:03+00:00",
+        "evidence": [
+          "https://api.github.com/repos/basher83/pplx-tool-research-workbench/rules/branches/main",
+          "https://api.github.com/repos/basher83/pplx-tool-research-workbench/branches/main/protection"
         ]
       },
       "unknowns": [
