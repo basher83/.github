@@ -155,7 +155,8 @@ def validate(data):
     require(scope['public_count'] == sum(r['visibility']['value'] == 'public' for r in data['repositories']), 'Public count mismatch')
     require(scope['private_count'] == sum(r['visibility']['value'] == 'private' for r in data['repositories']), 'Private count mismatch')
     require(scope['included_count'] == len(names), 'Included count mismatch')
-    require(scope['historical_card_count'] == scope['included_count'] + scope['excluded_count'], 'Scope counts do not reconcile')
+    require(isinstance(scope.get('added_since_card_count', 0), int) and scope.get('added_since_card_count', 0) >= 0, 'Invalid added_since_card_count')
+    require(scope['historical_card_count'] + scope.get('added_since_card_count', 0) == scope['included_count'] + scope['excluded_count'], 'Scope counts do not reconcile')
     for entry in data['proposals'] + data['historical_observations']:
         require(entry['repository'] in names, 'Proposal/history references an excluded repository')
         require(entry['repository'] in {r['repository'] for r in data['repositories'] if r['visibility']['value'] == 'public'}, 'Private free-text proposals/history are outside publication boundary')
@@ -198,6 +199,8 @@ def render(data):
     visibility_dates = sorted({r["visibility"]["observed_at"][:10] for r in all_repos})
     visibility_period = " to ".join(dict.fromkeys([visibility_dates[0], visibility_dates[-1]]))
     authority = data.get('inventory_authority') or {}
+    added = scope.get('added_since_card_count', 0)
+    added_note = f'; {added} repositories created after the card were added by later refreshes' if added else ''
     extender_note = ''
     extenders = scope.get('renovate_preset_extenders')
     if extenders:
@@ -222,7 +225,7 @@ def render(data):
             '',
         ]
     lines += [
-        f'The 2026-10-06 card contained {scope["historical_card_count"]} entries. Visibility was checked on {visibility_period}; {scope["included_count"]} entries are included ({scope["public_count"]} public, {scope["private_count"]} private), with {scope["excluded_count"]} excluded.{extender_note} The initial public-only restriction was superseded by the operator-approved publication boundary below.', '',
+        f'The 2026-10-06 card contained {scope["historical_card_count"]} entries{added_note}. Visibility was checked on {visibility_period}; {scope["included_count"]} entries are included ({scope["public_count"]} public, {scope["private_count"]} private), with {scope["excluded_count"]} excluded.{extender_note} The initial public-only restriction was superseded by the operator-approved publication boundary below.', '',
         '## Publication boundary', '',
         'Private repository identity and shared-management facts are approved for publication: tool versions, direct preset/workflow references, declared/required check names and configured adoption. Private application code, internal architecture, infrastructure addresses, secrets, private registry addresses and unrelated content are excluded. No whole private manifests, workflow bodies or logs are copied. Ambiguous values are withheld for the operator’s decision.', '',
         'Private records use a strict nested allowlist. They contain no purpose/stack descriptions, arbitrary override values, commands, environment, workflow filters or job bodies. Evidence is restricted to the repository and known management files at the observed revision. Unknown categories are controlled codes rather than free text; private records cannot use the free-text proposal/history sections. Public records retain their existing historical descriptions and configuration detail.', '',
