@@ -19,7 +19,7 @@ prek = "0.5.5"
 git-cliff = "2.14.2"
 eza = "0.23.5"
 fd = "10.5.0"
-rg = "15.2.0"
+rg = "16.0.0"
 
 [tasks.ci] # only dependencies to be run
 description = 'Run CI tasks'
