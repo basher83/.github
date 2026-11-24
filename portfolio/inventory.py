@@ -155,8 +155,9 @@ def validate(data):
     require(scope['public_count'] == sum(r['visibility']['value'] == 'public' for r in data['repositories']), 'Public count mismatch')
     require(scope['private_count'] == sum(r['visibility']['value'] == 'private' for r in data['repositories']), 'Private count mismatch')
     require(scope['included_count'] == len(names), 'Included count mismatch')
-    require(isinstance(scope.get('added_since_card_count', 0), int) and scope.get('added_since_card_count', 0) >= 0, 'Invalid added_since_card_count')
-    require(scope['historical_card_count'] + scope.get('added_since_card_count', 0) == scope['included_count'] + scope['excluded_count'], 'Scope counts do not reconcile')
+    added_since_card = scope.get('added_since_card_count', 0)
+    require(type(added_since_card) is int and added_since_card >= 0, 'Invalid added_since_card_count')
+    require(scope['historical_card_count'] + added_since_card == scope['included_count'] + scope['excluded_count'], 'Scope counts do not reconcile')
     for entry in data['proposals'] + data['historical_observations']:
         require(entry['repository'] in names, 'Proposal/history references an excluded repository')
         require(entry['repository'] in {r['repository'] for r in data['repositories'] if r['visibility']['value'] == 'public'}, 'Private free-text proposals/history are outside publication boundary')

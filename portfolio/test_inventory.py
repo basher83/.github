@@ -62,6 +62,9 @@ class InventoryTests(unittest.TestCase):
         data['scope']['added_since_card_count'] = 0
         with self.assertRaises(ValueError):
             inventory.validate(data)
+        data['scope']['added_since_card_count'] = True
+        with self.assertRaises(ValueError):
+            inventory.validate(data)
 
     def test_rejects_unverified_visibility(self):
         for value in (None, 'unknown'):
